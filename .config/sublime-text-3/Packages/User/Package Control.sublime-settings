@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Agila Theme",
+		"Color Highlighter",
+		"Evernote",
+		"Markdown Extended",
+		"MarkdownEditing",
+		"Material Theme",
+		"Package Control",
+		"Theme - Brogrammer",
+		"Theme - Hero",
+		"WordCount"
+	]
+}
