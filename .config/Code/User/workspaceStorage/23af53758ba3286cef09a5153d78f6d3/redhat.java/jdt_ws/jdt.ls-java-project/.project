@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/edu/coursera/parallel/MatrixMultiply.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Parallel Programming in Java/miniproject_3/src/main/java/edu/coursera/parallel/MatrixMultiply.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/Board.java</name>
+			<type>1</type>
+			<location>/home/savvy/Documents/Coursera Algorithms Pt 1/Week 4/8Puzzle/Board.java</location>
+		</link>
+		<link>
+			<name>src/PuzzleChecker.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 4/8Puzzle/8puzzle/PuzzleChecker.java</location>
+		</link>
+		<link>
+			<name>src/Solver.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 4/8Puzzle/Solver.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

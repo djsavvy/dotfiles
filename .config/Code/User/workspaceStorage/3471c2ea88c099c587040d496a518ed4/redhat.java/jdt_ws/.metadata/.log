@@ -1,0 +1,2349 @@
+!SESSION 2017-09-02 19:27:02.102 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/3471c2ea88c099c587040d496a518ed4/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:02.896
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:02.991
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:02.992
+!MESSAGE Initializing Java Language Server 0.3.0.201708311749
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:03.003
+!MESSAGE Creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:03.014
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:03.634
+!MESSAGE Finished creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:03.912
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:03.991
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:04.412
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:27:05.216
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.223
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.239
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.247
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.675
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.676
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.700
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.700
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.701
+!MESSAGE Reconciled 0, validated: 1. Took 62 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:30:18.841
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:17.706
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:17.978
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:22.322
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:23.856
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:32.999
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:55.859
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:58.265
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.335
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.338
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.339
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/AbstractBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.799
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.799
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/AbstractBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.804
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.823
+!MESSAGE begin problem for /AbstractBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.823
+!MESSAGE 1 problems reported for /AbstractBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.824
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.824
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.824
+!MESSAGE Reconciled 0, validated: 2. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:32:59.957
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:33:00.216
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:33:12.496
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:33:12.497
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/AbstractBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:33:12.538
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:33:12.764
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:34:57.559
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:00.748
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:04.575
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:04.578
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:04.579
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.037
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.037
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.054
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.059
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.059
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.059
+!MESSAGE begin problem for /SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.059
+!MESSAGE 1 problems reported for /SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:05.060
+!MESSAGE Reconciled 0, validated: 2. Took 33 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:06.911
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:06.912
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:06.913
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:07.156
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:14.123
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:23.054
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:24.937
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:24.938
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:24.945
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.420
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.420
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.438
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.442
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.442
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.442
+!MESSAGE Reconciled 0, validated: 1. Took 47 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.443
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.909
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.913
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.913
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.936
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.936
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.936
+!MESSAGE Reconciled 0, validated: 1. Took 41 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:25.937
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:26.406
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:26.406
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:26.424
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:26.424
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:26.425
+!MESSAGE Reconciled 0, validated: 1. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.137
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.138
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.148
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.570
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.571
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.584
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.585
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:28.585
+!MESSAGE Reconciled 0, validated: 1. Took 35 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.016
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.017
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.484
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.484
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.499
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.499
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.499
+!MESSAGE Reconciled 0, validated: 1. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.744
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.745
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:31.915
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:32.333
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:32.334
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:32.349
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:32.349
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:32.349
+!MESSAGE Reconciled 0, validated: 1. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.366
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.367
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.833
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.833
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.847
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.847
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.848
+!MESSAGE Reconciled 0, validated: 1. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.959
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:33.959
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.370
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.835
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.835
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.849
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.849
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.849
+!MESSAGE Reconciled 0, validated: 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.965
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.966
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.986
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.988
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:34.989
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.092
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.257
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.258
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.635
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.651
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.690
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.705
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.809
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.873
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:35.965
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.072
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.163
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.303
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.322
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.433
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.472
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.475
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.534
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.713
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:36.865
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.018
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.192
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.441
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.442
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.534
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.535
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.771
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.771
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.949
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.949
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.963
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.963
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:37.964
+!MESSAGE Reconciled 0, validated: 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:35:38.077
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:12.070
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:15.262
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:16.003
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:16.700
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:17.399
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:20.322
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.371
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.372
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.375
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.839
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.839
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.850
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.850
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:29.850
+!MESSAGE Reconciled 0, validated: 1. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:30.559
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:30.560
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:30.959
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:31.421
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:31.421
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:31.432
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:31.432
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:36:31.432
+!MESSAGE Reconciled 0, validated: 1. Took 22 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:22.780
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:22.783
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:22.785
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.241
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.241
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.252
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.255
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.255
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.255
+!MESSAGE begin problem for /SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.255
+!MESSAGE 1 problems reported for /SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:23.255
+!MESSAGE Reconciled 0, validated: 2. Took 22 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:27.637
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:27.638
+!MESSAGE Releasing AST for /miniproject_4/src/main/java/edu/coursera/concurrent/SolutionToBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:27.639
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:27.641
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:30.817
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:30.821
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:30.822
+!MESSAGE Caching AST for /miniproject_4/src/test/java/edu/coursera/concurrent/BoruvkaPerformanceTest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.314
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.315
+!MESSAGE Caching AST for /miniproject_4/src/main/java/edu/coursera/concurrent/ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.326
+!MESSAGE Caching AST for /miniproject_4/src/test/java/edu/coursera/concurrent/BoruvkaPerformanceTest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.343
+!MESSAGE begin problem for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.344
+!MESSAGE 4 problems reported for /ParBoruvka.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.344
+!MESSAGE begin problem for /BoruvkaPerformanceTest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.354
+!MESSAGE 9 problems reported for /BoruvkaPerformanceTest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.355
+!MESSAGE Reconciled 0, validated: 2. Took 84 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:31.484
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:32.176
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:35.065
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:35.924
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:38.416
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:38.571
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:38.871
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:39.072
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:41.035
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:43.629
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:47.183
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:50.836
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:52.888
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:53.199
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:54.173
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:54.891
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:56.066
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:56.264
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 19:37:56.466
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:54:54.142
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:54:54.168
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:54:54.375
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:54:54.377
+!MESSAGE Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@385c9627,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Worker-9,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Active Thread: Equinox Container: cea94f03-c635-4bcb-b29a-876d20956d78,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[Worker-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Refresh Thread: Equinox Container: cea94f03-c635-4bcb-b29a-876d20956d78,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[pool-1-thread-1,5,main]
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:61)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Java indexing,4,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Start Level: Equinox Container: cea94f03-c635-4bcb-b29a-876d20956d78,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+Thread[Signal Dispatcher,9,system]
+Thread[Bundle File Closer,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[pool-3-thread-1,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-02 21:54:54.897
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2017-09-02 21:59:48.708 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/3471c2ea88c099c587040d496a518ed4/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-02 21:59:49.206
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:49.351
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:49.429
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:49.429
+!MESSAGE Initializing Java Language Server 0.3.0.201708311749
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:49.462
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:50.127
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:50.128
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:50.215
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:50.431
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-02 21:59:50.434
+!MESSAGE Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+Thread[Signal Dispatcher,9,system]
+Thread[Worker-2,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@15b204a1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[Start Level: Equinox Container: b7c6c4f0-b8f1-4d6d-85a1-8b73e962dd60,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Worker-0,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1552)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:163)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[pool-1-thread-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2235)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.jdt.ls.core.internal.handlers.DocumentLifeCycleHandler.didOpen(DocumentLifeCycleHandler.java:160)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.didOpen(JDTLanguageServer.java:418)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:51)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint$$Lambda$27/1661406123.apply(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:165)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:136)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:149)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:77)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Active Thread: Equinox Container: b7c6c4f0-b8f1-4d6d-85a1-8b73e962dd60,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-1,5,main]
+	at org.codehaus.plexus.util.xml.Xpp3Dom.getChildren(Xpp3Dom.java:220)
+	at org.codehaus.plexus.configuration.xml.XmlPlexusConfiguration.<init>(XmlPlexusConfiguration.java:40)
+	at org.codehaus.plexus.configuration.xml.XmlPlexusConfiguration.<init>(XmlPlexusConfiguration.java:42)
+	at org.codehaus.plexus.configuration.xml.XmlPlexusConfiguration.<init>(XmlPlexusConfiguration.java:42)
+	at org.apache.maven.plugin.descriptor.PluginDescriptorBuilder.buildConfiguration(PluginDescriptorBuilder.java:347)
+	at org.apache.maven.plugin.descriptor.PluginDescriptorBuilder.build(PluginDescriptorBuilder.java:49)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.parsePluginDescriptor(DefaultMavenPluginManager.java:269)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.extractPluginDescriptor(DefaultMavenPluginManager.java:215)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getPluginDescriptor(DefaultMavenPluginManager.java:184)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getMojoDescriptor(DefaultMavenPluginManager.java:284)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.getMojoDescriptor(DefaultBuildPluginManager.java:241)
+	at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.setupMojoExecution(DefaultLifecycleExecutionPlanCalculator.java:169)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.setupMojoExecution(MavenImpl.java:408)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$2.call(MavenImpl.java:420)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$2.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.setupMojoExecution(MavenImpl.java:418)
+	at org.eclipse.m2e.core.internal.lifecyclemapping.LifecycleMappingFactory.applyParametersFilter(LifecycleMappingFactory.java:694)
+	at org.eclipse.m2e.core.internal.lifecyclemapping.LifecycleMappingFactory.calculateEffectiveLifecycleMappingMetadata0(LifecycleMappingFactory.java:598)
+	at org.eclipse.m2e.core.internal.lifecyclemapping.LifecycleMappingFactory.calculateEffectiveLifecycleMappingMetadata(LifecycleMappingFactory.java:535)
+	at org.eclipse.m2e.core.internal.lifecyclemapping.LifecycleMappingFactory.calculateEffectiveLifecycleMappingMetadata(LifecycleMappingFactory.java:249)
+	at org.eclipse.m2e.core.internal.lifecyclemapping.LifecycleMappingFactory.calculateLifecycleMapping(LifecycleMappingFactory.java:181)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.setupLifecycleMapping(ProjectRegistryManager.java:594)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:513)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$3.call(ProjectRegistryManager.java:492)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$3.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:496)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:351)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:298)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:405)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:352)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1351)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:349)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:335)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:317)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.updateProjects(MavenProjectImporter.java:137)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.importToWorkspace(MavenProjectImporter.java:118)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:75)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[Java indexing,4,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+!SESSION 2017-09-04 17:01:41.301 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/3471c2ea88c099c587040d496a518ed4/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-04 17:01:41.759
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:41.956
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:42.075
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:42.076
+!MESSAGE Initializing Java Language Server 0.3.0.201708311749
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:42.101
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:42.923
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:42.925
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:43.050
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:44.107
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-04 17:01:44.110
+!MESSAGE Thread[Okio Watchdog,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:460)
+	at okio.AsyncTimeout.awaitTimeout(AsyncTimeout.java:360)
+	at okio.AsyncTimeout$Watchdog.run(AsyncTimeout.java:311)
+Thread[Signal Dispatcher,9,system]
+Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@15b204a1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Worker-2,5,main]
+	at java.io.FileDescriptor.sync(Native Method)
+	at org.apache.lucene.store.FSDirectory.sync(FSDirectory.java:457)
+	at org.apache.lucene.index.IndexWriter.startCommit(IndexWriter.java:4590)
+	at org.apache.lucene.index.IndexWriter.prepareCommit(IndexWriter.java:3365)
+	at org.apache.lucene.index.IndexWriter.commit(IndexWriter.java:3408)
+	at org.apache.maven.index.context.DefaultIndexingContext.storeDescriptor(DefaultIndexingContext.java:324)
+	at org.apache.maven.index.context.DefaultIndexingContext.checkAndUpdateIndexDescriptor(DefaultIndexingContext.java:270)
+	at org.apache.maven.index.context.DefaultIndexingContext.prepareIndex(DefaultIndexingContext.java:199)
+	at org.apache.maven.index.context.DefaultIndexingContext.<init>(DefaultIndexingContext.java:173)
+	at org.apache.maven.index.DefaultNexusIndexer.addIndexingContextForced(DefaultNexusIndexer.java:160)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.createIndexingContext(NexusIndexManager.java:965)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.setIndexDetails(NexusIndexManager.java:932)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.repositoryAdded(NexusIndexManager.java:878)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.addRepository(RepositoryRegistry.java:163)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:241)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[pool-1-thread-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2235)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.jdt.ls.core.internal.handlers.DocumentLifeCycleHandler.didOpen(DocumentLifeCycleHandler.java:160)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.didOpen(JDTLanguageServer.java:418)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:51)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint$$Lambda$27/1661406123.apply(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:165)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:136)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:149)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:77)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-0,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1552)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:163)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[Start Level: Equinox Container: 8a2771a0-aa18-40a3-bd66-9284b4e39b4a,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Worker-3,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Java indexing,4,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[OkHttp ConnectionPool,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:460)
+	at okhttp3.ConnectionPool$1.run(ConnectionPool.java:66)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-1,5,main]
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:983)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1385)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1397)
+	at okhttp3.internal.connection.RealConnection.connectTls(RealConnection.java:268)
+	at okhttp3.internal.connection.RealConnection.establishProtocol(RealConnection.java:238)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:149)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:192)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:121)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:100)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:120)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:185)
+	at okhttp3.RealCall.execute(RealCall.java:69)
+	at io.takari.aether.okhttp.OkHttpAetherClient.execute(OkHttpAetherClient.java:207)
+	at io.takari.aether.okhttp.OkHttpAetherClient.get(OkHttpAetherClient.java:153)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:600)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:453)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:297)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver$ResolveTask.run(DefaultMetadataResolver.java:607)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver$1.execute(DefaultMetadataResolver.java:527)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver.resolve(DefaultMetadataResolver.java:382)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver.resolveMetadata(DefaultMetadataResolver.java:205)
+	at org.apache.maven.repository.internal.DefaultVersionResolver.resolveVersion(DefaultVersionResolver.java:237)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:231)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:198)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.resolveCachedArtifactDescriptor(DefaultDependencyCollector.java:535)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.getArtifactDescriptorResult(DefaultDependencyCollector.java:519)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:409)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:363)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(DefaultDependencyCollector.java:351)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.collectDependencies(DefaultDependencyCollector.java:254)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:316)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:172)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:215)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:188)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.DefaultMavenDependencyResolver.resolveProjectDependencies(DefaultMavenDependencyResolver.java:63)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:530)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$3.call(ProjectRegistryManager.java:492)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$3.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:496)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:351)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:298)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:405)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:352)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1351)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:349)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:335)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:317)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.updateProjects(MavenProjectImporter.java:137)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.importToWorkspace(MavenProjectImporter.java:118)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:75)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+Thread[Active Thread: Equinox Container: 8a2771a0-aa18-40a3-bd66-9284b4e39b4a,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+!ENTRY org.eclipse.m2e.core 4 -1 2017-09-04 17:01:44.125
+!MESSAGE Could not lookup required component
+!STACK 0
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: java.util.NoSuchElementException
+      role: org.apache.maven.execution.MavenExecutionRequestPopulator
+  roleHint: 
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:267)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:249)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lookup(MavenImpl.java:1270)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createExecutionRequest(MavenImpl.java:236)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createExecutionRequest(MavenImpl.java:211)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getMirror(MavenImpl.java:1160)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:257)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.util.NoSuchElementException
+	at java.util.Collections$EmptyIterator.next(Collections.java:4189)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+	... 9 more
+!SESSION 2017-09-10 10:44:32.564 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/3471c2ea88c099c587040d496a518ed4/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-10 10:44:33.119
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:33.346
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:33.459
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:33.460
+!MESSAGE Initializing Java Language Server 0.3.0.201708311749
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:33.488
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:34.525
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:34.527
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:34.652
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:35.469
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 10:44:35.471
+!MESSAGE Thread[Worker-2,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@15b204a1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Active Thread: Equinox Container: e467cd97-5678-4cdf-9810-00aa5ad8944f,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-0,5,main]
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:983)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1385)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1413)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1397)
+	at okhttp3.internal.connection.RealConnection.connectTls(RealConnection.java:268)
+	at okhttp3.internal.connection.RealConnection.establishProtocol(RealConnection.java:238)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:149)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:192)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:121)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:100)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:120)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:185)
+	at okhttp3.RealCall.execute(RealCall.java:69)
+	at io.takari.aether.okhttp.OkHttpAetherClient.execute(OkHttpAetherClient.java:207)
+	at io.takari.aether.okhttp.OkHttpAetherClient.get(OkHttpAetherClient.java:153)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:600)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:453)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:297)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver$ResolveTask.run(DefaultMetadataResolver.java:607)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver$1.execute(DefaultMetadataResolver.java:527)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver.resolve(DefaultMetadataResolver.java:382)
+	at org.eclipse.aether.internal.impl.DefaultMetadataResolver.resolveMetadata(DefaultMetadataResolver.java:205)
+	at org.apache.maven.repository.internal.DefaultVersionResolver.resolveVersion(DefaultVersionResolver.java:237)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:231)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:198)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.resolveCachedArtifactDescriptor(DefaultDependencyCollector.java:535)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.getArtifactDescriptorResult(DefaultDependencyCollector.java:519)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:409)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:363)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(DefaultDependencyCollector.java:351)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.collectDependencies(DefaultDependencyCollector.java:254)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:316)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:172)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:215)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:188)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.DefaultMavenDependencyResolver.resolveProjectDependencies(DefaultMavenDependencyResolver.java:63)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:530)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$3.call(ProjectRegistryManager.java:492)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$3.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:496)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:351)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:298)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:405)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:352)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1351)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:349)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:335)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:317)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.updateProjects(MavenProjectImporter.java:137)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.importToWorkspace(MavenProjectImporter.java:118)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:75)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[pool-1-thread-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2235)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.jdt.ls.core.internal.handlers.DocumentLifeCycleHandler.didOpen(DocumentLifeCycleHandler.java:160)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.didOpen(JDTLanguageServer.java:418)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:51)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint$$Lambda$27/1661406123.apply(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:165)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:136)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:149)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:77)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Java indexing,4,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Start Level: Equinox Container: e467cd97-5678-4cdf-9810-00aa5ad8944f,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[Signal Dispatcher,9,system]
+Thread[Worker-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1552)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:163)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+
+!ENTRY org.eclipse.m2e.core 4 -1 2017-09-10 10:44:35.573
+!MESSAGE Could not lookup required component
+!STACK 0
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: java.util.NoSuchElementException
+      role: org.apache.maven.execution.MavenExecutionRequestPopulator
+  roleHint: 
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:267)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:249)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lookup(MavenImpl.java:1270)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createExecutionRequest(MavenImpl.java:236)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createExecutionRequest(MavenImpl.java:211)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getMirrors(MavenImpl.java:1175)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:224)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:47)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.util.NoSuchElementException
+	at java.util.Collections$EmptyIterator.next(Collections.java:4189)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+	... 9 more
+
+!ENTRY org.eclipse.core.resources 4 566 2017-09-10 10:44:36.033
+!MESSAGE Workspace was not properly initialized or has already shutdown.
+
+!ENTRY org.eclipse.core.jobs 4 1 2017-09-10 10:44:36.034
+!MESSAGE Worker thread ended job: Refreshing workspace(10), but still holds rule: ThreadJob(Refreshing workspace(10),[F/miniproject_4/src/main/java/edu/coursera/concurrent])
+!SESSION 2017-09-10 11:51:56.079 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/3471c2ea88c099c587040d496a518ed4/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-10 11:51:56.559
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:56.767
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:56.868
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:56.869
+!MESSAGE Initializing Java Language Server 0.3.0.201708311749
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:56.891
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:57.669
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:57.671
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:57.767
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:59.886
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 11:51:59.888
+!MESSAGE Thread[Worker-4,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+Thread[Start Level: Equinox Container: aafb8f5a-f30c-42ee-ad3f-01ce52e405de,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Signal Dispatcher,9,system]
+Thread[Active Thread: Equinox Container: aafb8f5a-f30c-42ee-ad3f-01ce52e405de,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-0,5,main]
+	at org.eclipse.aether.util.graph.selector.ScopeDependencySelector.deriveChildSelector(ScopeDependencySelector.java:103)
+	at org.eclipse.aether.util.graph.selector.AndDependencySelector.deriveChildSelector(AndDependencySelector.java:121)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:484)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:458)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:363)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(DefaultDependencyCollector.java:351)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:504)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:458)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:363)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(DefaultDependencyCollector.java:351)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:504)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:458)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:363)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(DefaultDependencyCollector.java:351)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:504)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:458)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:363)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(DefaultDependencyCollector.java:351)
+	at org.eclipse.aether.internal.impl.DefaultDependencyCollector.collectDependencies(DefaultDependencyCollector.java:254)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:316)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:172)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:215)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:188)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:794)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1010)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:5065)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:5060)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1008)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:98)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:487)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:399)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[Worker-3,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Java indexing,4,main]
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:381)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[OkHttp ConnectionPool,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:460)
+	at okhttp3.ConnectionPool$1.run(ConnectionPool.java:66)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Okio Watchdog,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:460)
+	at okio.AsyncTimeout.awaitTimeout(AsyncTimeout.java:360)
+	at okio.AsyncTimeout$Watchdog.run(AsyncTimeout.java:311)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[pool-1-thread-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2235)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.jdt.ls.core.internal.handlers.DocumentLifeCycleHandler.didOpen(DocumentLifeCycleHandler.java:160)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.didOpen(JDTLanguageServer.java:418)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:51)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint$$Lambda$27/1661406123.apply(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:165)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:136)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:149)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:77)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-2,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[Worker-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1552)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:163)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@15b204a1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+
+
+!ENTRY org.eclipse.core.resources 4 2 2017-09-10 11:51:59.951
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.processBuildResults(MavenBuilderImpl.java:286)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:179)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:172)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1$1.call(MavenBuilder.java:115)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:105)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:487)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:399)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.resources 4 2 2017-09-10 11:51:59.953
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getProjectsManager(JavaLanguageServerPlugin.java:309)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.visit(WorkspaceDiagnosticsHandler.java:84)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.resourceChanged(WorkspaceDiagnosticsHandler.java:62)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:360)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:496)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:399)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-10 11:51:59.973
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.resources 4 2 2017-09-10 11:51:59.974
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getProjectsManager(JavaLanguageServerPlugin.java:309)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.visit(WorkspaceDiagnosticsHandler.java:84)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.jdt.ls.core.internal.handlers.WorkspaceDiagnosticsHandler.resourceChanged(WorkspaceDiagnosticsHandler.java:62)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2017-09-10 13:32:22.837 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/3471c2ea88c099c587040d496a518ed4/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-10 13:32:23.337
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:23.550
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:23.689
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:23.690
+!MESSAGE Initializing Java Language Server 0.3.0.201708311749
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:23.723
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:24.576
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:24.578
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:24.684
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:24.693
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-09-10 13:32:24.695
+!MESSAGE Thread[Worker-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1552)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:163)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@15b204a1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Java indexing,4,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-0,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+Thread[pool-1-thread-1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:287)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2235)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.jdt.ls.core.internal.handlers.DocumentLifeCycleHandler.didOpen(DocumentLifeCycleHandler.java:160)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.didOpen(JDTLanguageServer.java:418)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:51)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint$$Lambda$27/1661406123.apply(Unknown Source)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:165)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:136)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:149)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:77)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Active Thread: Equinox Container: 116687d5-1d58-43bd-86eb-2e1b4d37ff0f,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Signal Dispatcher,9,system]
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[Worker-2,5,main]
+	at java.io.UnixFileSystem.getBooleanAttributes0(Native Method)
+	at java.io.UnixFileSystem.getBooleanAttributes(UnixFileSystem.java:242)
+	at java.io.File.exists(File.java:819)
+	at org.eclipse.osgi.framework.util.SecureAction.exists(SecureAction.java:228)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.<init>(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.Storage.createBundleFile(Storage.java:941)
+	at org.eclipse.osgi.storage.BundleInfo$Generation.getBundleFile(BundleInfo.java:79)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.addStandardClassPathEntry(ClasspathManager.java:195)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.addClassPathEntry(ClasspathManager.java:190)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassPathEntry(ClasspathManager.java:173)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.buildClasspath(ClasspathManager.java:152)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.buildFragmentClasspaths(ClasspathManager.java:106)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.<init>(ClasspathManager.java:80)
+	at org.eclipse.osgi.internal.loader.EquinoxClassLoader.<init>(EquinoxClassLoader.java:43)
+	at org.eclipse.osgi.internal.loader.BundleLoader.createClassLoaderPrivledged(BundleLoader.java:316)
+	at org.eclipse.osgi.internal.loader.BundleLoader.getModuleClassLoader(BundleLoader.java:233)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:442)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.core.internal.net.ProxyType.getNode(ProxyType.java:523)
+	at org.eclipse.core.internal.net.ProxyType.loadProxyAuth(ProxyType.java:533)
+	at org.eclipse.core.internal.net.ProxyType.createProxyData(ProxyType.java:138)
+	at org.eclipse.core.internal.net.ProxyType.getProxyData(ProxyType.java:127)
+	at org.eclipse.core.internal.net.PreferenceManager.migrateInstanceScopePreferences(PreferenceManager.java:292)
+	at org.eclipse.core.internal.net.PreferenceManager.migrate(PreferenceManager.java:260)
+	at org.eclipse.core.internal.net.ProxyManager.checkMigrated(ProxyManager.java:389)
+	at org.eclipse.core.internal.net.ProxyManager.initialize(ProxyManager.java:259)
+	at org.eclipse.core.internal.net.Activator.start(Activator.java:175)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.addModifyListener(PreferenceServiceRegistryHelper.java:91)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.getModifyListeners(PreferenceServiceRegistryHelper.java:205)
+	at org.eclipse.core.internal.preferences.PreferencesService.firePreApplyEvent(PreferencesService.java:440)
+	at org.eclipse.core.internal.preferences.PreferencesService.internalApply(PreferencesService.java:692)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyPreferences(PreferencesService.java:93)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.setNotCoveredMojoExecutionSeverity(MavenConfigurationImpl.java:296)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.importToWorkspace(MavenProjectImporter.java:113)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:75)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[Start Level: Equinox Container: 116687d5-1d58-43bd-86eb-2e1b4d37ff0f,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+
+
+!ENTRY org.eclipse.osgi 4 0 2017-09-10 13:32:24.706
+!MESSAGE An error occurred while automatically activating bundle org.eclipse.core.net (21).
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.core.internal.net.Activator.start() of bundle org.eclipse.core.net.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.addModifyListener(PreferenceServiceRegistryHelper.java:91)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.getModifyListeners(PreferenceServiceRegistryHelper.java:205)
+	at org.eclipse.core.internal.preferences.PreferencesService.firePreApplyEvent(PreferencesService.java:440)
+	at org.eclipse.core.internal.preferences.PreferencesService.internalApply(PreferencesService.java:692)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyPreferences(PreferencesService.java:93)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.setNotCoveredMojoExecutionSeverity(MavenConfigurationImpl.java:296)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.importToWorkspace(MavenProjectImporter.java:113)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:75)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesMapper.open(SecurePreferencesMapper.java:75)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesMapper.getDefault(SecurePreferencesMapper.java:52)
+	at org.eclipse.equinox.security.storage.SecurePreferencesFactory.getDefault(SecurePreferencesFactory.java:49)
+	at org.eclipse.core.internal.net.ProxyType.getNode(ProxyType.java:523)
+	at org.eclipse.core.internal.net.ProxyType.loadProxyAuth(ProxyType.java:533)
+	at org.eclipse.core.internal.net.ProxyType.createProxyData(ProxyType.java:138)
+	at org.eclipse.core.internal.net.ProxyType.getProxyData(ProxyType.java:127)
+	at org.eclipse.core.internal.net.PreferenceManager.migrateInstanceScopePreferences(PreferenceManager.java:292)
+	at org.eclipse.core.internal.net.PreferenceManager.migrate(PreferenceManager.java:260)
+	at org.eclipse.core.internal.net.ProxyManager.checkMigrated(ProxyManager.java:389)
+	at org.eclipse.core.internal.net.ProxyManager.initialize(ProxyManager.java:259)
+	at org.eclipse.core.internal.net.Activator.start(Activator.java:175)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 30 more
+Root exception:
+java.lang.NullPointerException
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesMapper.open(SecurePreferencesMapper.java:75)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesMapper.getDefault(SecurePreferencesMapper.java:52)
+	at org.eclipse.equinox.security.storage.SecurePreferencesFactory.getDefault(SecurePreferencesFactory.java:49)
+	at org.eclipse.core.internal.net.ProxyType.getNode(ProxyType.java:523)
+	at org.eclipse.core.internal.net.ProxyType.loadProxyAuth(ProxyType.java:533)
+	at org.eclipse.core.internal.net.ProxyType.createProxyData(ProxyType.java:138)
+	at org.eclipse.core.internal.net.ProxyType.getProxyData(ProxyType.java:127)
+	at org.eclipse.core.internal.net.PreferenceManager.migrateInstanceScopePreferences(PreferenceManager.java:292)
+	at org.eclipse.core.internal.net.PreferenceManager.migrate(PreferenceManager.java:260)
+	at org.eclipse.core.internal.net.ProxyManager.checkMigrated(ProxyManager.java:389)
+	at org.eclipse.core.internal.net.ProxyManager.initialize(ProxyManager.java:259)
+	at org.eclipse.core.internal.net.Activator.start(Activator.java:175)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.addModifyListener(PreferenceServiceRegistryHelper.java:91)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.getModifyListeners(PreferenceServiceRegistryHelper.java:205)
+	at org.eclipse.core.internal.preferences.PreferencesService.firePreApplyEvent(PreferencesService.java:440)
+	at org.eclipse.core.internal.preferences.PreferencesService.internalApply(PreferencesService.java:692)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyPreferences(PreferencesService.java:93)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.setNotCoveredMojoExecutionSeverity(MavenConfigurationImpl.java:296)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.importToWorkspace(MavenProjectImporter.java:113)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:75)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-09-10 13:32:24.710
+!MESSAGE Plug-in org.eclipse.core.net was unable to load class org.eclipse.core.internal.net.PreferenceModifyListener.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle org.eclipse.core.net (21).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:112)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.addModifyListener(PreferenceServiceRegistryHelper.java:91)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.getModifyListeners(PreferenceServiceRegistryHelper.java:205)
+	at org.eclipse.core.internal.preferences.PreferencesService.firePreApplyEvent(PreferencesService.java:440)
+	at org.eclipse.core.internal.preferences.PreferencesService.internalApply(PreferencesService.java:692)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyPreferences(PreferencesService.java:93)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.setNotCoveredMojoExecutionSeverity(MavenConfigurationImpl.java:296)
+	at org.eclipse.jdt.ls.core.internal.managers.MavenProjectImporter.importToWorkspace(MavenProjectImporter.java:113)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:75)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.run(InitHandler.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.osgi.framework.BundleException: Exception in org.eclipse.core.internal.net.Activator.start() of bundle org.eclipse.core.net.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	... 23 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesMapper.open(SecurePreferencesMapper.java:75)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesMapper.getDefault(SecurePreferencesMapper.java:52)
+	at org.eclipse.equinox.security.storage.SecurePreferencesFactory.getDefault(SecurePreferencesFactory.java:49)
+	at org.eclipse.core.internal.net.ProxyType.getNode(ProxyType.java:523)
+	at org.eclipse.core.internal.net.ProxyType.loadProxyAuth(ProxyType.java:533)
+	at org.eclipse.core.internal.net.ProxyType.createProxyData(ProxyType.java:138)
+	at org.eclipse.core.internal.net.ProxyType.getProxyData(ProxyType.java:127)
+	at org.eclipse.core.internal.net.PreferenceManager.migrateInstanceScopePreferences(PreferenceManager.java:292)
+	at org.eclipse.core.internal.net.PreferenceManager.migrate(PreferenceManager.java:260)
+	at org.eclipse.core.internal.net.ProxyManager.checkMigrated(ProxyManager.java:389)
+	at org.eclipse.core.internal.net.ProxyManager.initialize(ProxyManager.java:259)
+	at org.eclipse.core.internal.net.Activator.start(Activator.java:175)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 30 more

@@ -1,0 +1,426 @@
+!SESSION 2017-08-29 10:27:47.813 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/23af53758ba3286cef09a5153d78f6d3/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:48.394
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:48.514
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:48.515
+!MESSAGE Initializing Java Language Server 0.2.0.201707312221
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:48.531
+!MESSAGE Creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:48.544
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:49.080
+!MESSAGE Finished creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:49.543
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:49.548
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:49.675
+!MESSAGE Classpath is incomplete. Only syntax errors will be reported for file:///home/savvy/Documents/Coursera%20Parallel%20Programming%20in%20Java/miniproject_3/src/main/java/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:49.709
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:49.736
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:49.919
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:50.116
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:50.116
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:50.122
+!MESSAGE begin problem for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:50.122
+!MESSAGE 0 problems reported for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:50.123
+!MESSAGE Reconciled 0, validated: 1. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:50.162
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:27:50.379
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:05.251
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:10.383
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:16.731
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:17.001
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:17.311
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:17.557
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:17.867
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:25.607
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:29.652
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:29.681
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:31.933
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:31.935
+!MESSAGE Releasing AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:31.941
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:31.953
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:31.968
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.197
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.198
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.343
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.344
+!MESSAGE Releasing AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.363
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.373
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.505
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.521
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.530
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.755
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.757
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.787
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.787
+!MESSAGE Releasing AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:32.971
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.097
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.345
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.346
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.556
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.556
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.559
+!MESSAGE begin problem for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.559
+!MESSAGE 0 problems reported for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:33.560
+!MESSAGE Reconciled 0, validated: 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:36.189
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:46.050
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:46.051
+!MESSAGE Releasing AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:46.282
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:46.435
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:46.616
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:46.773
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.239
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.239
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.247
+!MESSAGE begin problem for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.247
+!MESSAGE 8 problems reported for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.248
+!MESSAGE Reconciled 0, validated: 1. Took 22 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.379
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.499
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.500
+!MESSAGE Releasing AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.511
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.520
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.581
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.592
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.601
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.684
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.695
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.702
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.934
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:47.935
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:48.143
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:48.144
+!MESSAGE Caching AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:48.147
+!MESSAGE begin problem for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:48.147
+!MESSAGE 0 problems reported for /MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:48.147
+!MESSAGE Reconciled 0, validated: 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:48.276
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:29:48.980
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:15.361
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:15.983
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:22.963
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:22.964
+!MESSAGE Releasing AST for /jdt.ls-java-project/src/edu/coursera/parallel/MatrixMultiply.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:22.967
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:22.969
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:23.368
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:23.369
+!MESSAGE Reconciled 0, validated: 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:47.165
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:47.166
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:48.095
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-29 10:30:48.097
+!MESSAGE Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+Thread[Worker-2,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[pool-1-thread-1,5,main]
+	at org.newsclub.net.unix.NativeUnixSocket.read(Native Method)
+	at org.newsclub.net.unix.AFUNIXSocketImpl$AFUNIXInputStream.read(AFUNIXSocketImpl.java:189)
+	at org.newsclub.net.unix.AFUNIXSocketImpl$AFUNIXInputStream.read(AFUNIXSocketImpl.java:199)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:61)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Worker-0,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Active Thread: Equinox Container: 4d2846a7-3273-4999-a921-bebf21f6011f,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@15b204a1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Start Level: Equinox Container: 4d2846a7-3273-4999-a921-bebf21f6011f,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[pool-2-thread-1,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Signal Dispatcher,9,system]
+Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[Java indexing,4,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-08-29 10:30:48.614
+!MESSAGE The workspace will exit with unsaved changes in this session.

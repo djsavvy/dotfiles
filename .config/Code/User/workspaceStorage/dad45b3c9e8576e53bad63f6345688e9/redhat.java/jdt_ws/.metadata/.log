@@ -1,0 +1,1306 @@
+!SESSION 2017-08-30 12:16:30.116 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/savvy/.config/Code/User/workspaceStorage/dad45b3c9e8576e53bad63f6345688e9/redhat.java/jdt_ws
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:30.679
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:30.800
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:30.801
+!MESSAGE Initializing Java Language Server 0.2.0.201707312221
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:30.816
+!MESSAGE Creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:30.826
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:31.362
+!MESSAGE Finished creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:31.816
+!MESSAGE >>New configuration: {java={home=null, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=ignore}}, configuration={updateBuildConfiguration=interactive, maven={userSettings=null}}, trace={server=off}, referencesCodeLens={enabled=true}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true}, import={exclusions=['**/node_modules', '**/.metadata']}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:31.907
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:32.327
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:33.194
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.519
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.534
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.542
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.948
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.949
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.959
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.960
+!MESSAGE 1 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:51.960
+!MESSAGE Reconciled 0, validated: 1. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:52.104
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:52.286
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:16:55.149
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.475
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.477
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.478
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.956
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.956
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.969
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.977
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.977
+!MESSAGE 1 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.978
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.978
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:13.978
+!MESSAGE Reconciled 0, validated: 2. Took 50 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:21.182
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:23.353
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:23.800
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:26.684
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:26.686
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:26.693
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.149
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.149
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.153
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.159
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.159
+!MESSAGE 1 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.159
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.159
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.160
+!MESSAGE Reconciled 0, validated: 2. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.401
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.402
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.852
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.852
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.856
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.861
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.861
+!MESSAGE 1 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.861
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.861
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:27.861
+!MESSAGE Reconciled 0, validated: 2. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.391
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.392
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.412
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.511
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.568
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.655
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.713
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.747
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.773
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.804
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.881
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.935
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:28.989
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.020
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.083
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.119
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.334
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.335
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.504
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.505
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.519
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.528
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.528
+!MESSAGE 3 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.528
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.529
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.529
+!MESSAGE Reconciled 0, validated: 2. Took 45 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.658
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.759
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.761
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:29.788
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.009
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.010
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.060
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.061
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.087
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.518
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.519
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.523
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.528
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.528
+!MESSAGE 2 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.529
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.529
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.529
+!MESSAGE Reconciled 0, validated: 2. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:30.659
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.289
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.292
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.318
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.340
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.352
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.711
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.712
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.718
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.722
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.722
+!MESSAGE 2 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.723
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.723
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.723
+!MESSAGE Reconciled 0, validated: 2. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.854
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.905
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:31.906
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.360
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.360
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.365
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.370
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.370
+!MESSAGE 2 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.370
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.370
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.370
+!MESSAGE Reconciled 0, validated: 2. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.501
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.849
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.850
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.870
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:32.947
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.008
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.293
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.336
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.462
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.499
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.547
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.577
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.628
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.655
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.688
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.714
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.847
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.875
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.906
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.918
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.933
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.976
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:33.998
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.050
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.057
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.137
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.593
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.593
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.597
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.601
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.602
+!MESSAGE 3 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.602
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.602
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:34.602
+!MESSAGE Reconciled 0, validated: 2. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.334
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.335
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.399
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.807
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.807
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.811
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.815
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.815
+!MESSAGE 2 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.815
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.815
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.816
+!MESSAGE Reconciled 0, validated: 2. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.852
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.853
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:35.906
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.348
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.349
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.354
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.358
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.358
+!MESSAGE 3 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.358
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.358
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.358
+!MESSAGE Reconciled 0, validated: 2. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.560
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.561
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:36.848
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.298
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.298
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.302
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.306
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.306
+!MESSAGE 3 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.306
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.306
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.306
+!MESSAGE Reconciled 0, validated: 2. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.437
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.439
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:37.650
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.109
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.109
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.113
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.116
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.116
+!MESSAGE 2 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.117
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.117
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:38.117
+!MESSAGE Reconciled 0, validated: 2. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:39.490
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:42.903
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:42.904
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.417
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.419
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.446
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.451
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.492
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.670
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.744
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.745
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.750
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.935
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.959
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.964
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:43.994
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.054
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.221
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.248
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.254
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.281
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.298
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.301
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.380
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.400
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.405
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.475
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.491
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.497
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.720
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.737
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.741
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.848
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.877
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.883
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.914
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.932
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:44.936
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.004
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.030
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.035
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.101
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.121
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.126
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.183
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.202
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.212
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.288
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.299
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.305
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.375
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.407
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.416
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.521
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.936
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.937
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.951
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.959
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.959
+!MESSAGE 3 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.959
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.960
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:45.960
+!MESSAGE Reconciled 0, validated: 2. Took 37 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:46.089
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:47.867
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:51.284
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:53.382
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:53.383
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:53.616
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:54.816
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:54.817
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:54.828
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:54.867
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:54.896
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:54.897
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:54.929
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.011
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.050
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.097
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.128
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.242
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.287
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.329
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.356
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.439
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.465
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.513
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.539
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.661
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.692
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.799
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.841
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.869
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:55.883
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.049
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.051
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.083
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.084
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.220
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.247
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.255
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.259
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.279
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.307
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.488
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:56.658
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.125
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.125
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.138
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.149
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.149
+!MESSAGE 2 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.149
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.150
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.150
+!MESSAGE Reconciled 0, validated: 2. Took 41 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.184
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.186
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:57.485
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:58.662
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:58.892
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:58.920
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:58.920
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:58.921
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.327
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.328
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.331
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.334
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.334
+!MESSAGE 1 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.334
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.335
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.335
+!MESSAGE Reconciled 0, validated: 2. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:17:59.465
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:00.134
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:00.135
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:00.431
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:00.432
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:01.562
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.196
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.196
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.197
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.544
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.643
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.668
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.682
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.691
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.706
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.954
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:02.954
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.114
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.114
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.123
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.134
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.134
+!MESSAGE 1 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.135
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.135
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.135
+!MESSAGE Reconciled 0, validated: 2. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.136
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.137
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.270
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.271
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.284
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.286
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.448
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.626
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:03.772
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.203
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.205
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.229
+!MESSAGE Releasing all ASTs
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.229
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.235
+!MESSAGE Caching AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.241
+!MESSAGE begin problem for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.241
+!MESSAGE 0 problems reported for /BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.241
+!MESSAGE begin problem for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.241
+!MESSAGE 0 problems reported for /BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.241
+!MESSAGE Reconciled 0, validated: 2. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.404
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.406
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:18:04.697
+!MESSAGE >> workspace/didChangeWatchedFiles
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:31.806
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:31.922
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:32.167
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:34.064
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:34.065
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingObjectIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:34.085
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:34.571
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:34.572
+!MESSAGE Releasing AST for /miniproject_2/src/main/java/edu/coursera/concurrent/BankTransactionsUsingGlobalIsolation.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:36.665
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:36.666
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:37.388
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2017-08-30 12:30:37.390
+!MESSAGE Thread[ForkJoinPool.commonPool-worker-4,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Thread[pool-1-thread-1,5,main]
+	at org.newsclub.net.unix.NativeUnixSocket.read(Native Method)
+	at org.newsclub.net.unix.AFUNIXSocketImpl$AFUNIXInputStream.read(AFUNIXSocketImpl.java:189)
+	at org.newsclub.net.unix.AFUNIXSocketImpl$AFUNIXInputStream.read(AFUNIXSocketImpl.java:199)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:61)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:84)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Finalizer,8,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+Thread[pool-15-thread-1,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Java indexing,4,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:373)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Reference Handler,10,system]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+Thread[Worker-JM,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+Thread[Worker-0,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@15b204a1,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Worker-6,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:188)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:52)
+Thread[Signal Dispatcher,9,system]
+Thread[Bundle File Closer,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[Framework stop,5,main]
+	at java.lang.Thread.dumpThreads(Native Method)
+	at java.lang.Thread.getAllStackTraces(Thread.java:1610)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.getThreadDump(JavaLanguageServerPlugin.java:235)
+	at org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin.stop(JavaLanguageServerPlugin.java:226)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1669)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1588)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[Active Thread: Equinox Container: 675ef7f6-963e-4b35-8a52-1449e456d872,5,main]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Thread[main,5,main]
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.osgi.container.SystemModule.waitForStop(SystemModule.java:168)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle.waitForStop(EquinoxBundle.java:250)
+	at org.eclipse.osgi.launch.Equinox.waitForStop(Equinox.java:181)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:444)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Thread[Start Level: Equinox Container: 675ef7f6-963e-4b35-8a52-1449e456d872,5,main]
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:336)
+Thread[process reaper,10,system]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-08-30 12:30:37.912
+!MESSAGE The workspace will exit with unsaved changes in this session.

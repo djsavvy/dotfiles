@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/BruteCollinearPoints.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 3/PS3 - Collinear Points/BruteCollinearPoints.java</location>
+		</link>
+		<link>
+			<name>src/FastCollinearPoints.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 3/PS3 - Collinear Points/FastCollinearPoints.java</location>
+		</link>
+		<link>
+			<name>src/LineSegment.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 3/PS3 - Collinear Points/LineSegment.java</location>
+		</link>
+		<link>
+			<name>src/Point.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 3/PS3 - Collinear Points/Point.java</location>
+		</link>
+		<link>
+			<name>src/TestClient.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 3/PS3 - Collinear Points/TestClient.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

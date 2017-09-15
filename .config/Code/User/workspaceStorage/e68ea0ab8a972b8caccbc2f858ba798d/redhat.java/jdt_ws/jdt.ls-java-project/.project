@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/InteractivePercolationVisualizer.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 1/PS1 - Percolation/percolation/InteractivePercolationVisualizer.java</location>
+		</link>
+		<link>
+			<name>src/Percolation.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 1/PS1 - Percolation/Percolation.java</location>
+		</link>
+		<link>
+			<name>src/PercolationStats.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 1/PS1 - Percolation/PercolationStats.java</location>
+		</link>
+		<link>
+			<name>src/PercolationVisualizer.java</name>
+			<type>1</type>
+			<location>//home/savvy/Documents/Coursera Algorithms Pt 1/Week 1/PS1 - Percolation/percolation/PercolationVisualizer.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>
