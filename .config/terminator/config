@@ -1,5 +1,6 @@
 [global_config]
   always_split_with_profile = True
+  borderless = True
   enabled_plugins = InactivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   inactive_color_offset = 0.912763157895
 [keybindings]
@@ -14,13 +15,16 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#262626"
-    background_darkness = 0.95
+    background_color = "#222222"
+    background_darkness = 0.85
     background_type = transparent
     cursor_color = "#d0d0d0"
     font = Source Code Pro for Powerline Medium 10
     foreground_color = "#d0d0d0"
+    icon_bell = False
     palette = "#262626:#c80003:#79e513:#edf630:#49bbfb:#e56aef:#42dfe6:#c7c7c7:#262626:#c80003:#79e513:#edf630:#49bbfb:#e56aef:#42dfe6:#c7c7c7"
     scrollback_infinite = True
+    scrollbar_position = hidden
     show_titlebar = False
+    urgent_bell = True
     use_system_font = False

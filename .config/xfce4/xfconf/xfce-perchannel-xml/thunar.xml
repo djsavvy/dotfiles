@@ -8,10 +8,10 @@
   <property name="misc-recursive-permissions" type="string" value="THUNAR_RECURSIVE_PERMISSIONS_NEVER"/>
   <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_SHORT"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
-  <property name="last-details-view-column-widths" type="string" value="50,193,50,50,410,50,50,74,298"/>
+  <property name="last-details-view-column-widths" type="string" value="50,195,50,50,694,50,50,83,755"/>
   <property name="last-separator-position" type="int" value="170"/>
-  <property name="last-window-width" type="int" value="1152"/>
-  <property name="last-window-height" type="int" value="716"/>
+  <property name="last-window-width" type="int" value="945"/>
+  <property name="last-window-height" type="int" value="1028"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-statusbar-visible" type="bool" value="true"/>
   <property name="misc-text-beside-icons" type="bool" value="false"/>

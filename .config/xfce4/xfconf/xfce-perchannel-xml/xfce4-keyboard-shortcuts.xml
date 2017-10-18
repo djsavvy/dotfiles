@@ -34,6 +34,7 @@
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="Print" type="string" value="xfce4-screenshooter -f"/>
+      <property name="&lt;Super&gt;BackSpace" type="string" value="firefox-nightly"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

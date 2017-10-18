@@ -36,6 +36,8 @@ if [ -s ~/.Xmodmap ]; then
   xmodmap ~/.Xmodmap
 fi
 
-lightdm &
-exec startxfce4
 
+
+
+# exec startxfce4
+exec i3
