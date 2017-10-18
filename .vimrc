@@ -106,7 +106,9 @@ set splitright
 
 set autoread
 
-command W w !sudo tee % > /dev/null
+command WW w !sudo tee % > /dev/null
+command W w
+command Q q
 
 set number
 highlight LineNr ctermfg=DarkGrey
@@ -198,8 +200,8 @@ endfunction
 hi Normal ctermbg=none
 call s:hi('Comment'  , 49, ''  , 'None' , 'italic')
 hi Comment guifg=#2aa1ae
-call s:hi('SpecialComment' , 24  , '' , 'None' , 'None')
-hi SpecialComment guifg=#3C8380
+" call s:hi('SpecialComment' , 24  , '' , 'None' , 'None')
+" hi SpecialComment guifg=#3C8380
 
 
 " colorscheme minimalist
