@@ -1,19 +1,36 @@
 !------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.color-enabled: true
+! rofi.color-enabled: true
 ! first two color-window were a013191c
 ! a6 = 65% amount of black needed over white for white to be a 7 contrast score
 ! b3 = 70%
 ! 80 = 50%
-rofi.color-window: argb:a6000000, argb:a6000000, argb:0000000 
-rofi.color-normal: argb:0fdf6e3, #ffffff, argb:0eee8d5, #009688, #ffffff 
-rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3 
+! rofi.color-window: argb:a6000000, argb:a6000000, argb:0000000 
+! rofi.color-normal: argb:0fdf6e3, #ffffff, argb:0eee8d5, #009688, #ffffff 
 rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
-rofi.line-margin: 31
-rofi.font: Roboto Light 30
-rofi.padding: 168
-rofi.fullscreen: true
-rofi.display-drun: 
-rofi.display-window: win
-rofi.display-combi: myprompt
+! rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3 
+! rofi.line-margin: 31
+! rofi.font: Roboto Light 30
+! rofi.padding: 168
+! rofi.fullscreen: true
+! rofi.display-drun: 
+! rofi.display-window: win
+! rofi.display-combi: myprompt
+rofi.color-enabled: true
+rofi.color-window: argb:ee292f37, argb:0292f37, #259E83
+rofi.color-normal: argb:2000000, #ffffff, argb:2000000, argb:2000000, #259E83
+rofi.color-active: argb:2000000, #ffffff, argb:2000000, argb:2000000, #ffffff
+! rofi.color-urgent: argb:2000000, #ffffff, argb:2000000, argb:2000000, #ffffff
+
+rofi.font: System San Francisco Display 20
+rofi.eh: 1
+rofi.line-margin: 30
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines: 7
+rofi.width: 100
+rofi.padding: 620
+rofi.bw: 0
+rofi.auto-select: false 
+rofi.fuzzy: true
