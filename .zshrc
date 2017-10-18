@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.config/xboxdrv/scripts/:$HOME/go/bin:/usr/lib/ccache/bin/:$HOME/miniconda3/bin:$PATH" 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 # export ZSH=/home/savvy/.oh-my-zsh
@@ -39,4 +40,4 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias steam-wine='primusrun wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe &'
+alias steam-wine='WINEDEBUG=-all primusrun wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe &'
