@@ -2,7 +2,7 @@
 
 LOCKIMAGE=/tmp/i3lock.png
 WALLPAPER=/tmp/i3wall.png
-icon=~/.config/i3/lock/icons/circlelockclear.png
+icon=~/.config/i3/lock/icons/computer_locked.png
 
 
 convert $1 -resize 1920x1080\! $WALLPAPER
