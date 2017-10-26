@@ -13,6 +13,7 @@ Plugin 'Shougo/neocomplete.vim'
 " Plugin 'liuchengxu/space-vim-dark'
 Plugin 'jacoborus/tender.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
 " Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()
