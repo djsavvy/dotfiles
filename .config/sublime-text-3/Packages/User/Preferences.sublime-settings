@@ -10,7 +10,7 @@
 		"creeped"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Agila Theme/Markdown/Monokai Markdown.tmTheme",
+	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 	"draw_minimap_border": false,
 	"font_options":
 	[
@@ -32,7 +32,7 @@
 	"material_theme_bright_scrollbars": true,
 	"material_theme_contrast_mode": true,
 	"overlay_scroll_bars": "enabled",
-	"theme": "Agila Monokai.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"use_tab_stops": true
 }
