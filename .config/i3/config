@@ -7,7 +7,7 @@ for_window [class="^.*"] border pixel 0
 # Gaps
 gaps inner 10
 gaps outer 0 
-#smart_gaps on 
+smart_gaps on 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -26,8 +26,8 @@ font pango:System San Francisco Display 11
 exec_always pkill -9 polybar ; polybar top
 
 # Wallpaper
-exec_always sh ~/.config/i3/SetWallpaper.sh ~/Downloads/nasa-63033.jpg
-# exec_always --no-startup-id bgchd -dir ~/Pictures/Wallpapers/16x9 -bcknd feh -rpl -intv 1m
+exec_always sh ~/.config/i3/SetWallpaper.sh ~/Downloads/rocky_coastline.png &
+
 
 # Compton
 exec_always pkill -9 compton ; compton -cCFb --config ~/.config/compton.conf 
@@ -48,6 +48,7 @@ bindsym $mod+Escape exec --no-startup-id sh ~/.config/i3/Lock.sh
 bindsym Mod1+F4 kill
 
 # rofi
+exec_always xrdb ~/.Xresources
 bindsym $mod+space exec --no-startup-id rofi -show drun -display-drun "" -fuzzy 
 bindsym $mod+Tab exec --no-startup-id rofi -show window -display-window ""
 
@@ -76,7 +77,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xfce4-power-manager
 
 # spotify 
-assign [class="(?i)spotify"] 10:
+assign [class="(?i)spotify"] 
 
 # thunar
 bindsym $Mod+e exec --no-startup-id thunar
@@ -172,8 +173,10 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9:
-bindsym $mod+0 workspace 10:
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+plus workspace 
+bindsym $mod+minus workspace 
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
@@ -184,8 +187,10 @@ bindsym $mod+Shift+5 move container to workspace 5; workspace 5
 bindsym $mod+Shift+6 move container to workspace 6; workspace 6
 bindsym $mod+Shift+7 move container to workspace 7; workspace 7
 bindsym $mod+Shift+8 move container to workspace 8; workspace 8
-bindsym $mod+Shift+9 move container to workspace 9:; workspace 9:
-bindsym $mod+Shift+0 move container to workspace 10:; workspace 10:
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+bindsym $mod+Shift+plus move container to workspace ; workspace 
+bindsym $mod+Shift+minus move container to workspace ; workspace 
 
 bindsym $mod+Control+Right workspace next
 bindsym $mod+Control+Left workspace prev
@@ -195,10 +200,10 @@ bindsym $mod+Control+Shift+Left move container to workspace prev
 bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth
 
-# exec --no-startup-id thunar
+
 exec --no-startup-id spotify
 # exec --no-startup-id steam-native
-for_window [class="(?i)spotify"] move container to workspace 10:
+for_window [class="(?i)spotify"] move container to workspace 
 # for_window [class="(?i)thunar"] move container to workspace 8:
 for_window [class="(?i)Steam"] move container to workspace 
 exec --no-startup-id i3-msg workspace 1
