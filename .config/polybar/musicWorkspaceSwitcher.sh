@@ -5,10 +5,10 @@ curWorkpace=`i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' |
 notify-send $curWorkspace
 notify-send $curWorkspace -eq 
 
-if [[ "$curWorkpace" == "10:" ]]; 
+if [[ "$curWorkpace" == "" ]]; 
     then 
         i3-msg workspace back_and_forth
     else 
-        i3-msg workspace 10:
+        i3-msg workspace 
 fi
 

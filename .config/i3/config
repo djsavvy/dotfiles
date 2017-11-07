@@ -34,6 +34,7 @@ exec_always pkill -9 compton ; compton -cCFb --config ~/.config/compton.conf
 
 # Chrome
 bindsym $mod+BackSpace exec --no-startup-id firefox-nightly
+bindsym $mod+Shift+BackSpace exec --no-startup-id firefox-nightly -private-window
 
 # Network Manager
 # exec --no-startup-id nm-applet
@@ -75,6 +76,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # power manager
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xfsettingsd
 
 # spotify 
 assign [class="(?i)spotify"] 

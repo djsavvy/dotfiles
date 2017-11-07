@@ -40,4 +40,5 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias steam-wine='WINEDEBUG=-all primusrun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe &'
+alias steam-wine='WINEDEBUG=-all nohup primusrun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-cef-sandbox &> /dev/null &'
+alias witcher3='steam-wine ; cd ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/steamapps/common/The\ Witcher\ 3/bin/x64/ && WINEDEBUG=fps primusrun witcher3.exe'

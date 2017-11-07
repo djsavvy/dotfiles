@@ -27,5 +27,6 @@
     <property name="Properties" type="empty">
       <property name="Device_Enabled" type="int" value="1"/>
     </property>
+    <property name="ReverseScrolling" type="bool" value="false"/>
   </property>
 </channel>

@@ -8,6 +8,7 @@
   <property name="theme" type="string" value="Adapta"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="Electron"/>
       <value type="string" value="Firefox Developer Edition"/>
       <value type="string" value="Nightly"/>
       <value type="string" value="nm-applet"/>

@@ -8,7 +8,7 @@
   <property name="misc-recursive-permissions" type="string" value="THUNAR_RECURSIVE_PERMISSIONS_NEVER"/>
   <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_SHORT"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
-  <property name="last-details-view-column-widths" type="string" value="50,195,50,50,694,50,50,83,755"/>
+  <property name="last-details-view-column-widths" type="string" value="50,193,50,50,265,50,50,81,284"/>
   <property name="last-separator-position" type="int" value="170"/>
   <property name="last-window-width" type="int" value="945"/>
   <property name="last-window-height" type="int" value="1028"/>
@@ -17,4 +17,5 @@
   <property name="misc-text-beside-icons" type="bool" value="false"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
+  <property name="last-show-hidden" type="bool" value="false"/>
 </channel>
