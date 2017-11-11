@@ -8,13 +8,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete.vim'
-" Plugin 'nsf/gocode', {'rtp': 'vim/'}
 " Plugin 'dikiaap/minimalist'
 " Plugin 'liuchengxu/space-vim-dark'
 Plugin 'jacoborus/tender.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
 " Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-obsession'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 filetype plugin indent on
