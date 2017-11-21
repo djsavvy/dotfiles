@@ -29,4 +29,9 @@
     </property>
     <property name="ReverseScrolling" type="bool" value="false"/>
   </property>
+  <property name="USB_OPTICAL_MOUSE" type="empty">
+    <property name="RightHanded" type="bool" value="true"/>
+    <property name="Threshold" type="int" value="1"/>
+    <property name="Acceleration" type="double" value="5.000000"/>
+  </property>
 </channel>
