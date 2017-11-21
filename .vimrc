@@ -210,14 +210,3 @@ hi Comment guifg=#2aa1ae
 " let g:space_vim_dark_background = 234
 " colorscheme space-vim-dark
 hi Comment cterm=italic
-
-" hi PmenuSbar guifg=#F57900 ctermfg=180 guibg=#F57900 ctermbg=180 gui=NONE cterm=NONE
-" hi SpellLocal guifg=#F57900 ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" hi String guifg=#F57900 ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" hi markdownUrlTitle guifg=#F57900 ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" hi markdownCode guifg=#F57900 ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" hi plugStar guifg=#F57900 ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" hi plugSha guifg=#F57900 ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" hi yamlFlowString guifg=#F57900 ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-" let g:terminal_color_13 = "#F57900"
-" let g:terminal_color_5 = "#F57900"
