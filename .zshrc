@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.config/xboxdrv/scripts/:$HOME/go/bin:/usr/lib/ccache/bin/:$HOME/miniconda3/bin:$PATH" 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export MOZ_USE_XINPUT2=1
 
 # Path to your oh-my-zsh installation.
 # export ZSH=/home/savvy/.oh-my-zsh

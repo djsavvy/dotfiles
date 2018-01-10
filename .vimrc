@@ -15,6 +15,7 @@ Plugin 'jacoborus/tender.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
 " Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-obsession'
+Plugin 'chrisbra/Colorizer'
 Plugin 'w0rp/ale'
 
 call vundle#end()
@@ -85,6 +86,11 @@ let g:NERDAltDelims_java = 1
 
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
+
+
+
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_save = 1
 
 
 
@@ -202,11 +208,4 @@ endfunction
 hi Normal ctermbg=none
 call s:hi('Comment'  , 49, ''  , 'None' , 'italic')
 hi Comment guifg=#2aa1ae
-" call s:hi('SpecialComment' , 24  , '' , 'None' , 'None')
-" hi SpecialComment guifg=#3C8380
-
-
-" colorscheme minimalist
-" let g:space_vim_dark_background = 234
-" colorscheme space-vim-dark
 hi Comment cterm=italic

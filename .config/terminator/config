@@ -19,10 +19,10 @@
     background_darkness = 0.85
     background_type = transparent
     cursor_color = "#d0d0d0"
-    font = Fira Mono for Powerline 10
+    font = Hurmit Nerd Font Medium 10
     foreground_color = "#d0d0d0"
     icon_bell = False
-    palette = "#262626:#c80003:#79e513:#edf630:#49bbfb:#e56aef:#42dfe6:#c7c7c7:#262626:#c80003:#79e513:#edf630:#49bbfb:#e56aef:#42dfe6:#c7c7c7"
+    palette = "#262626:#f43753:#79e513:#ffc24b:#49bbfb:#e56aef:#2aa1ae:#c7c7c7:#262626:#f43753:#79e513:#ffc24b:#49bbfb:#e56aef:#2aa1ae:#c7c7c7"
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False

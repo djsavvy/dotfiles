@@ -5,7 +5,7 @@
     <property name="Numlock" type="bool" value="true"/>
     <property name="KeyRepeat" type="empty">
       <property name="Rate" type="int" value="35"/>
-      <property name="Delay" type="int" value="250"/>
+      <property name="Delay" type="int" value="300"/>
     </property>
   </property>
 </channel>

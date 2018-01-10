@@ -26,7 +26,7 @@ font pango:System San Francisco Display 11
 exec_always pkill -9 polybar ; polybar top
 
 # Wallpaper
-exec_always sh ~/.config/i3/SetWallpaper.sh ~/Downloads/rocky_coastline.png &
+exec_always sh ~/.config/i3/SetWallpaper.sh ~/Downloads/Whale.jpg &
 
 # Keyboard Backlight
 bindsym Scroll_Lock exec sh ~/.config/i3/ToggleKeyboardBacklight.sh
@@ -185,8 +185,8 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-bindsym $mod+plus workspace 
-bindsym $mod+minus workspace 
+bindsym $mod+minus workspace 
+bindsym $mod+plus workspace 
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
@@ -199,8 +199,8 @@ bindsym $mod+Shift+7 move container to workspace 7; workspace 7
 bindsym $mod+Shift+8 move container to workspace 8; workspace 8
 bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
-bindsym $mod+Shift+plus move container to workspace ; workspace 
-bindsym $mod+Shift+minus move container to workspace ; workspace 
+bindsym $mod+Shift+minus move container to workspace ; workspace 
+bindsym $mod+Shift+plus move container to workspace ; workspace 
 
 bindsym $mod+Control+Right workspace next
 bindsym $mod+Control+Left workspace prev

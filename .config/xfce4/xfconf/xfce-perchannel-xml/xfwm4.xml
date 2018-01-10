@@ -79,6 +79,12 @@
       <value type="string" value="○"/>
       <value type="string" value="○"/>
       <value type="string" value="○"/>
+      <value type="string" value=""/>
+      <value type="string" value="Workspace 8"/>
+      <value type="string" value=""/>
+      <value type="string" value=""/>
+      <value type="string" value=""/>
+      <value type="string" value="Workspace 12"/>
     </property>
     <property name="wrap_layout" type="bool" value="false"/>
     <property name="wrap_resistance" type="int" value="10"/>
