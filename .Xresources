@@ -37,3 +37,4 @@ rofi.scroll-method: 1
 rofi.window-format: {w:5} {t}
 rofi.mesg: "hello"
 ! rofi.show-icons: true
+
