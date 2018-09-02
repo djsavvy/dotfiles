@@ -42,10 +42,12 @@ font-0 = Roboto Slab:size=11:weight=Regular;1
 ;font-0 = System San Francisco Display:size=10;2
 ;font-0 = Hack:weight=Regular:size=10;1
 ;font-0 = Source Code Pro:weight=Regular:size=10;1
-font-1 = FontAwesome:size=16;3
+font-1 = Font Awesome 5 Brands:weight=Regular:size=14;3
 font-2 = MaterialIcons:size=16;5
 font-3 = URW Gothic:size=11;2
 font-4 = Raleway VF Beta:size=11:weight=Regular;1
+font-5 = Font Awesome 5 Free:weight=Regular:pixelsize=14;3
+font-6 = Font Awesome 5 Free Solid:pixelsize=14;3
 ;http://fontawesome.io/cheatsheet/
 ;https://shanfan.github.io/material-icons-cheatsheet/
 
@@ -76,10 +78,10 @@ ws-icon-4 = 5;%{T4}5%{T-}
 ws-icon-5 = 6;%{T4}6%{T-}
 ws-icon-6 = 7;%{T4}7%{T-}
 ws-icon-7 = 8;%{T4}8%{T-}
-ws-icon-8 = 9;%{F#e44332}
-ws-icon-9 = 10;%{T4}10%{T-}
-ws-icon-10 = ;%{F#1ED760}
-ws-icon-11 = ;
+ws-icon-8 = 9;%{T4}9%{T-}
+ws-icon-9 = 10:;%{F#e44332}
+ws-icon-10 = 11:;%{F#1ED760}
+ws-icon-11 = 12:;
 
 format = <label-mode> <label-state> <label-mode>
 label-mode = %mode%
@@ -123,10 +125,10 @@ type = custom/script
 tail = true
 label = " %output% "
 exec = ~/.config/polybar/pavolume.sh --listen
-click-left = amixer -D pulse sset Master toggle
+click-left = amixer sset Master toggle
 click-right = exec pavucontrol &
-scroll-down = amixer -D pulse sset Master 2%+
-scroll-up = amixer -D pulse sset Master 2%-  
+scroll-down = amixer sset Master 2%-
+scroll-up = amixer sset Master 2%+
  
 
 
@@ -200,9 +202,9 @@ label-charging-foreground = ${colours.white}
 label-discharging-foreground = ${colours.white}
 label-full-foreground = ${colours.white}
 
-label-charging-font = 0
-label-discharging-font = 0
-label-full-font = 0
+label-charging-font = 4
+label-discharging-font = 4
+label-full-font = 4
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = ${colours.red}
@@ -212,8 +214,8 @@ ramp-capacity-2 = 
 ramp-capacity-2-foreground = ${colours.maia}
 ramp-capacity-3-foreground = ${colours.maia}
 ramp-capacity-3 = 
-ramp-capacity-4 = 
 ramp-capacity-4-foreground = ${colours.maia}
+ramp-capacity-4 = 
 
 animation-charging-0 = %{F#17a086} 
 animation-charging-1 = %{F#17a086} 
@@ -227,7 +229,7 @@ animation-charging-framerate = 600
 
 [module/wireless-network]
 type = internal/network
-interface = wlp8s0 
+interface = wlp0s20f3
 interval = 1.0
 ping-interval = 3
 format-connected = <label-connected>
@@ -273,7 +275,7 @@ label-foreground = ${colours.white}
 
 [module/powermenubarlauncher]
 type = custom/text
-content = "  "
+content = " %{F#17a086} "
 click-left = polybar powermenubar
 
 
@@ -311,7 +313,7 @@ module-margin = 2
 separator = %{F#33}|
 
 font-0 = System San Francisco Display:size=10;2
-font-1 = FontAwesome:size=14;3
+font-1 = Font Awesome:size=14;3
 font-2 = MaterialIcons:size=14;4
 ;http://fontawesome.io/cheatsheet/
 ;https://shanfan.github.io/material-icons-cheatsheet/

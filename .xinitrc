@@ -36,8 +36,9 @@ if [ -s ~/.Xmodmap ]; then
   xmodmap ~/.Xmodmap
 fi
 
-
+rfkill block bluetooth
 
 
 # exec startxfce4
-exec i3
+dbus-launch --exit-with-session i3
+# exec startkde
