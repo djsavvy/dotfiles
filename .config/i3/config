@@ -291,43 +291,34 @@ client.urgent               $urgent-bg-colour       $urgent-bg-colour           
 # }
 
 
-################################################################################
 # KDE PLASMA INTEGRATION
-################################################################################
-
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everything)
-# exec --no-startup-id wmctrl -c Plasma
-# for_window [title="Desktop — Plasma"] kill; floating enable; border none
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
-# for_window [class="plasmashell"] floating enable;
-# for_window [class="Plasma"] floating enable; border none
-# for_window [title="plasma-desktop"] floating enable; border none
-# for_window [title="win7"] floating enable; border none
-# for_window [class="krunner"] floating enable; border none
-# for_window [class="Kmix"] floating enable; border none
-# for_window [class="Klipper"] floating enable; border none
-# for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+
+
+
+
+# Other floating windows
 for_window [class="(?i)pavucontrol"] floating enable
 for_window [class="(?i)pavucontrol"] resize set 800 600 
 for_window [class="(?i)blueberry.py"] floating enable
 for_window [class="(?i)blueberry.py"] resize set 800 600
 for_window [class="(?i)xfce4-taskmanager"] floating enable
-for_window [class="(?i)xfce4-taskmanager"] resize set 1000 800
+for_window [class="(?i)xfce4-taskmanager" window_type="normal"] resize set 1000 800
 for_window [class="(?i)xfrun"] floating enable
 for_window [class="(?i)xfrun"] resize set 800 600
 for_window [title="Settings for Task Manager"] resize set 600 400
 for_window [title="About Task Manager"] resize set 600 400
 for_window [title="Terminator Preferences"] floating enable
-
-################################################################################
-# ~/.config/plasma-workspace/env/wm.sh
-################################################################################
-
-### Disable KWin and use i3gaps as WM
-#export KDEWM=/usr/bin/i3
-
-### Compositor (Animations, Shadows, Transparency)
-# exec --no-startup-id xcompmgr -C
-#compton -cCFb --backend glx --vsync opengl
