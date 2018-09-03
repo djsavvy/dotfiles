@@ -12,6 +12,7 @@ red =   #ff4d4d
 grey =  #33
 clear = #00
 yellow = #f9a825
+batterypurple = #6e4661
 
 
 [bar/top]
@@ -117,7 +118,7 @@ label-urgent-padding = 4
 type = internal/date
 format = " <label> "
 label = %date%
-date = %{F#259e83} %{F#e8e8e8}%a %b %d %{F#e8e8e8}%l:%M:%S %p
+date = %{F#993257} %{F#e8e8e8}%a %b %d %{F#e8e8e8}%l:%M:%S %p
 label-font = 0
 
 
@@ -167,14 +168,14 @@ click-left = playerctl play-pause
 
 [module/nextsong]
 type = custom/text
-content = "%{F#17a086}"
+content = "%{F#1d95cd}"
 click-left = playerctl next
 
 
 
 [module/prevsong]
 type = custom/text
-content = "%{F#17a086}"
+content = "%{F#1998c9}"
 click-left = playerctl previous
 
 
@@ -214,17 +215,17 @@ ramp-capacity-0-foreground = ${colours.red}
 ramp-capacity-1 = 
 ramp-capacity-1-foreground = ${colours.yellow}
 ramp-capacity-2 = 
-ramp-capacity-2-foreground = ${colours.maia}
-ramp-capacity-3-foreground = ${colours.maia}
+ramp-capacity-2-foreground = ${colours.batterypurple}
 ramp-capacity-3 = 
-ramp-capacity-4-foreground = ${colours.maia}
+ramp-capacity-3-foreground = ${colours.batterypurple}
 ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${colours.batterypurple}
 
-animation-charging-0 = %{F#17a086} 
-animation-charging-1 = %{F#17a086} 
-animation-charging-2 = %{F#17a086} 
-animation-charging-3 = %{F#17a086} 
-animation-charging-4 = %{F#17a086} 
+animation-charging-0 = %{F#6e4661} 
+animation-charging-1 = %{F#6e4661} 
+animation-charging-2 = %{F#6e4661} 
+animation-charging-3 = %{F#6e4661} 
+animation-charging-4 = %{F#6e4661} 
 animation-charging-framerate = 600
 
 
@@ -236,7 +237,7 @@ interface = wlp0s20f3
 interval = 1.0
 ping-interval = 3
 format-connected = <label-connected>
-label-connected = " %{A1:i3-sensible-terminal -e 'sh -c nmtui':}%{F#17a086} %{F#e8e8e8}%essid%%{A}  "
+label-connected = " %{A1:i3-sensible-terminal -e 'sh -c nmtui':}%{F#854168} %{F#e8e8e8}%essid%%{A}  "
 label-disconnected = " %{F#33} "
 label-font = 0
 
@@ -278,7 +279,7 @@ label-foreground = ${colours.white}
 
 [module/powermenubarlauncher]
 type = custom/text
-content = " %{F#17a086} "
+content = " %{F#b02145} "
 click-left = polybar powermenubar
 
 
