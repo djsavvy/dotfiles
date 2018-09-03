@@ -55,6 +55,9 @@ modules-left   = prevsong playpause nextsong music
 modules-center = i3 
 modules-right  = pavolume redshift battery bluetooth wireless-network clock powermenubarlauncher
 
+; For KDE, disable the powermenubarlauncher module
+; modules-right  = pavolume redshift battery bluetooth wireless-network clock
+
 ; override-redirect = true
 ; wm-restack = i3
 
@@ -319,6 +322,7 @@ font-2 = MaterialIcons:size=14;4
 ;https://shanfan.github.io/material-icons-cheatsheet/
 
 modules-center = lock logout suspend reboot poweroff closepowermenubar
+
 
 override-redirect = true
 wm-restack = true
