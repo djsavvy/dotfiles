@@ -153,12 +153,12 @@ function output() {
         echo "%{F#33} $curVol%"
     elif [ $curVol -eq 0 ]
     then
-        echo "%{F#259E83} %{F#ff}$curVol%"
+        echo "%{F#7a4d77} %{F#ff}$curVol%"
     elif [ $curVol -le 40 ]
     then
-        echo "%{F#259E83} %{F#ff}$curVol%"
+        echo "%{F#7a4d77} %{F#ff}$curVol%"
     else 
-        echo "%{F#259E83} %{F#ff}$curVol%"
+        echo "%{F#7a4d77} %{F#ff}$curVol%"
     fi
 } #}}}
 

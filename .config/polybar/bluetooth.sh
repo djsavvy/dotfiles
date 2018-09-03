@@ -20,7 +20,7 @@ esac
 
 if [[ $tempstatus == "bluetooth = on" ]]
     then
-        echo "%{F#17a086}$icon_enabled"
+        echo "%{F#8a3f66}$icon_enabled"
     else 
         echo "%{F#33}$icon_disabled"
     fi

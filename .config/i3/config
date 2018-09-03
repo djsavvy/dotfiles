@@ -26,7 +26,7 @@ font pango:System San Francisco Display 11
 exec_always pkill -9 polybar ; polybar top
 
 # Wallpaper
-exec_always sh ~/.config/i3/SetWallpaper.sh ~/savvy-rice-files/rocky_coastline.jpg &
+exec_always sh ~/.config/i3/SetWallpaper.sh ~/savvy-rice-files/doodles.jpg &
 
 # Keyboard Backlight
 # bindsym Scroll_Lock exec sh ~/.config/i3/ToggleKeyboardBacklight.sh
@@ -108,7 +108,9 @@ assign [class="(?i)Steam"] 
 # exec --no-startup-id xfce4-panel --disable-wm-check
 
 # Screenshots
-#bindsym $mod+Print exec spectacle
+bindsym --release Print exec spectacle -b
+bindsym --release Shift+Print exec spectacle
+#bindsym $mod+Print exec spectacle 
 #bindsym $mod+Ctrl+Print exec spectacle -r
 #bindsym $mod+Shift+Print exec spectacle -a
 
