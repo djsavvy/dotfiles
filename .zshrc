@@ -51,3 +51,4 @@ alias sudo="sudo "
 # This allows for alias expansions to work
 
 alias :q="exit"
+alias :Q="exit"
