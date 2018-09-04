@@ -90,7 +90,7 @@ exec --no-startup-id gnome-settings-daemon/gsd-xsettings
 # exec --no-startup-id xfsettingsd
 
 # spotify 
-assign [class="(?i)spotify"] 
+assign [class="(?i)spotify"] 11:
 
 # Todoist
 assign [class="(?i)todoist.*"]10:
@@ -100,7 +100,7 @@ exec --no-startup-id todoist
 # bindsym $Mod+e exec --no-startup-id thunar
 
 #steam
-assign [class="(?i)Steam"] 
+assign [class="(?i)Steam"] 12:
 
 # redshift
 # exec --no-startup-id redshift-gtk
