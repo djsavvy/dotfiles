@@ -1,0 +1,341 @@
+# Windows button
+set $mod Mod4
+
+# (No) Title Bars
+for_window [class="^.*"] border pixel 0
+
+# Gaps
+gaps inner 10
+gaps outer 0 
+smart_gaps on 
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym Mod1+Control+Delete exec --no-startup-id xfce4-taskmanager
+
+# Font
+font pango:System San Francisco Display 11
+
+# Polybar
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always pkill -9 polybar ; polybar top
+
+# Wallpaper
+exec_always sh ~/.config/i3/SetWallpaper.sh ~/savvy-rice-files/doodles.jpg &
+
+# Keyboard Backlight
+# bindsym Scroll_Lock exec sh ~/.config/i3/ToggleKeyboardBacklight.sh
+# exec_always xset led on
+
+# Compton
+exec_always pkill -9 compton ; compton -cCFb --config ~/.config/compton.conf 
+
+# Firefox
+bindsym $mod+BackSpace exec --no-startup-id firefox
+bindsym $mod+Shift+BackSpace exec --no-startup-id firefox -private-window
+# bindsym $mod+BackSpace exec --no-startup-id google-chrome-stable
+# bindsym $mod+Shift+BackSpace exec --no-startup-id google-chrome-stable --incognito
+
+# InSync
+exec --no-startup-id insync start
+
+# Network Manager
+# exec --no-startup-id nm-applet
+
+# Terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+
+# Lock screen
+bindsym $mod+Escape exec --no-startup-id sh ~/.config/i3/Lock.sh
+
+# Kill focused window
+bindsym Mod1+F4 kill
+
+# rofi
+exec_always xrdb ~/.Xresources
+bindsym $mod+space exec --no-startup-id rofi -show drun -display-drun "" -fuzzy 
+bindsym $mod+Tab exec --no-startup-id rofi -show window -display-window ""
+
+# lightdm and light-locker
+# exec --no-startup-id lightdm
+# exec --no-startup-id light-locker
+
+# bluetooth
+exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
+# exec --no-startup-id blueberry-tray
+
+# audio
+exec --no-startup-id start-pulseaudio-x11
+# exec --no-startup-id pasystray # --always-notify
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 2%-  
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 2%+
+bindsym XF86AudioMute exec amixer sset Master toggle
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop 
+
+# brightness
+# bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+# bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+# bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id light -A 5 
+# bindsym $mod+XF86AudioLowerVolume exec --no-startup-id light -U 5
+set $brillo pkexec /usr/bin/brillo -equ 1500
+bindsym XF86MonBrightnessUp exec true $($brillo -A 2)
+bindsym XF86MonBrightnessDown exec true $($brillo -U 2)
+bindsym $mod+XF86AudioRaiseVolume exec true $(pkexec $brillo -A 2)
+bindsym $mod+XF86AudioLowerVolume exec true $(pkexec $brillo -U 2)
+
+# authentication
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
+
+# power manager
+exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id gnome-settings-daemon/gsd-xsettings
+# exec --no-startup-id xfsettingsd
+
+# spotify 
+assign [class="(?i)spotify"] 11:
+
+# Todoist
+assign [class="(?i)todoist.*"]10:
+exec --no-startup-id todoist
+
+# thunar
+# bindsym $Mod+e exec --no-startup-id thunar
+
+#steam
+assign [class="(?i)Steam"] 12:
+
+# redshift
+# exec --no-startup-id redshift-gtk
+
+# exec --no-startup-id xfce4-panel --disable-wm-check
+
+# Screenshots
+bindsym --release Print exec spectacle -b
+bindsym --release Shift+Print exec spectacle
+#bindsym $mod+Print exec spectacle 
+#bindsym $mod+Ctrl+Print exec spectacle -r
+#bindsym $mod+Shift+Print exec spectacle -a
+
+
+
+
+################################################################################
+# TILING
+################################################################################
+
+set $up k
+set $down j
+set $left h
+set $right l
+
+# change focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+z split h 
+
+# split in vertical orientation
+bindsym $mod+x split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+t floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+shift+t focus mode_toggle
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+d focus child
+
+################################################################################
+# WORKSPACES
+################################################################################
+
+# http://fontawesome.io/cheatsheet/
+
+# workspace_auto_back_and_forth yes
+
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10:
+bindsym $mod+minus workspace 11:
+bindsym $mod+plus workspace 12:
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10:; workspace 10:
+bindsym $mod+Shift+minus move container to workspace 11:; workspace 11:
+bindsym $mod+Shift+plus move container to workspace 12:; workspace 12:
+
+bindsym $mod+Control+Right workspace next
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Shift+Right move container to workspace next
+bindsym $mod+Control+Shift+Left move container to workspace prev
+
+bindsym Mod1+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth
+
+
+# exec --no-startup-id spotify
+# exec --no-startup-id steam-native
+for_window [class="(?i)spotify"] move container to workspace 11:
+# for_window [class="(?i)thunar"] move container to workspace 8:
+for_window [class="(?i)Steam"] move container to workspace 12:
+exec --no-startup-id i3-msg workspace 1
+
+
+
+################################################################################
+# RESIZING
+################################################################################
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym $left resize shrink width 5 px or 5 ppt
+        bindsym $down resize grow height 5 px or 5 ppt
+        bindsym $up resize shrink height 5 px or 5 ppt
+        bindsym $right resize grow width 5 px or 5 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+################################################################################
+# COLOURS
+################################################################################
+
+set $bg-colour              #2f343f
+set $inactive-bg-colour     #2f343f
+set $text-colour            #f3f4f5
+set $inactive-text-colour   #676e7d
+set $urgent-bg-colour       #e53935
+
+# Window Colours            Border                  Background                  Text                    Indicator
+client.focused              $bg-colour              $bg-colour                  $text-colour            #00ff00
+client.focused_inactive     $inactive-bg-colour     $inactive-bg-colour         $inactive-text-colour   #00ff00
+client.unfocused            $inactive-bg-colour     $inactive-bg-colour         $inactive-text-colour   #00ff00
+client.urgent               $urgent-bg-colour       $urgent-bg-colour           $text-colour            #00ff00
+
+################################################################################
+# TASKBAR
+################################################################################
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+# bar {
+# 	    font pango: System San Francisco Display, FontAwesome 11
+#         #position top
+#         #strip_workspace_numbers yes
+#         colors {
+#               separator  $inactive-text-colour
+#               background $bg-colour
+#               statusline $text-colour
+#               #                     Border                  Background                  Text
+#               focused_workspace     $bg-colour              $bg-colour                  $text-colour
+#               active_workspace      #0000ff                 #ff0000                     #00ff00
+#               inactive_workspace    $inactive-bg-colour     $inactive-bg-colour         $inactive-text-colour
+#               urgent_workspace      $urgent-bg-colour       $urgent-bg-colour           $text-colour
+#     }
+# }
+
+
+# KDE PLASMA INTEGRATION
+# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everything)
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+## Avoid tiling popups, dropdown windows from plasma
+# for the first time, manually resize them, i3 will remember the setting for floating windows
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+
+
+
+
+# Other floating windows
+for_window [class="(?i)pavucontrol"] floating enable
+for_window [class="(?i)pavucontrol"] resize set 800 600 
+for_window [class="(?i)blueberry.py"] floating enable
+for_window [class="(?i)blueberry.py"] resize set 800 600
+for_window [class="(?i)xfce4-taskmanager"] floating enable
+for_window [class="(?i)xfce4-taskmanager" window_type="normal"] resize set 1000 800
+for_window [class="(?i)xfrun"] floating enable
+for_window [class="(?i)xfrun"] resize set 800 600
+for_window [title="Settings for Task Manager"] resize set 600 400
+for_window [title="About Task Manager"] resize set 600 400
+for_window [title="Terminator Preferences"] floating enable
