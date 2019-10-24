@@ -1,6 +1,0 @@
-{
-    "vim.disableAnnoyingNeovimMessage": true,
-    "editor.codeLens": false,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "window.zoomLevel": 0
-}
