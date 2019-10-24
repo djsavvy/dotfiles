@@ -1,0 +1,7 @@
+[user]
+	email = sraghuvanshi@college.harvard.edu
+	name = djsavvy
+[core]
+	editor = nvim
+[color]
+	ui = auto
