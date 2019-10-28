@@ -131,8 +131,10 @@ label = " %output% "
 exec = ~/.config/polybar/pavolume.sh --listen
 click-left = amixer sset Master toggle
 click-right = exec pavucontrol &
-scroll-down = amixer sset Master 2%-
-scroll-up = amixer sset Master 2%+
+; scroll-down = amixer sset Master 2%-
+; scroll-up = amixer sset Master 2%+
+scroll-down = pactl set-sink-volume @DEFAULT_SINK@ -2%
+scroll-up = pactl set-sink-volume @DEFAULT_SINK@ +2%
  
 
 

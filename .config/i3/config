@@ -72,8 +72,10 @@ exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
 # audio
 exec --no-startup-id start-pulseaudio-x11
 # exec --no-startup-id pasystray # --always-notify
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 2%-  
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 2%+
+# bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 2%-  
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 2%+
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym XF86AudioMute exec amixer sset Master toggle
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
