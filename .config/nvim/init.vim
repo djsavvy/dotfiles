@@ -10,6 +10,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'plasticboy/vim-markdown'
     Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }}
 
+    " Focused writing
     Plug 'junegunn/limelight.vim'
     Plug 'junegunn/goyo.vim'
 
@@ -18,6 +19,8 @@ call plug#begin('~/.nvim/plugged')
 
     " Plug 'jiangmiao/auto-pairs'
     Plug 'kien/ctrlp.vim'
+
+    " Colorscheme
     Plug 'jacoborus/tender.vim'
 
     Plug 'Shougo/deoplete.nvim' 
