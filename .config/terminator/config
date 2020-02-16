@@ -36,6 +36,17 @@
     urgent_bell = True
     use_system_font = False
   [[light]]
-    background_color = "#fdf6e3"
-    cursor_color = "#aaaaaa"
-    foreground_color = "#657b83"
+    background_color = "#f3f3f3"
+    background_darkness = 0.85
+    backspace_binding = automatic
+    cursor_color = "#d0d0d0"
+    font = Fira Mono for Powerline 11
+    foreground_color = "#2e3436"
+    icon_bell = False
+    palette = "#f3f3f3:#c80003:#79e513:#edf630:#49bbfb:#e56aef:#42dfe6:#c7c7c7:#f3f3f3:#c80003:#79e513:#edf630:#49bbfb:#e56aef:#42dfe6:#c7c7c7"
+    scrollback_infinite = True
+    scrollback_lines = 10000000
+    scrollbar_position = hidden
+    show_titlebar = False
+    urgent_bell = True
+    use_system_font = False
