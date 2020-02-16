@@ -85,3 +85,8 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 
 # opam configuration
 test -r /home/savvy/.opam/opam-init/init.zsh && . /home/savvy/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+
+
+export SYSTEMD_EDITOR="/bin/nvim"
+
