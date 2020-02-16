@@ -54,7 +54,8 @@ font-6 = Font Awesome 5 Free Solid:pixelsize=14;3
 
 modules-left   = prevsong playpause nextsong music
 modules-center = i3 
-modules-right  = pavolume redshift battery bluetooth wireless-network clock powermenubarlauncher
+; modules-right  = pavolume redshift battery bluetooth wireless-network clock powermenubarlauncher
+modules-right  = pavolume battery bluetooth wireless-network clock powermenubarlauncher
 
 ; For KDE, disable the powermenubarlauncher module
 ; modules-right  = pavolume redshift battery bluetooth wireless-network clock
