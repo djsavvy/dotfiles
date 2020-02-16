@@ -3,7 +3,9 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 " vim-plug directory
 call plug#begin('~/.nvim/plugged')
-	Plug 'vim-airline/vim-airline'
+    " TODO: replace vim-airline with my own
+    " (https://irrellia.github.io/blogs/vim-statusline/) 
+    Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
     Plug 'godlygeek/tabular'
@@ -17,10 +19,10 @@ call plug#begin('~/.nvim/plugged')
     Plug 'fatih/vim-go'
     Plug 'nsf/gocode'
 
-    " Plug 'jiangmiao/auto-pairs'
-    Plug 'kien/ctrlp.vim'
+    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
-    " Colorscheme
+    " Colorschemes
+    " Plug 'lifepillar/vim-colortemplate'
     Plug 'jacoborus/tender.vim'
 
     Plug 'Shougo/deoplete.nvim' 
@@ -38,8 +40,72 @@ call plug#begin('~/.nvim/plugged')
 call plug#end()
 " :PlugInstall, :PlugUpdate, :PlugUpgrade :PlugClean are the necessary commands
 
+
+" Options from vim
+set number
+highlight LineNr ctermfg=DarkGrey
+set showtabline=2
+set noshowmode
+set cmdheight=1
+set ignorecase
+set smartcase
+set showmatch
+set foldcolumn=1
+
+" Set indentation
+set autoindent 
+set smartindent
+set expandtab
+set shiftwidth=4
+set tabstop=4
+
+" Set splits
+set splitbelow
+set splitright
+
+
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+
+" Filetype-specific tab widths
+autocmd FileType ocaml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
+
+
+" Search for a whole word using <leader><backslash>
+nnoremap <leader>/ /\<\><left><left>
+
+
+" Deal effectively with wrapped lines
+set wrap
+set linebreak
+noremap <buffer> <silent> j gj
+noremap <buffer> <silent> k gk
+noremap <buffer> <silent> 0 g0
+noremap <buffer> <silent> $ g$
+
+
 " Enable system clipboard integration
 set clipboard+=unnamedplus
+" Workaround for neovim wl-clipboard and netrw interaction hang 
+" (see: https://github.com/neovim/neovim/issues/6695 and
+" https://github.com/neovim/neovim/issues/9806) 
+let g:clipboard = {
+      \   'name': 'myClipboard',
+      \   'copy': {
+      \      '+': 'wl-copy',
+      \      '*': 'wl-copy',
+      \    },
+      \   'paste': {
+      \      '+': 'wl-paste -o',
+      \      '*': 'wl-paste -o',
+      \   },
+      \   'cache_enabled': 0,
+      \ }
+
 
 " Mouse support
 set mouse=a
@@ -52,126 +118,62 @@ imap <3-MiddleMouse> <Nop>
 map <4-MiddleMouse> <Nop>
 imap <4-MiddleMouse> <Nop>
 
+
 " Speed up python startup
 let g:python_host_skip_check = 1
 let g:python3_host_skip_check = 1
 
-" nerdcommenter settings
-nmap <C-_> <Plug>NERDCommenterToggle
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDefaultAlign = 'left'
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 0
+
+" Use vim-clap buffer, filer lists
+cnoreabbrev <expr> b getcmdtype() == ":" && getcmdline() == 'b' ? 'Clap buffers' : 'b'
+cnoreabbrev <expr> e getcmdtype() == ":" && getcmdline() == 'e' ? 'Clap filer' : 'e'
 
 
+" vim-clap override popup mappings 
+autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>
+autocmd FileType clap_input inoremap <silent> <buffer> <C-n> <C-R>=clap#navigation#linewise('down')<CR>
+autocmd FileType clap_input inoremap <silent> <buffer> <C-p> <C-R>=clap#navigation#linewise('up')<CR>
 
-" Merlin (OCaml)
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-
-
-" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-let s:opam_share_dir = system("opam config var share")
-let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
-
-let s:opam_configuration = {}
-
-function! OpamConfOcpIndent()
-  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
-endfunction
-let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
-
-function! OpamConfOcpIndex()
-  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
-endfunction
-let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
-
-function! OpamConfMerlin()
-  let l:dir = s:opam_share_dir . "/merlin/vim"
-  execute "set rtp+=" . l:dir
-endfunction
-let s:opam_configuration['merlin'] = function('OpamConfMerlin')
-
-let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
-let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
-let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
-for tool in s:opam_packages
-  " Respect package order (merlin should be after ocp-index)
-  if count(s:opam_available_tools, tool) > 0
-    call s:opam_configuration[tool]()
-  endif
-endfor
-" ## end of OPAM user-setup addition for vim / base ## keep this line
-
-
-" Deoplete settings
-let g:deoplete#enable_at_startup = 0 
-autocmd InsertEnter * call deoplete#enable()
-" <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-P>" : "\<C-D>"
-inoremap <expr><ESC> pumvisible() ? "\<C-E>" : "\<ESC>"
-inoremap <expr><CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-call deoplete#custom#option('ignore_sources', {'_': ['buffer', 'around']})
-set completeopt=menu,preview,longest,menuone
-if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
-endif
-
-" latex autocomplete
-let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
-
-" OCaml (Merlin deoplete integration)
-let g:deoplete#omni#input_patterns.ocaml = '[^. *\t]\.\w*|\s\w+|#'
-" call deoplete#custom#option('ignore_sources', {'ocaml': ['buffer', 'around', 'member', 'tag']})
-let g:deoplete#ignore_sources = {}
-let g:deoplete#ignore_sources.ocaml = ['buffer', 'around', 'member', 'tag']
-
-" Ale customization
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_save = 1
-let g:ale_sign_error = '⤫'
-let g:ale_sign_warning = '⚠'
-let g:ale_linters = {
-            \    'python': ['yapf'],
-            \    'markdown': []
-            \}
-" let g:ale_linters_explicit = 1
-
-
-" vimtex neovim support
-let g:vimtex_compiler_progname = 'nvr'
-let g:tex_flavor = 'latex'
-" vimtex pdf viewer
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
-
-
-
-" vim-markdown settings
-set conceallevel=2
-let g:vim_markdown_folding_disabled = 1
-let g:tex_conceal = ""
-let g:vim_markdown_math = 1
-let g:vim_markdown_strikethrough = 1
-let g:vim_markdown_new_list_item_indent = 4
 
 " use <leader>ll to compile
 function! User_compile()
-    if &ft == 'tex' || &ft == 'latex'
+    " compiling vimrc/nvim.init is just reloading it
+    if &ft == 'vim'
+        source $MYVIMRC
+    " latex 
+    elseif &ft == 'tex' || &ft == 'latex'
         VimtexCompile
+    " markdown
     elseif &ft == 'markdown'
         MarkdownPreview
     end
 endfunction
-
 nnoremap <leader>ll :call User_compile()<CR>
 
 
+" Disable annoying <F1> behavior
+map <F1> <Esc>
+imap <F1> <Esc>
+
+
+" use C-S-j and C-S-k to move lines (or blocks of lines) up or down 
+let g:C_Ctrl_j = 'off'
+nnoremap <C-S-j> :m .+1<CR>==
+nnoremap <C-S-k> :m .-2<CR>==
+inoremap <C-S-j> <Esc>:m .+1<CR>==gi
+inoremap <C-S-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-S-j> :m '>+1<CR>gv=gv
+vnoremap <C-S-k> :m '<-2<CR>gv=gv
+
+
+" improved w and q
+command WW w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null
+command W w
+command Q q
+
+
+" Spell checking 
+set spell
 
 
 " Distraction-free writing
@@ -201,111 +203,18 @@ autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
 
 
-
-
-" Disable annoying <F1> behavior
-map <F1> <Esc>
-imap <F1> <Esc>
-
-
-" use C-S-j and C-S-k to move lines (or blocks of lines) up or down 
-let g:C_Ctrl_j = 'off'
-nnoremap <C-S-j> :m .+1<CR>==
-nnoremap <C-S-k> :m .-2<CR>==
-inoremap <C-S-j> <Esc>:m .+1<CR>==gi
-inoremap <C-S-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-S-j> :m '>+1<CR>gv=gv
-vnoremap <C-S-k> :m '<-2<CR>gv=gv
-
-
-" Set splits
-set splitbelow
-set splitright
-
-
-" improved w and q
-command WW w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null
-command W w
-command Q q
-
-
-" Spell checking 
-set spell
-
-
 " Airline customization
 set encoding=utf-8
 " let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
 " let g:airline_section_error = ''
 " let g:airline_section_warning = ''
-" let g:airline_skip_empty_sections = 1
-" let g:airline_powerline_fonts = 1 
+let g:airline_skip_empty_sections = 1
+let g:airline_powerline_fonts = 1 
 " let g:airline_left_sep = ''
 " let g:airline_right_sep = ''
 
 
-
-
-" Options from vim
-"
-"
-"
-set number
-highlight LineNr ctermfg=DarkGrey
-set showtabline=2
-set noshowmode
-set cmdheight=1
-set ignorecase
-set smartcase
-set showmatch
-set foldcolumn=1
-set expandtab
-
-set shiftwidth=4
-set tabstop=4
-
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
-
-
-" Search for a whole word using <leader><backslash>
-nnoremap <leader>/ /\<\><left><left>
-
-
-set ai
-set si
-
-
-" Deal effectively with wrapped lines
-set wrap
-set linebreak
-
-noremap <buffer> <expr> k (mode(0) ==# 'V') ? "k" : "gk"
-noremap <buffer> <expr> j (mode(0) ==# 'V') ? "j" : "gj"
-noremap <buffer> <expr> 0 (mode(0) ==# 'V') ? "0" : "g0"
-noremap <buffer> <expr> $ (mode(0) ==# 'V') ? "$" : "g$"
-
-onoremap <buffer> <silent> j gj
-onoremap <buffer> <silent> k gk
-onoremap <buffer> <silent> 0 g0
-onoremap <buffer> <silent> $ g$
-
-
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_build_constraints = 1
-let g:go_auto_sameids = 1
-let g:go_gocode_propose_builtins = 1
-let g:go_auto_type_info = 1
-
+" Color schemes
 colorscheme tender
 
 let s:color_map = {
@@ -345,7 +254,6 @@ let s:color_map = {
             \   214 : '#ffaf00', 215 : '#ffaf5f', 216 : '#ffaf87', 217 : '#ffafaf', 218 : '#ffafd7', 219 : '#ffafff',
             \   220 : '#ffd700', 221 : '#ffd75f', 222 : '#ffd787', 223 : '#ffd7af', 224 : '#ffd7d7', 225 : '#ffd7ff',
             \   226 : '#ffff00', 227 : '#ffff5f', 228 : '#ffff87', 229 : '#ffffaf', 230 : '#ffffd7', 231 : '#ffffff',
-            \
             \   232 : '#080808', 233 : '#121212', 234 : '#1c1c1c', 235 : '#262626', 236 : '#303030', 237 : '#3a3a3a',
             \   238 : '#444444', 239 : '#4e4e4e', 240 : '#585858', 241 : '#606060', 242 : '#666666', 243 : '#767676',
             \   244 : '#808080', 245 : '#8a8a8a', 246 : '#949494', 247 : '#9e9e9e', 248 : '#a8a8a8', 249 : '#b2b2b2',
@@ -362,9 +270,127 @@ function! s:hi(item, fg, bg, cterm_style, gui_style)
     execute printf('hi %s cterm=%s gui=%s', a:item, a:cterm_style, a:gui_style)
 endfunction
 
-
-
 hi Normal ctermbg=none
 call s:hi('Comment'  , 49, ''  , 'None' , 'italic')
 hi Comment guifg=#2aa1ae
 hi Comment cterm=italic
+
+
+
+
+" Deoplete settings
+let g:deoplete#enable_at_startup = 0 
+autocmd InsertEnter * call deoplete#enable()
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-P>" : "\<C-D>"
+inoremap <expr><ESC> pumvisible() ? "\<C-E>" : "\<ESC>"
+inoremap <expr><CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+call deoplete#custom#option('ignore_sources', {'_': ['buffer', 'around']})
+set completeopt=menu,preview,longest,menuone
+if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {}
+endif
+
+" latex autocomplete
+let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
+
+" OCaml autocomplete (Merlin deoplete integration)
+let g:deoplete#omni#input_patterns.ocaml = '[^. *\t]\.\w*|\s\w+|#'
+" call deoplete#custom#option('ignore_sources', {'ocaml': ['buffer', 'around', 'member', 'tag']})
+let g:deoplete#ignore_sources = {}
+let g:deoplete#ignore_sources.ocaml = ['buffer', 'around', 'member', 'tag']
+
+
+" Ale customization
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_save = 1
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+let g:ale_linters = {
+            \    'python': ['yapf'],
+            \    'markdown': []
+            \}
+" let g:ale_linters_explicit = 1
+
+
+" nerdcommenter settings
+nmap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 0
+
+
+" Go customization
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_build_constraints = 1
+let g:go_auto_sameids = 1
+let g:go_gocode_propose_builtins = 1
+let g:go_auto_type_info = 1
+
+
+" Latex customization 
+" vimtex neovim support
+let g:vimtex_compiler_progname = 'nvr'
+let g:tex_flavor = 'latex'
+" vimtex pdf viewer
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+
+
+" vim-markdown settings
+set conceallevel=2
+let g:vim_markdown_folding_disabled = 1
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_new_list_item_indent = 4
+
+
+" Merlin (OCaml)
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
+let s:opam_share_dir = system("opam config var share")
+let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
+
+let s:opam_configuration = {}
+
+function! OpamConfOcpIndent()
+  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
+endfunction
+let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
+
+function! OpamConfOcpIndex()
+  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
+endfunction
+let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
+
+function! OpamConfMerlin()
+  let l:dir = s:opam_share_dir . "/merlin/vim"
+  execute "set rtp+=" . l:dir
+endfunction
+let s:opam_configuration['merlin'] = function('OpamConfMerlin')
+
+let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
+let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
+let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
+for tool in s:opam_packages
+  " Respect package order (merlin should be after ocp-index)
+  if count(s:opam_available_tools, tool) > 0
+    call s:opam_configuration[tool]()
+  endif
+endfor
+" ## end of OPAM user-setup addition for vim / base ## keep this line
