@@ -94,7 +94,7 @@ bindsym $mod+XF86AudioRaiseVolume exec true $(pkexec $brillo -A 2)
 bindsym $mod+XF86AudioLowerVolume exec true $(pkexec $brillo -U 2)
 
 # authentication
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 
 # power manager
 exec --no-startup-id xfce4-power-manager
