@@ -42,8 +42,6 @@ antigen apply
 
 export MANPATH="/usr/local/man:$MANPATH"
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 alias vim="nvim"
 alias vi="nvim"
 # Note that you can use \vim to ignore the alias
