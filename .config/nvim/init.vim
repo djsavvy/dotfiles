@@ -130,19 +130,23 @@ autocmd FileType clap_input inoremap <silent> <buffer> <C-p> <C-R>=clap#navigati
 
 
 " use <leader>ll to compile
-function! User_compile()
-    " compiling vimrc/nvim.init is just reloading it
-    if &ft == 'vim'
-        source $MYVIMRC
-    " latex 
-    elseif &ft == 'tex' || &ft == 'latex'
-        VimtexCompile
-    " markdown
-    elseif &ft == 'markdown'
-        MarkdownPreview
-    end
-endfunction
-nnoremap <leader>ll :call User_compile()<CR>
+if !exists("*User_compile") 
+    " placed in an `if` block to avoid error message on re-sourcing
+    " vimrc/nvim.init
+    function User_compile()
+        " compiling vimrc/nvim.init is just reloading it
+        if &ft == 'vim'
+            source $MYVIMRC
+            " latex 
+        elseif &ft == 'tex' || &ft == 'latex'
+            VimtexCompile
+            " markdown
+        elseif &ft == 'markdown'
+            MarkdownPreview
+        end
+    endfunction
+    nnoremap <leader>ll :call User_compile()<CR>
+endif
 
 
 " Disable annoying <F1> behavior
