@@ -227,6 +227,8 @@ endif
 " PaperColor 
 set background=light | colorscheme PaperColor
 
+" colorscheme xcodedark
+
 " Tender 
 " colorscheme tender
 
