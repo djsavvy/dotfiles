@@ -276,6 +276,10 @@ let g:ale_linters = {
             \    'markdown': []
             \}
 " let g:ale_linters_explicit = 1
+" let g:ale_set_loclist = 1
+" let g:ale_set_quickfix = 0
+let g:ale_open_list = 1
+autocmd FileType tex let g:ale_open_list = 0
 
 
 " nerdcommenter settings
