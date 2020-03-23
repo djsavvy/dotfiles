@@ -153,6 +153,12 @@ endif
 map <F1> <Esc>
 imap <F1> <Esc>
 
+" Map <C-s> in insert mode to save, to de-condition <Esc>:w<C-R>i keyboard tic
+inoremap <C-s> <Esc>:w<CR>i
+
+" De-condition myself from pressing <Esc> twice to escape insert mode
+" nnoremap <Esc> <C-z>
+" imap <Esc><Esc> <Esc><C-z>
 
 " use C-S-j and C-S-k to move lines (or blocks of lines) up or down 
 let g:C_Ctrl_j = 'off'
@@ -165,9 +171,9 @@ vnoremap <C-S-k> :m '<-2<CR>gv=gv
 
 
 " improved w and q
-command WW w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null
-command W w
-command Q q
+command! WW w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null
+command! W w
+command! Q q
 
 
 " Spell checking 
