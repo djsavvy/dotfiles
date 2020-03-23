@@ -97,18 +97,8 @@ set clipboard+=unnamedplus
 " Workaround for neovim wl-clipboard and netrw interaction hang 
 " (see: https://github.com/neovim/neovim/issues/6695 and
 " https://github.com/neovim/neovim/issues/9806) 
-let g:clipboard = {
-      \   'name': 'myClipboard',
-      \   'copy': {
-      \      '+': 'wl-copy',
-      \      '*': 'wl-copy',
-      \    },
-      \   'paste': {
-      \      '+': 'wl-paste',
-      \      '*': 'wl-paste',
-      \   },
-      \   'cache_enabled': 0,
-      \ }
+" let g:clipboard = {
+      " \ }
 
 
 " Mouse support
