@@ -26,6 +26,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'jacoborus/tender.vim'
     Plug 'sonph/onehalf', {'rtp': 'vim/'}
     Plug 'NLKNguyen/papercolor-theme'
+    Plug 'arzg/vim-colors-xcode'
     Plug 'connorholyday/vim-snazzy'
 
     Plug 'Shougo/deoplete.nvim' 
