@@ -247,7 +247,7 @@ autocmd InsertEnter * call deoplete#enable()
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-P>" : "\<C-D>"
-inoremap <expr><ESC> pumvisible() ? "\<C-E>" : "\<ESC>"
+inoremap <expr><ESC> pumvisible() ? "\<C-E>\<ESC>" : "\<ESC>"
 inoremap <expr><CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 call deoplete#custom#option('ignore_sources', {'_': ['buffer', 'around']})
 set completeopt=menu,preview,longest,menuone
