@@ -4,11 +4,15 @@ let &packpath = &runtimepath
 " vim-plug directory
 call plug#begin('~/.nvim/plugged')
     " TODO: replace vim-airline with my own
-    " (https://irrellia.github.io/blogs/vim-statusline/) 
+    " (https://irrellia.github.io/blogs/vim-statusline/)
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
-    Plug 'godlygeek/tabular'
+    Plug 'junegunn/fzf.vim', {'do': { -> fzf#install() }}
+    Plug 'https://github.com/alok/notational-fzf-vim'
+
+    Plug 'caenrique/nvim-maximize-window-toggle'
+
     Plug 'plasticboy/vim-markdown'
     Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }}
 
@@ -21,6 +25,8 @@ call plug#begin('~/.nvim/plugged')
 
     Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
+    " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
     " Colorschemes
     " Plug 'lifepillar/vim-colortemplate'
     Plug 'jacoborus/tender.vim'
@@ -29,9 +35,10 @@ call plug#begin('~/.nvim/plugged')
     Plug 'arzg/vim-colors-xcode'
     Plug 'connorholyday/vim-snazzy'
 
-    Plug 'Shougo/deoplete.nvim' 
+    " Completion
+    Plug 'Shougo/deoplete.nvim'
     Plug 'zchee/deoplete-clang'
-    Plug 'zchee/deoplete-go' 
+    Plug 'zchee/deoplete-go'
     Plug 'zchee/deoplete-jedi'
 
     Plug 'scrooloose/nerdcommenter'
@@ -40,6 +47,7 @@ call plug#begin('~/.nvim/plugged')
 
     Plug 'lervag/vimtex'
 
+    Plug 'sheerun/vim-polyglot'
     Plug 'dense-analysis/ale'
 call plug#end()
 " :PlugInstall, :PlugUpdate, :PlugUpgrade :PlugClean are the necessary commands
@@ -57,7 +65,7 @@ set showmatch
 set foldcolumn=1
 
 " Set indentation
-set autoindent 
+set autoindent
 set smartindent
 set expandtab
 set shiftwidth=4
@@ -66,6 +74,30 @@ set tabstop=4
 " Set splits
 set splitbelow
 set splitright
+
+
+" fzf keybindings from James Larisch (semaj)
+nmap <C-;> :Buffers<CR>
+nmap <C-P> :Files<CR>
+let g:nv_search_paths = ['.']
+nnoremap <silent> <c-g> :NV<CR>
+
+autocmd! FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+
+" ToggleOnly keybinding
+nnoremap <leader>o :ToggleOnly<Enter>
+
+
+" Use <C-Backspace> (which is interpreted as <C-H> to delete a word)
+inoremap <C-H> <C-W>
+
+
+" Use <C-Tab> and <C-Shift-Tab> to navigate through tabs (broken b/c terminals
+" don't recognize <C-Tab> --- instead it just sees a tab
+nnoremap <Tab> :tabnext<CR>
+nnoremap <S-Tab> :tabprevious<CR>
 
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
@@ -77,6 +109,22 @@ endif
 " Filetype-specific tab widths
 autocmd FileType ocaml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
+
+" Remove trailing spaces from certain file types
+" autocmd FileType c,cpp,java,php,ocaml,lua,latex,tex autocmd BufWritePre <buffer> %s/\s\+$//e
+
+" Function/command to delete all trailing whitespace in a document
+" (see https://vi.stackexchange.com/a/456/14073)
+if !exists("*TrimTrailingWhitespace")
+    " placed in an `if` block to avoid error message on re-sourcing
+    function TrimTrailingWhitespace()
+        let l:save = winsaveview()
+        keeppatterns %s/\s\+$//e
+        call winrestview(l:save)
+    endfunction
+
+    command! TrimTrailingWhitespace call TrimTrailingWhitespace()
+endif
 
 
 " Search for a whole word using <leader><backslash>
@@ -94,9 +142,9 @@ noremap <buffer> <silent> $ g$
 
 " Enable system clipboard integration
 set clipboard+=unnamedplus
-" Workaround for neovim wl-clipboard and netrw interaction hang 
+" Workaround for neovim wl-clipboard and netrw interaction hang
 " (see: https://github.com/neovim/neovim/issues/6695 and
-" https://github.com/neovim/neovim/issues/9806) 
+" https://github.com/neovim/neovim/issues/9806)
 " let g:clipboard = {
       " \ }
 
@@ -120,24 +168,24 @@ let g:python3_host_skip_check = 1
 
 " Use vim-clap buffer, filer lists
 cnoreabbrev <expr> b getcmdtype() == ":" && getcmdline() == 'b' ? 'Clap buffers' : 'b'
-cnoreabbrev <expr> e getcmdtype() == ":" && getcmdline() == 'e' ? 'Clap filer' : 'e'
+" cnoreabbrev <expr> e getcmdtype() == ":" && getcmdline() == 'e' ? 'Clap filer' : 'e'
 
 
-" vim-clap override popup mappings 
+" vim-clap override popup mappings
 autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>
 autocmd FileType clap_input inoremap <silent> <buffer> <C-n> <C-R>=clap#navigation#linewise('down')<CR>
 autocmd FileType clap_input inoremap <silent> <buffer> <C-p> <C-R>=clap#navigation#linewise('up')<CR>
 
 
 " use <leader>ll to compile
-if !exists("*User_compile") 
+if !exists("*User_compile")
     " placed in an `if` block to avoid error message on re-sourcing
     " vimrc/nvim.init
     function User_compile()
         " compiling vimrc/nvim.init is just reloading it
         if &ft == 'vim'
             source $MYVIMRC
-            " latex 
+            " latex
         elseif &ft == 'tex' || &ft == 'latex'
             VimtexCompile
             " markdown
@@ -160,7 +208,7 @@ inoremap <C-s> <Esc>:w<CR>i
 " nnoremap <Esc> <C-z>
 " imap <Esc><Esc> <Esc><C-z>
 
-" use C-S-j and C-S-k to move lines (or blocks of lines) up or down 
+" use C-S-j and C-S-k to move lines (or blocks of lines) up or down
 let g:C_Ctrl_j = 'off'
 nnoremap <C-S-j> :m .+1<CR>==
 nnoremap <C-S-k> :m .-2<CR>==
@@ -174,9 +222,10 @@ vnoremap <C-S-k> :m '<-2<CR>gv=gv
 command! WW w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null
 command! W w
 command! Q q
+command! Qa qa
 
 
-" Spell checking 
+" Spell checking
 set spell
 
 
@@ -213,7 +262,7 @@ set encoding=utf-8
 " let g:airline_section_error = ''
 " let g:airline_section_warning = ''
 let g:airline_skip_empty_sections = 1
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 1
 " let g:airline_left_sep = ''
 " let g:airline_right_sep = ''
 let g:airline_theme='tender'
@@ -224,12 +273,12 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
-" PaperColor 
+" PaperColor
 set background=light | colorscheme PaperColor
 
 " colorscheme xcodedark
 
-" Tender 
+" Tender
 " colorscheme tender
 
 " user terminal background color for vim
@@ -242,7 +291,7 @@ set background=light | colorscheme PaperColor
 
 
 " Deoplete settings
-let g:deoplete#enable_at_startup = 0 
+let g:deoplete#enable_at_startup = 0
 autocmd InsertEnter * call deoplete#enable()
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
@@ -283,6 +332,7 @@ autocmd FileType tex let g:ale_open_list = 0
 
 
 " nerdcommenter settings
+imap <C-_> <Esc><Plug>NERDCommenterToggle i
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 let g:NERDSpaceDelims = 1
@@ -306,7 +356,7 @@ let g:go_gocode_propose_builtins = 1
 let g:go_auto_type_info = 1
 
 
-" Latex customization 
+" Latex customization
 " vimtex neovim support
 let g:vimtex_compiler_progname = 'nvr'
 let g:tex_flavor = 'latex'
