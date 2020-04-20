@@ -42,6 +42,9 @@ antigen apply
 
 export MANPATH="/usr/local/man:$MANPATH"
 
+alias ls="exa"
+# Note that you can use \ls to ignore the alias"
+
 alias vim="nvim"
 alias vi="nvim"
 # Note that you can use \vim to ignore the alias
@@ -73,10 +76,8 @@ alias startx_i3="startx /home/savvy/.xinitrc i3"
 alias startx_xfce4="startx /home/savvy/.xinitrc xfce4"
 alias startx_gnome3="startx /home/savvy/.xinitrc gnome3"
 
-
 # QT go binding env var setup
 export QT_PKG_CONFIG=true
-
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper_lazy.sh
@@ -84,7 +85,6 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 # opam configuration
 test -r /home/savvy/.opam/opam-init/init.zsh && . /home/savvy/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-
-
 export SYSTEMD_EDITOR="/bin/nvim"
+export EDITOR="/bin/nvim"
 
