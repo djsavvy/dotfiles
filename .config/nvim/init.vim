@@ -1,4 +1,4 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
+"set runtimepath^=~/.vim runtimepath+=~/.vim/after
 
 let &packpath = &runtimepath
 " vim-plug directory
@@ -11,6 +11,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf.vim', {'do': { -> fzf#install() }}
     Plug 'https://github.com/alok/notational-fzf-vim'
 
+    " TODO: does this even work?
     Plug 'caenrique/nvim-maximize-window-toggle'
 
     Plug 'plasticboy/vim-markdown'
@@ -93,9 +94,8 @@ nnoremap <leader>o :ToggleOnly<Enter>
 " Use <C-Backspace> (which is interpreted as <C-H> to delete a word)
 inoremap <C-H> <C-W>
 
-
-" Use <C-Tab> and <C-Shift-Tab> to navigate through tabs (broken b/c terminals
-" don't recognize <C-Tab> --- instead it just sees a tab
+" Use <Tab> and <Shift-Tab> to navigate through tabs (note that terminals
+" don't recognize <C-Tab> --- instead they just see a tab
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
@@ -364,6 +364,8 @@ let g:tex_flavor = 'latex'
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
+" Prevent using latex-box's async compiler
+let g:polyglot_disabled = ['latex']
 
 
 " vim-markdown settings
