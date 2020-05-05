@@ -8,11 +8,9 @@ call plug#begin('~/.nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
+    " Fuzzy finding and jumping
     Plug 'junegunn/fzf.vim', {'do': { -> fzf#install() }}
     Plug 'https://github.com/alok/notational-fzf-vim'
-
-    " TODO: does this even work?
-    Plug 'caenrique/nvim-maximize-window-toggle'
 
     Plug 'plasticboy/vim-markdown'
     Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }}
@@ -87,15 +85,10 @@ autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 
-" ToggleOnly keybinding
-nnoremap <leader>o :ToggleOnly<Enter>
-
 
 " Use <C-Backspace> (which is interpreted as <C-H> to delete a word)
 inoremap <C-H> <C-W>
 
-" Use <Tab> and <Shift-Tab> to navigate through tabs (note that terminals
-" don't recognize <C-Tab> --- instead they just see a tab
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
