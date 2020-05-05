@@ -7,6 +7,10 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="/mnt/c/Program Files/Oracle/VirtualBox:$PATH"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
+# read manpages in neovim
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
 
