@@ -235,8 +235,8 @@ set spell
 
 " Distraction-free writing
 let g:limelight_conceal_ctermfg = 'gray'
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
 
 function! s:goyo_enter()
   let b:quitting = 0
@@ -256,8 +256,8 @@ function! s:goyo_leave()
   endif
 endfunction
 
-autocmd! User GoyoEnter call <SID>goyo_enter()
-autocmd! User GoyoLeave call <SID>goyo_leave()
+autocmd User GoyoEnter call <SID>goyo_enter()
+autocmd User GoyoLeave call <SID>goyo_leave()
 
 
 " Airline customization
@@ -276,6 +276,7 @@ let g:airline_theme='tender'
 if (has("termguicolors"))
  set termguicolors
 endif
+
 
 " PaperColor
 set background=light | colorscheme PaperColor
