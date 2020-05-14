@@ -1,4 +1,4 @@
-"set runtimepath^=~/.vim runtimepath+=~/.vim/after
+" set runtimepath^=~/.vim runtimepath+=~/.vim/after
 
 let &packpath = &runtimepath
 " vim-plug directory
@@ -22,7 +22,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'fatih/vim-go'
     Plug 'nsf/gocode'
 
-    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+    " Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
@@ -46,7 +46,7 @@ call plug#begin('~/.nvim/plugged')
 
     Plug 'lervag/vimtex'
 
-    Plug 'sheerun/vim-polyglot'
+    " Plug 'sheerun/vim-polyglot'
     Plug 'dense-analysis/ale'
 call plug#end()
 " :PlugInstall, :PlugUpdate, :PlugUpgrade :PlugClean are the necessary commands
