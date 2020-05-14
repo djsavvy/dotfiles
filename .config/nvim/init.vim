@@ -75,11 +75,18 @@ set splitbelow
 set splitright
 
 
-" fzf keybindings from James Larisch (semaj)
+" fzf keybindings
 nmap <C-;> :Buffers<CR>
 nmap <C-P> :Files<CR>
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
 let g:nv_search_paths = ['.']
+let g:nv_use_ignore_files = 1
+let g:nv_include_hidden = 0
 nnoremap <silent> <c-g> :NV<CR>
+
+
 
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
