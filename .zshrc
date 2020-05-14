@@ -11,6 +11,10 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
+# fzf quality of life
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
 
