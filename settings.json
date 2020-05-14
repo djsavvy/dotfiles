@@ -21,6 +21,7 @@
 
     "rowsToScroll": 1,
     "snapToGridOnResize": true,
+    "closeOnExit": "always",
 
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
