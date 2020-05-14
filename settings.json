@@ -21,7 +21,6 @@
 
     "rowsToScroll": 1,
     "snapToGridOnResize": true,
-    "closeOnExit": "always",
 
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
@@ -38,6 +37,7 @@
             "fontSize": 11,
             "antialiasingMode": "cleartype",
             "colorScheme": "PaperColor Light",
+            "closeOnExit": "always",
             "historySize": 1000000,
             "padding": "0, 0, -20, 0"
         },
