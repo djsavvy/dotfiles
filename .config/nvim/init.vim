@@ -134,10 +134,10 @@ nnoremap <leader>/ /\<\><left><left>
 " Deal effectively with wrapped lines
 set wrap
 set linebreak
-noremap <buffer> <silent> j gj
-noremap <buffer> <silent> k gk
-noremap <buffer> <silent> 0 g0
-noremap <buffer> <silent> $ g$
+noremap <silent> j gj
+noremap <silent> k gk
+noremap <silent> 0 g0
+noremap <silent> $ g$
 
 
 " Enable system clipboard integration
