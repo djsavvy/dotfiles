@@ -15,6 +15,10 @@ export MANWIDTH=999
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 
+# Call Windows programs from terminal
+alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
+
+
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
 
