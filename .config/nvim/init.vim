@@ -107,8 +107,8 @@ endif
 
 
 " Filetype-specific tab widths
-autocmd FileType ocaml setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType ocaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " Remove trailing spaces from certain file types
 " autocmd FileType c,cpp,java,php,ocaml,lua,latex,tex autocmd BufWritePre <buffer> %s/\s\+$//e
@@ -365,7 +365,7 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 " Prevent using latex-box's async compiler
-let g:polyglot_disabled = ['latex']
+let g:polyglot_disabled = ['latex', 'tex']
 
 
 " vim-markdown settings
