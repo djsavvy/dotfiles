@@ -32,10 +32,10 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            // "fontFace": "FiraCode Nerd Font Mono",
-            "fontFace": "Cascadia Code PL",
+            "fontFace": "FiraCode Nerd Font Mono",
+            // "fontFace": "Cascadia Code PL",
             // =>  3 >> 3
-            "fontSize": 12,
+            "fontSize": 11,
             "antialiasingMode": "cleartype",
             "colorScheme": "PaperColor Light",
             "closeOnExit": "always",
