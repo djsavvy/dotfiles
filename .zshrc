@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.config/xboxdrv/scripts/:$HOME/go/bin:/usr/lib/ccache/bin/:$HOME/miniconda3/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -22,21 +24,27 @@ alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
 
+
+# Pure prompt options
+zstyle :prompt:pure:git:stash show yes
+
+
 # Path to your oh-my-zsh installation.
 # export ZSH=/home/savvy/.oh-my-zsh
 
+
 source /usr/share/zsh/share/antigen.zsh
-
 antigen use oh-my-zsh
-
-antigen bundle git
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+# antigen bundle git
 antigen bundle shrink-path
 antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-syntax-highlighting  # syntax highlighting needs to be last bundle
-
-antigen theme djsavvy/zsh-theme
-
+antigen bundle zdharma/fast-syntax-highlighting
+# antigen bundle zsh-users/zsh-syntax-highlighting  # syntax highlighting needs to be last bundle
+# antigen theme djsavvy/zsh-theme
 antigen apply
+
 
 # User configuration
 
