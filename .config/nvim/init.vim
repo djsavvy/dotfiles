@@ -66,6 +66,7 @@ set ignorecase
 set smartcase
 set showmatch
 set foldcolumn=1
+set wildmenu
 
 " Set indentation
 set autoindent
