@@ -288,6 +288,8 @@ set background=light | colorscheme PaperColor
 let g:deoplete#enable_at_startup = 0
 autocmd InsertEnter * call deoplete#enable()
 " <TAB>: completion.
+imap <expr><C-J> pumvisible() ? "\<C-N>" : "<C-J>"
+imap <expr><C-K> pumvisible() ? "\<C-P>" : "<C-K>"
 inoremap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-P>" : "\<C-D>"
 inoremap <expr><ESC> pumvisible() ? "\<C-E>\<ESC>" : "\<ESC>"
