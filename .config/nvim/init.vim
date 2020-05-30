@@ -26,8 +26,6 @@ call plug#begin('~/.nvim/plugged')
     Plug 'fatih/vim-go'
     Plug 'nsf/gocode'
 
-    " Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
     " Colorschemes
@@ -170,16 +168,6 @@ imap <4-MiddleMouse> <Nop>
 let g:python_host_skip_check = 1
 let g:python3_host_skip_check = 1
 
-
-" Use vim-clap buffer, filer lists
-cnoreabbrev <expr> b getcmdtype() == ":" && getcmdline() == 'b' ? 'Clap buffers' : 'b'
-" cnoreabbrev <expr> e getcmdtype() == ":" && getcmdline() == 'e' ? 'Clap filer' : 'e'
-
-
-" vim-clap override popup mappings
-autocmd FileType clap_input inoremap <silent> <buffer> <Esc> <Esc>:call clap#handler#exit()<CR>
-autocmd FileType clap_input inoremap <silent> <buffer> <C-n> <C-R>=clap#navigation#linewise('down')<CR>
-autocmd FileType clap_input inoremap <silent> <buffer> <C-p> <C-R>=clap#navigation#linewise('up')<CR>
 
 
 " use <leader>ll to compile
