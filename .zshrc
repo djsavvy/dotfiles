@@ -23,6 +23,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # Call Windows programs from terminal
 alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
+alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
 
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
@@ -34,14 +35,16 @@ zstyle :prompt:pure:git:stash show yes
 export MANPATH="/usr/local/man:$MANPATH"
 
 alias ls="exa"
-# Note that you can use \ls to ignore the alias"
+# Note that you can use \ls to ignore the alias
+
+alias cat="bat"
 
 alias vim="nvim"
 alias vi="nvim"
 # Note that you can use \vim to ignore the alias
 
-alias sudo="sudo "
 # This allows for alias expansions to work
+alias sudo="sudo "
 
 alias :q="exit"
 alias :Q="exit"
