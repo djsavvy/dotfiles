@@ -8,11 +8,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 #Backspace::
-    Run, C:\Program Files\Mozilla Firefox\firefox.exe
+    Run, C:\Program Files\Firefox Nightly\firefox.exe
 return
 
 #+Backspace::
-    Run, C:\Program Files\Mozilla Firefox\firefox.exe --private-window
+    Run, C:\Program Files\Firefox Nightly\firefox.exe --private-window
 return
 
 #Esc::#l
