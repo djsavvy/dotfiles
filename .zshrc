@@ -51,6 +51,8 @@ alias vi="nvim"
 # This allows for alias expansions to work
 alias sudo="sudo "
 
+alias :e="vim "
+alias :E="vim "
 alias :q="exit"
 alias :Q="exit"
 alias exi="exit"
