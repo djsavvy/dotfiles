@@ -25,6 +25,11 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
 alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
 
+# Drop caches to free up memory in Windows host (note, this needs to be executed as root)
+function drop_caches() {
+    echo 1 > /proc/sys/vm/drop_caches
+}
+
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
 
