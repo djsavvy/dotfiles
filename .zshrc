@@ -27,7 +27,15 @@ alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
 
 # Drop caches to free up memory in Windows host (note, this needs to be executed as root)
 function drop_caches() {
-    echo 1 > /proc/sys/vm/drop_caches
+    local integer amt=$1
+    if [[ $# == 0 || ($amt < 1 || $amt > 3) ]];
+    then
+        amt=1
+    fi
+    echo "executing: echo $amt > /proc/sys/vm/drop_caches"
+    echo $amt > /proc/sys/vm/drop_caches
+    echo "executing: echo 1 > /proc/sys/vm/compact_memory"
+    echo 1 > /proc/sys/vm/compact_memory
 }
 
 # enable smooth scrolling in firefox on X.org
@@ -126,5 +134,5 @@ zinit light romkatv/powerlevel10k
 
 # Establish completions with zinit
 autoload -Uz compinit
-compinit 
+compinit
 zinit cdreplay -q
