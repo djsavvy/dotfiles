@@ -35,7 +35,7 @@
             "fontFace": "FiraCode Nerd Font Mono",
             // "fontFace": "Cascadia Code PL",
             // =>  3 >> 3
-            "fontSize": 11,
+            "fontSize": 10,
             "antialiasingMode": "cleartype",
             "colorScheme": "PaperColor Light",
             "closeOnExit": "always",
