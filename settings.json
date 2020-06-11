@@ -45,6 +45,13 @@
         "list":
         [
             {
+                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "hidden": false,
+                "name": "Arch",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "//wsl$/Arch/home/savvy"
+            },
+            {
                 // Make changes here to the powershell.exe profile.
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
@@ -57,13 +64,6 @@
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
                 "hidden": false
-            },
-            {
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "hidden": false,
-                "name": "Arch",
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "//wsl$/Arch/home/savvy"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
