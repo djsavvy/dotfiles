@@ -24,6 +24,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # Call Windows programs from terminal
 alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
 alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
+alias shutdown="wsl.exe --shutdown"
 
 # Drop caches to free up memory in Windows host (note, this needs to be executed as root)
 function drop_caches() {
