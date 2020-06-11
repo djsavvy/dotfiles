@@ -34,7 +34,7 @@
             // Put settings here that you want to apply to all profiles.
             "fontFace": "FiraCode Nerd Font Mono",
             // "fontFace": "Cascadia Code PL",
-            // =>  3 >> 3
+            // =>  3 >> 3 (ligature test)
             "fontSize": 10,
             "antialiasingMode": "cleartype",
             "colorScheme": "PaperColor Light",
