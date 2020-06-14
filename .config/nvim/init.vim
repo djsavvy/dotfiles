@@ -48,7 +48,9 @@ call plug#begin('~/.nvim/plugged')
 
     Plug 'scrooloose/nerdcommenter'
 
+    " Better tags
     Plug 'ludovicchabant/vim-gutentags'
+    Plug 'majutsushi/tagbar'
 
     Plug 'lervag/vimtex'
 
@@ -344,6 +346,27 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 0
 
 
+" settings for tags
+let g:tagbar_left = 0
+let g:tagbar_autofocus = 1
+let g:tagbar_width = 50
+
+
+" use <leader>ll to open a table of contents or tagbar
+if !exists("*User_toggle_table_of_contents")
+    " placed in an `if` block to avoid error message on re-sourcing
+    " vimrc/nvim.init
+    function User_toggle_table_of_contents()
+        if &ft == 'tex' || &ft == 'latex'
+            :call b:vimtex.toc.open()
+        else
+            TagbarToggle
+        end
+    endfunction
+    nnoremap <leader>lt :call User_toggle_table_of_contents()<CR>
+endif
+
+
 " Go customization
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -386,6 +409,9 @@ let g:vimtex_compiler_latexmk = {
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_toc_config = {}
+let g:vimtex_toc_config.split_pos = 'vert rightbelow'
+let g:vimtex_toc_config.split_width = 50
 " Prevent using latex-box's async compiler
 let g:polyglot_disabled = ['latex', 'tex']
 
