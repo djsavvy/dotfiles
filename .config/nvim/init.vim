@@ -72,6 +72,12 @@ set showmatch
 set foldcolumn=1
 set wildmenu
 
+" Allow moving away from an unsaved buffer
+set hidden
+
+" Spell checking
+set spell
+
 " Set indentation
 set autoindent
 set smartindent
@@ -95,16 +101,15 @@ let g:nv_use_ignore_files = 1
 let g:nv_include_hidden = 0
 nnoremap <silent> <c-g> :NV<CR>
 
-
-
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
 
 
 " Use <C-Backspace> (which is interpreted as <C-H> to delete a word)
 inoremap <C-H> <C-W>
 
+
+" Navigate between tabs
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
@@ -200,12 +205,14 @@ endif
 map <F1> <Esc>
 imap <F1> <Esc>
 
+
 " Map <C-s> in insert mode to save, to de-condition <Esc>:w<C-R>i keyboard tic
 inoremap <C-s> <Esc>:w<CR>i
 
 " De-condition myself from pressing <Esc> twice to escape insert mode
 " nnoremap <Esc> <C-z>
 " imap <Esc><Esc> <Esc><C-z>
+
 
 " use C-S-j and C-S-k to move lines (or blocks of lines) up or down
 let g:C_Ctrl_j = 'off'
@@ -222,10 +229,6 @@ command! WW w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null
 command! W w
 command! Q q
 command! Qa qa
-
-
-" Spell checking
-set spell
 
 
 " Distraction-free writing
