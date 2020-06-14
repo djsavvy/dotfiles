@@ -23,8 +23,11 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/limelight.vim'
     Plug 'junegunn/goyo.vim'
 
+    " Specific languages
     Plug 'fatih/vim-go'
     Plug 'nsf/gocode'
+
+    Plug 'rust-lang/rust.vim'
 
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
@@ -41,6 +44,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'zchee/deoplete-clang'
     Plug 'zchee/deoplete-go'
     Plug 'zchee/deoplete-jedi'
+    Plug 'racer-rust/vim-racer'
 
     Plug 'scrooloose/nerdcommenter'
 
@@ -318,8 +322,9 @@ let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = ''
 " let g:ale_sign_column_always = 1
 let g:ale_linters = {
-            \    'python': ['yapf'],
             \    'markdown': [],
+            \    'python': ['yapf'],
+            \    'rust': ['rustc', 'analyzer'],
             \}
 " let g:ale_linters_explicit = 1
 " let g:ale_set_loclist = 1
@@ -351,6 +356,10 @@ let g:go_highlight_build_constraints = 1
 let g:go_auto_sameids = 1
 let g:go_gocode_propose_builtins = 1
 let g:go_auto_type_info = 1
+
+
+" Rust customization
+let g:rustfmt_autosave = 1
 
 
 " Latex customization
