@@ -54,6 +54,14 @@ call plug#begin('~/.nvim/plugged')
 
     Plug 'lervag/vimtex'
 
+    " Language Server Protocol
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ }
+
+
     " Plug 'sheerun/vim-polyglot'
     Plug 'dense-analysis/ale'
 call plug#end()
@@ -294,7 +302,7 @@ set background=light | colorscheme PaperColor
 
 
 " Deoplete settings
-let g:deoplete#enable_at_startup = 0
+let g:deoplete#enable_at_startup = 1
 autocmd InsertEnter * call deoplete#enable()
 " <TAB>: completion.
 imap <expr><C-J> pumvisible() ? "\<C-N>" : "<C-J>"
@@ -317,6 +325,13 @@ let g:deoplete#omni#input_patterns.ocaml = '[^. *\t]\.\w*|\s\w+|#'
 " call deoplete#custom#option('ignore_sources', {'ocaml': ['buffer', 'around', 'member', 'tag']})
 let g:deoplete#ignore_sources = {}
 let g:deoplete#ignore_sources.ocaml = ['buffer', 'around', 'member', 'tag']
+
+
+" Language Server Protocol customizations
+let g:LanguageClient_serverCommands = {
+\ 'rust': ['rust-analyzer'],
+\ }
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
 
 " Ale customization
