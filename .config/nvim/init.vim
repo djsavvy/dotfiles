@@ -12,10 +12,6 @@ call plug#begin('~/.nvim/plugged')
 
     " Fuzzy finding and jumping
     Plug 'junegunn/fzf.vim', {'do': { -> fzf#install() }}
-    Plug 'https://github.com/alok/notational-fzf-vim'
-
-    Plug 'plasticboy/vim-markdown'
-    Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }}
 
     " Focused writing
     Plug 'junegunn/limelight.vim'
@@ -24,8 +20,10 @@ call plug#begin('~/.nvim/plugged')
     " Specific languages
     Plug 'fatih/vim-go'
     Plug 'nsf/gocode'
-
     Plug 'rust-lang/rust.vim'
+    Plug 'lervag/vimtex'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }}
 
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
@@ -44,6 +42,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'zchee/deoplete-jedi'
     Plug 'racer-rust/vim-racer'
 
+    " Improved comments
     Plug 'scrooloose/nerdcommenter'
 
     " Better tags
@@ -102,10 +101,7 @@ nmap <C-P> :Files<CR>
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-let g:nv_search_paths = ['.']
-let g:nv_use_ignore_files = 1
-let g:nv_include_hidden = 0
-nnoremap <silent> <c-g> :NV<CR>
+nnoremap <silent> <c-g> :Rg<CR>
 
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
