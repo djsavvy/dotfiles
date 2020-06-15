@@ -363,6 +363,7 @@ let g:NERDTrimTrailingWhitespace = 0
 let g:tagbar_left = 0
 let g:tagbar_autofocus = 1
 let g:tagbar_width = 50
+let g:tagbar_sort = 0
 
 
 " use <leader>ll to open a table of contents or tagbar
