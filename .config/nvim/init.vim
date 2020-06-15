@@ -161,6 +161,10 @@ let g:python_host_skip_check = 1
 let g:python3_host_skip_check = 1
 
 
+" Options for sessions (useful for changing init.nvim and reloading)
+set ssop-=options
+set ssop-=folds
+
 
 " use <leader>ll to compile
 if !exists("*User_compile")
