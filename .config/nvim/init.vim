@@ -24,6 +24,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'lervag/vimtex'
     Plug 'plasticboy/vim-markdown'
     Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }}
+    Plug 'neoclide/jsonc.vim'
 
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
