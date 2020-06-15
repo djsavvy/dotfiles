@@ -28,19 +28,8 @@ call plug#begin('~/.nvim/plugged')
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
     " Colorschemes
-    " Plug 'lifepillar/vim-colortemplate'
     Plug 'jacoborus/tender.vim'
-    Plug 'sonph/onehalf', {'rtp': 'vim/'}
     Plug 'NLKNguyen/papercolor-theme'
-    Plug 'arzg/vim-colors-xcode'
-    Plug 'connorholyday/vim-snazzy'
-
-    " Completion
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'zchee/deoplete-clang'
-    Plug 'zchee/deoplete-go'
-    Plug 'zchee/deoplete-jedi'
-    Plug 'racer-rust/vim-racer'
 
     " Improved comments
     Plug 'scrooloose/nerdcommenter'
@@ -49,18 +38,8 @@ call plug#begin('~/.nvim/plugged')
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'majutsushi/tagbar'
 
-    Plug 'lervag/vimtex'
-
-    " Language Server Protocol
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
-
-
-    " Plug 'sheerun/vim-polyglot'
-    Plug 'dense-analysis/ale'
+    " Language Server Protocol (LSP)
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 " :PlugInstall, :PlugUpdate, :PlugUpgrade :PlugClean are the necessary commands
 
@@ -295,59 +274,80 @@ set background=light | colorscheme PaperColor
 
 
 
-" Deoplete settings
-let g:deoplete#enable_at_startup = 1
-autocmd InsertEnter * call deoplete#enable()
-" <TAB>: completion.
+
+" Language Server Protocol (LSP) customizations (COC)
+set updatetime=300
+set signcolumn=yes
+
+" gd - go to definition of word under cursor
+nmap <silent> gd <Plug>(coc-definition)
+
+" gy - go to type definition
+nmap <silent> gy <Plug>(coc-type-definition)
+
+" gi - go to implementation
+nmap <silent> gi <Plug>(coc-implementation)
+
+" gr - find references
+nmap <silent> gr <Plug>(coc-references)
+
+" gh - get hint on whatever's under the cursor
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
+
+" restart Coc when it gets wonky
+nnoremap <silent> <leader>cR  :<C-u>CocRestart<CR>
+
+" view all errors
+nnoremap <silent> <leader>ce :<C-u>CocList diagnostics<CR>
+
+" rename the current word in the cursor
+nmap <leader>cr  <Plug>(coc-rename)
+
+" coc-format
+nmap <leader>cf  <Plug>(coc-format-selected)
+vmap <leader>cf  <Plug>(coc-format-selected)
+
+" tab-completion
 imap <expr><C-J> pumvisible() ? "\<C-N>" : "<C-J>"
 imap <expr><C-K> pumvisible() ? "\<C-P>" : "<C-K>"
-inoremap <expr><TAB> pumvisible() ? "\<C-N>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-P>" : "\<C-D>"
 inoremap <expr><ESC> pumvisible() ? "\<C-E>\<ESC>" : "\<ESC>"
 inoremap <expr><CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-call deoplete#custom#option('ignore_sources', {'_': ['buffer', 'around']})
 set completeopt=menu,preview,longest,menuone
-if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
-" latex autocomplete
-let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
-
-" OCaml autocomplete (Merlin deoplete integration)
-let g:deoplete#omni#input_patterns.ocaml = '[^. *\t]\.\w*|\s\w+|#'
-" call deoplete#custom#option('ignore_sources', {'ocaml': ['buffer', 'around', 'member', 'tag']})
-let g:deoplete#ignore_sources = {}
-let g:deoplete#ignore_sources.ocaml = ['buffer', 'around', 'member', 'tag']
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
 
 
-" Language Server Protocol customizations
-let g:LanguageClient_serverCommands = {
-\ 'rust': ['rust-analyzer'],
-\ }
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-
-
-" Ale customization
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_save = 1
-let g:ale_sign_error = '⤫'
-let g:ale_sign_warning = ''
-" let g:ale_sign_column_always = 1
-let g:ale_linters = {
-            \    'markdown': [],
-            \    'python': ['yapf'],
-            \    'rust': ['rustc', 'analyzer'],
-            \}
-" let g:ale_linters_explicit = 1
-" let g:ale_set_loclist = 1
-let g:ale_set_quickfix = 1
-let g:ale_open_list = 1
-autocmd FileType tex let g:ale_open_list = 0
 
 
 " nerdcommenter settings
+let g:NERDCreateDefaultMappings = 0
 imap <C-_> <Esc><Plug>NERDCommenterToggle i
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv

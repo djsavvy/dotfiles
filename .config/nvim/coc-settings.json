@@ -1,0 +1,34 @@
+{
+    "coc.source.around.enable": false,
+    "coc.source.buffer.enable": false,
+    // "diagnostic.displayByAle": true,
+    "rust-analyzer.serverPath": "/usr/sbin/rust-analyzer",
+    "coc.preferences.formatOnSaveFiletypes": [],
+    "diagnostic.checkCurrentLine":true, 
+    "coc.preferences.useQuickfixForLocations": true,
+    "diagnostic.refreshAfterSave": false,
+
+    "languageserver": {
+      "bash": {
+        "command": "bash-language-server",
+        "args": ["start"],
+        "filetypes": ["sh", "bash"],
+        "ignoredRootPaths": ["~"]
+      },
+      "ccls": {
+        "command": "ccls",
+        "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+        "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+        "initializationOptions": {
+           "cache": {
+             "directory": "/tmp/ccls"
+           }
+         }
+      },
+      "ocaml-lsp": {
+          "command": "opam",
+          "args": ["config", "exec", "--", "ocamllsp"],
+          "filetypes": ["ocaml", "reason"]
+      }
+    }
+ }
