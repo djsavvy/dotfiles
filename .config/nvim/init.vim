@@ -1,9 +1,7 @@
-" set runtimepath^=~/.vim runtimepath+=~/.vim/after
-
 " Unset all autocmds
 autocmd!
 
-
+" Plugins
 let &packpath = &runtimepath
 " vim-plug directory
 call plug#begin('~/.nvim/plugged')
