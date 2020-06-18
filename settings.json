@@ -36,6 +36,7 @@
             // "fontFace": "Cascadia Code PL",
             // =>  3 >> 3 (ligature test)
             "fontSize": 10,
+            "fontWeight": "normal",
             "antialiasingMode": "cleartype",
             "colorScheme": "PaperColor Light",
             "closeOnExit": "always",
@@ -80,14 +81,16 @@
     "schemes": [
         {
           "name": "PaperColor Light",
-          "black": "#f8f8f8",
+          // "black": "#f8f8f8",
+          "black": "#2c2c2c",
           "red": "#d7005f",
           "green": "#718c00",
           "yellow": "#ff8f01",
           "blue": "#005f87",
           "purple": "#6a1e9a",
           "cyan": "#3e999f",
-          "white": "#2c2c2c",
+          // "white": "#2c2c2c",
+          "white": "#f8f8f8",
           "brightBlack": "#2c2c2c",
           "brightRed": "#ef5251",
           "brightGreen": "#90c94d",
