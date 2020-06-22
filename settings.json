@@ -41,7 +41,7 @@
             "colorScheme": "PaperColor Light",
             "closeOnExit": "always",
             "historySize": 1000000,
-            "padding": "0, 0, -20, 0"
+            // "padding": "0, 0, -20, 0"
         },
         "list":
         [
