@@ -67,6 +67,20 @@
                 "hidden": false
             },
             {
+                "guid": "{e8862fd8-599e-4a8b-90b0-f785b50a3745}",
+                "name": "DigitalOcean savvy@savvy-drop1",
+                "commandline": "ssh savvy@157.245.249.255",
+                "hidden": false,
+                "icon": "https://snapshooter.io/assets/img/marketing/digitalocean-droplet.png"
+            },
+            {
+                "guid": "{09bce8e2-0e0a-4d9c-b6e8-196dd342c34d}",
+                "name": "DigitalOcean root@savvy-drop1",
+                "commandline": "ssh root@157.245.249.255",
+                "hidden": false,
+                "icon": "https://snapshooter.io/assets/img/marketing/digitalocean-droplet.png"
+            },
+            {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure",
