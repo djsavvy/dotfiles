@@ -178,12 +178,12 @@ if !exists("*User_compile")
         " compiling vimrc/nvim.init is just reloading it
         if &ft == 'vim'
             source $MYVIMRC
-            " latex
+        " latex
         elseif &ft == 'tex' || &ft == 'latex'
             VimtexCompile
-            " markdown
+        " markdown
         elseif &ft == 'markdown'
-            MarkdownPreview
+            :execute "normal \<Plug>MarkdownPreviewToggle"
         end
     endfunction
     nnoremap <leader>ll :call User_compile()<CR>
@@ -452,10 +452,21 @@ let g:vimtex_toc_config.split_width = 50
 let g:polyglot_disabled = ['latex', 'tex']
 
 
-" vim-markdown settings
+" vim-markdown and preview settings
 set conceallevel=2
 let g:vim_markdown_folding_disabled = 1
 let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_new_list_item_indent = 4
+let g:mkdp_open_to_the_world = 1
+let g:mkdp_open_ip = '127.0.0.1'
+" let g:mkdp_port = 8080
+function! g:OpenBrowser(url)
+    " :echo a:url
+    silent execute "!" . shellescape("/mnt/c/Program\ Files/Firefox\ Nightly/firefox.exe") shellescape(a:url)
+endfunction
+let g:mkdp_browserfunc = 'g:OpenBrowser'
+let g:mkdp_auto_close = 0
+let g:mkdp_refresh_slow = 0
+let g:mkdp_page_title = "${name}.md"
