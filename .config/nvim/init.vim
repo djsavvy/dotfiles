@@ -107,6 +107,7 @@ endif
 " Filetype-specific tab widths
 autocmd FileType ocaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " Remove trailing spaces from certain file types
 " autocmd FileType c,cpp,java,php,ocaml,lua,latex,tex autocmd BufWritePre <buffer> %s/\s\+$//e
@@ -387,7 +388,7 @@ let g:tagbar_width = 50
 let g:tagbar_sort = 0
 
 
-" use <leader>ll to open a table of contents or tagbar
+" use <leader>lt to open a table of contents or tagbar
 if !exists("*User_toggle_table_of_contents")
     " placed in an `if` block to avoid error message on re-sourcing
     " vimrc/nvim.init
