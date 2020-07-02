@@ -7,6 +7,8 @@
     "diagnostic.checkCurrentLine":true, 
     "coc.preferences.useQuickfixForLocations": true,
     "diagnostic.refreshAfterSave": false,
+    "html.format.enable": true,
+    "html.autoClosingTags": true,
 
     "languageserver": {
       "bash": {
