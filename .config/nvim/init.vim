@@ -388,6 +388,7 @@ let g:tagbar_left = 0
 let g:tagbar_autofocus = 1
 let g:tagbar_width = 50
 let g:tagbar_sort = 0
+let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git', 'md', 'markdown']
 
 
 " use <leader>lt to open a table of contents or tagbar
