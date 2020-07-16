@@ -471,5 +471,5 @@ function! g:OpenBrowser(url)
 endfunction
 let g:mkdp_browserfunc = 'g:OpenBrowser'
 let g:mkdp_auto_close = 0
-let g:mkdp_refresh_slow = 0
+let g:mkdp_refresh_slow = 1
 let g:mkdp_page_title = "${name}.md"
