@@ -124,6 +124,7 @@ if !exists("*TrimTrailingWhitespace")
     endfunction
 
     command! TrimTrailingWhitespace call TrimTrailingWhitespace()
+    command! TRimTrailingWhitespace call TrimTrailingWhitespace()
 endif
 
 
