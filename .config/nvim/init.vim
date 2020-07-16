@@ -58,6 +58,7 @@ set smartcase
 set showmatch
 set foldcolumn=1
 set wildmenu
+set inccommand=split
 
 " Allow moving away from an unsaved buffer
 set hidden
