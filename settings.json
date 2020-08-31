@@ -36,7 +36,7 @@
             // "fontFace": "Cascadia Code PL",
             // =>  3 >> 3 (ligature test)
             "fontSize": 10,
-            "fontWeight": "regular",
+            "fontWeight": "normal",
             "antialiasingMode": "cleartype",
             "colorScheme": "PaperColor Light",
             "closeOnExit": "always",
