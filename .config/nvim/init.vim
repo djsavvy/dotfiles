@@ -70,8 +70,8 @@ set spell
 set autoindent
 set smartindent
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Set splits
 set splitbelow
@@ -461,7 +461,7 @@ let g:vim_markdown_folding_disabled = 1
 let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 let g:vim_markdown_strikethrough = 1
-let g:vim_markdown_new_list_item_indent = 4
+let g:vim_markdown_new_list_item_indent = 2
 let g:mkdp_open_to_the_world = 1
 let g:mkdp_open_ip = '127.0.0.1'
 " let g:mkdp_port = 8080
