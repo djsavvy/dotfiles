@@ -32,6 +32,9 @@ alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
 alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
 alias firefox="/mnt/c/Program\ Files/Firefox\ Nightly/firefox.exe"
 alias shutdown="wsl.exe --shutdown"
+function win-notify() {
+    powershell.exe -executionpolicy bypass -command New-BurntToastNotification -Text "\"$@\""
+}
 
 # Drop caches to free up memory in Windows host (note, this needs to be executed as root)
 function drop_caches() {
