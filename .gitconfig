@@ -7,6 +7,8 @@
 	ui = auto
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    ls-all = ls-tree -r HEAD 
+  ls-all = ls-tree -r HEAD
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
 ; [submodule]
 	; recurse = true
