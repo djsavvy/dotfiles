@@ -32,6 +32,7 @@ alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
 alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
 alias firefox="/mnt/c/Program\ Files/Firefox\ Nightly/firefox.exe"
 alias shutdown="wsl.exe --shutdown"
+alias cmdrun="cmd.exe /c"
 function win-notify() {
     powershell.exe -executionpolicy bypass -command New-BurntToastNotification -Text "\"$@\""
 }
