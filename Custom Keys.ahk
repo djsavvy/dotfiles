@@ -15,4 +15,7 @@ return
     Run, C:\Program Files\Firefox Nightly\firefox.exe --private-window
 return
 
+; Set Win+Tab to Alt+Tab for muscle memory compatibility with the apple magic keyboard
+Lwin & Tab::AltTab
+
 #Esc::#l
