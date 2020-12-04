@@ -419,6 +419,7 @@ let g:go_highlight_build_constraints = 1
 let g:go_auto_sameids = 1
 let g:go_gocode_propose_builtins = 1
 let g:go_auto_type_info = 1
+let g:go_auto_sameids = 0
 
 
 " Rust customization
