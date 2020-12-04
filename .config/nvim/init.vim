@@ -11,7 +11,8 @@ call plug#begin('~/.nvim/plugged')
     Plug 'vim-airline/vim-airline-themes'
 
     " Fuzzy finding and jumping
-    Plug 'junegunn/fzf.vim', {'do': { -> fzf#install() }}
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
 
     " Focused writing
     Plug 'junegunn/limelight.vim'
