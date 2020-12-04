@@ -74,9 +74,6 @@ export MANPATH="/usr/local/man:$MANPATH"
 alias ls="exa"
 # Note that you can use \ls to ignore the alias
 
-export BAT_THEME="base16"
-alias cat="bat"
-
 export SYSTEMD_EDITOR=$(which nvim)
 export EDITOR=$(which nvim)
 alias vim="nvim"
