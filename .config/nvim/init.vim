@@ -29,7 +29,9 @@ call plug#begin('~/.nvim/plugged')
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
 
-    " Snippets
+    " Autocompleting pairs/autoclosing tags
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'alvan/vim-closetag'
 
     " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
@@ -384,6 +386,12 @@ let g:NERDCompactSexyComs = 1
 let g:NERDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 0
+
+
+" settings for auto-closing plugins
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+let g:closetag_filetypes = 'html,xhtml,phtml,javascript,jsx,javascript.jsx,javascriptreact,typescript.jsx,typescript.tsx,typescriptreact'
+
 
 
 " settings for tags
