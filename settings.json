@@ -50,7 +50,8 @@
                 "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
                 "hidden": false,
                 "name": "Arch",
-                "source": "Windows.Terminal.Wsl",
+//                 "source": "Windows.Terminal.Wsl",
+                "commandline": "wsl.exe",
                 "startingDirectory": "//wsl$/Arch/home/savvy"
             },
             {
@@ -85,7 +86,7 @@
                 "guid": "{cf1fd95f-f04c-45a1-b9c6-5e363ead3356}",
                 "name": "Fractal Protocol x86_64 Cross Tools Command Prompt for VS 2019",
                 "commandline": "cmd.exe /k \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvarsx86_amd64.bat\"",
-                "startingDirectory": "C:\\Users\\savvy\\Fractal\\protocol",
+                "startingDirectory": "C:\\Users\\savvy\\Fractal\\fractal\\protocol",
                 "hidden": false
             },
             {
