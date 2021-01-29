@@ -20,6 +20,10 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export PATH="/mnt/c/Program Files/Oracle/VirtualBox:$PATH"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
+# WSL2 GUI apps with VcXsrv
+# set DISPLAY variable to the IP automatically assigned to WSL2
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
 # read manpages in neovim
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
