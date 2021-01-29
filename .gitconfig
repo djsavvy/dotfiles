@@ -13,3 +13,5 @@
   insteadOf = https://github.com/
 ; [submodule]
 	; recurse = true
+[pull]
+	ff = only
