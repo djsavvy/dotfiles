@@ -43,7 +43,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'scrooloose/nerdcommenter'
 
     " Better tags
-    Plug 'ludovicchabant/vim-gutentags'
+    " Plug 'ludovicchabant/vim-gutentags'
     Plug 'majutsushi/tagbar'
 
     " Language Server Protocol (LSP)
