@@ -121,7 +121,8 @@
           "brightWhite": "#2c2c2c",
           "background": "#eeeeee",
           "foreground": "#3c3c3b",
-          "cursorColor": "#4271ae"
+          "cursorColor": "#4271ae",
+          "selectionBackground": "#90c94d"
         }
     ],
 
