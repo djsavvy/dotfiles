@@ -9,6 +9,8 @@
     "diagnostic.refreshAfterSave": false,
     "html.format.enable": true,
     "html.autoClosingTags": true,
+    "typescript.format.enabled": true,
+    "javascript.format.enabled": true,
     "markdownlint.onChange": false,
     "markdownlint.config": {
         "default": true,
