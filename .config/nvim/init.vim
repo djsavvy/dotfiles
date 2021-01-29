@@ -33,7 +33,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
 
-    " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    " Snippets
 
     " Colorschemes
     Plug 'jacoborus/tender.vim'
