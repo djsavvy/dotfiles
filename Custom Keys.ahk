@@ -11,11 +11,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 #Backspace::
-    Run, C:\Program Files\Firefox Nightly\firefox.exe
+    ; Run, C:\Program Files\Firefox Nightly\firefox.exe
+    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe
 return
 
 #+Backspace::
-    Run, C:\Program Files\Firefox Nightly\firefox.exe --private-window
+    ; Run, C:\Program Files\Firefox Nightly\firefox.exe --private-window
+    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe --inprivate
 return
 
 #Esc::#l
