@@ -26,6 +26,8 @@ call plug#begin('~/.nvim/plugged')
     Plug 'plasticboy/vim-markdown'
     Plug 'iamcco/markdown-preview.nvim', {'do': { -> mkdp#util#install() }}
     Plug 'neoclide/jsonc.vim'
+    Plug 'yuezk/vim-js'
+    Plug 'maxmellon/vim-jsx-pretty'
 
     " Snippets
 
