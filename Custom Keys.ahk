@@ -7,6 +7,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; KeyHistory
 
 #Enter::
+    ; The following line ensures that keyboard focus is on wt after it starts:
+    ; Gotten from: https://github.com/microsoft/terminal/issues/8954
+    WinActivate Program Manager ; focuses desktop, maybe?
     Run, wt
 return
 
