@@ -17,6 +17,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
 
+#+Enter::
+    Run, wt -p "Windows PowerShell"
+    Sleep, 300
+    WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+return
+
 #Backspace::
     Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 return
