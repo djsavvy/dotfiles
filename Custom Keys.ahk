@@ -1,26 +1,28 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
+#WinActivateForce
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Uncomment for debugging
 ; KeyHistory
 
+; For this to work consistently, we need to set the following registry key to 0: 
+; `HKEY_CURRENT_USER\Control Panel\Desktop ... REG_DWORD ... ForegroundLockTimeout`
+; (The default value is 200000 (0x30D40)).
+; For more details, see https://github.com/microsoft/terminal/issues/8954 
 #Enter::
-    ; The following line ensures that keyboard focus is on wt after it starts:
-    ; Gotten from: https://github.com/microsoft/terminal/issues/8954
-    WinActivate Program Manager ; focuses desktop, maybe?
     Run, wt
+    Sleep, 300
+    WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
 
 #Backspace::
-    ; Run, C:\Program Files\Firefox Nightly\firefox.exe
-    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe
+    Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 return
 
 #+Backspace::
-    ; Run, C:\Program Files\Firefox Nightly\firefox.exe --private-window
-    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe --inprivate
+    Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --inprivate
 return
 
 #Esc::#l
@@ -28,9 +30,19 @@ return
 ; Apple Magic Keyboard-specific bindings
 
 ; Set Win+Tab to Alt+Tab for muscle memory compatibility
-Lwin & Tab::AltTab
+; Lwin & Tab::AltTab
 
 ; Remap media keys
+RAlt & F1::
+    RegRead, UserLocal, HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders, Local AppData
+    Run % "" . UserLocal . "\Programs\twinkle-tray\Twinkle Tray.exe --All --Offset=-5"
+return
+
+RAlt & F2::
+    RegRead, UserLocal, HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders, Local AppData
+    Run % "" . UserLocal . "\Programs\twinkle-tray\Twinkle Tray.exe --All --Offset=+5"
+return
+
 RAlt & F7::SendInput {Media_Prev}
 RAlt & F8::SendInput {Media_Play_Pause}
 RAlt & F9::SendInput {Media_Next}
