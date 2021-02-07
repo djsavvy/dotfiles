@@ -38,6 +38,7 @@ call plug#begin('~/.nvim/plugged')
     " Colorschemes
     Plug 'jacoborus/tender.vim'
     Plug 'NLKNguyen/papercolor-theme'
+    Plug 'noahfrederick/vim-noctu'
 
     " Improved comments
     Plug 'scrooloose/nerdcommenter'
@@ -263,18 +264,13 @@ let g:airline_extensions=[]
 
 
 " Color schemes
-if (has("termguicolors"))
- set termguicolors
-endif
+" Note: for PaperColor light, set termguicolors. For noctu, don't.
+" if (has("termguicolors"))
+ " set termguicolors
+" endif
+" set background=light | colorscheme PaperColor
+colorscheme noctu
 
-
-" PaperColor
-set background=light | colorscheme PaperColor
-
-" colorscheme xcodedark
-
-" Tender
-" colorscheme tender
 
 " user terminal background color for vim
 " hi Normal ctermbg=none
