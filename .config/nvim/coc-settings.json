@@ -1,45 +1,45 @@
 {
-    "coc.source.around.enable": false,
-    "coc.source.buffer.enable": false,
-    // "diagnostic.displayByAle": true,
-    "rust-analyzer.serverPath": "/usr/sbin/rust-analyzer",
-    "coc.preferences.formatOnSaveFiletypes": [],
-    "diagnostic.checkCurrentLine":true, 
-    "coc.preferences.useQuickfixForLocations": true,
-    "diagnostic.refreshAfterSave": false,
-    "html.format.enable": true,
-    "html.autoClosingTags": true,
-    "typescript.format.enabled": true,
-    "javascript.format.enabled": true,
-    "markdownlint.onChange": false,
-    "markdownlint.config": {
-        "default": true,
-        "blank_lines": false,
-        "whitespace": false,
-        "line-length": false
-    },
+  "coc.source.around.enable": false,
+  "coc.source.buffer.enable": false,
+  // "diagnostic.displayByAle": true,
+  "rust-analyzer.serverPath": "/usr/sbin/rust-analyzer",
+  "coc.preferences.formatOnSaveFiletypes": [],
+  "diagnostic.checkCurrentLine": true,
+  "coc.preferences.useQuickfixForLocations": true,
+  "diagnostic.refreshAfterSave": false,
+  "html.format.enable": true,
+  "html.autoClosingTags": true,
+  "typescript.format.enabled": true,
+  "javascript.format.enabled": true,
+  "markdownlint.onChange": false,
+  "markdownlint.config": {
+    "default": true,
+    "blank_lines": false,
+    "whitespace": false,
+    "line-length": false
+  },
 
-    "languageserver": {
-      "bash": {
-        "command": "bash-language-server",
-        "args": ["start"],
-        "filetypes": ["sh", "bash"],
-        "ignoredRootPaths": ["~"]
-      },
-      "ccls": {
-        "command": "ccls",
-        "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-        "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-        "initializationOptions": {
-           "cache": {
-             "directory": "/tmp/ccls"
-           }
-         }
-      },
-      "ocaml-lsp": {
-          "command": "opam",
-          "args": ["config", "exec", "--", "ocamllsp"],
-          "filetypes": ["ocaml", "reason"]
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh", "bash"],
+      "ignoredRootPaths": ["~"]
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
       }
+    },
+    "ocaml-lsp": {
+      "command": "opam",
+      "args": ["config", "exec", "--", "ocamllsp"],
+      "filetypes": ["ocaml", "reason"]
     }
- }
+  }
+}

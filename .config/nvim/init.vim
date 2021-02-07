@@ -328,6 +328,9 @@ nmap <leader>cr  <Plug>(coc-rename)
 nmap <leader>cf  <Plug>(coc-format)
 vmap <leader>cf  <Plug>(coc-format-selected)
 
+" run prettier on a file with ":Prettier" using coc
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
 " tab-completion
 imap <expr><C-J> pumvisible() ? "\<C-N>" : "<C-J>"
 imap <expr><C-K> pumvisible() ? "\<C-P>" : "<C-K>"
