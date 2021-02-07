@@ -35,12 +35,12 @@ return
 ; Remap media keys
 RAlt & F1::
     RegRead, UserLocal, HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders, Local AppData
-    Run % "" . UserLocal . "\Programs\twinkle-tray\Twinkle Tray.exe --All --Offset=-5"
+    Run % "" . UserLocal . "\Programs\twinkle-tray\Twinkle Tray.exe --All --Offset=-5 --Overlay"
 return
 
 RAlt & F2::
     RegRead, UserLocal, HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders, Local AppData
-    Run % "" . UserLocal . "\Programs\twinkle-tray\Twinkle Tray.exe --All --Offset=+5"
+    Run % "" . UserLocal . "\Programs\twinkle-tray\Twinkle Tray.exe --All --Offset=+5 --Overlay"
 return
 
 RAlt & F7::SendInput {Media_Prev}
