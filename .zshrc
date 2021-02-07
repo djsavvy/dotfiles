@@ -35,6 +35,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
 alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
 alias firefox="/mnt/c/Program\ Files/Firefox\ Nightly/firefox.exe"
+alias edge="/mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe"
 alias shutdown="wsl.exe --shutdown"
 alias cmdrun="cmd.exe /c"
 function win-notify() {
