@@ -288,6 +288,7 @@ set signcolumn=yes
 
 " gd - go to definition of word under cursor
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> <C-]> <Plug>(coc-definition)
 
 " gy - go to type definition
 nmap <silent> gy <Plug>(coc-type-definition)
