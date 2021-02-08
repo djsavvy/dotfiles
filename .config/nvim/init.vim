@@ -37,6 +37,9 @@ call plug#begin('~/.nvim/plugged')
 
     " Snippets
 
+    " Git
+    Plug 'tpope/vim-fugitive'
+
     " Colorschemes
     Plug 'jacoborus/tender.vim'
     Plug 'NLKNguyen/papercolor-theme'
