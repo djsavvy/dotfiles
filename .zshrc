@@ -11,6 +11,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/.local/bin:$PATH"
 
 
 # custom ssh-agent systemd service
