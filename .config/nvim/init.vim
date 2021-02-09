@@ -28,6 +28,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'neoclide/jsonc.vim'
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'neoclide/jsonc.vim'
 
     " Autocompleting pairs/autoclosing tags
     Plug 'jiangmiao/auto-pairs'
