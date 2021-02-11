@@ -107,6 +107,11 @@ test -r /home/savvy/.opam/opam-init/init.zsh && . /home/savvy/.opam/opam-init/in
 export SYSTEMD_EDITOR="/bin/nvim"
 export EDITOR="/bin/nvim"
 
+# python pyenv configuration
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
