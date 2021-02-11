@@ -24,11 +24,11 @@ return
 return
 
 #Backspace::
-    Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe
 return
 
 #+Backspace::
-    Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --inprivate
+    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe --inprivate
 return
 
 #Esc::#l
