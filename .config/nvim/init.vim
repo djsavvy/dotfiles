@@ -437,6 +437,10 @@ let g:go_auto_sameids = 0
 let g:rustfmt_autosave = 1
 
 
+" Python customization
+autocmd FileType python let b:coc_root_patterns = ['app.json', '.git', '.env', 'pyproject.toml', 'pytest.ini']
+
+
 " Latex customization
 " vimtex neovim support
 let g:vimtex_compiler_progname = 'nvr'
