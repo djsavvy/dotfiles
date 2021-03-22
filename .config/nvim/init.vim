@@ -40,6 +40,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'jacoborus/tender.vim'
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'noahfrederick/vim-noctu'
+    Plug 'averak/laserwave.vim'
 
     " Improved comments
     Plug 'scrooloose/nerdcommenter'
