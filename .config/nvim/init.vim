@@ -85,6 +85,15 @@ set tabstop=2
 set splitbelow
 set splitright
 
+" Change shell for ! commands to powershell on windows
+if has('win32')
+  set shell=pwsh.exe\ -NoLogo
+  set shellpipe=\|
+  set shellxquote=
+  set shellcmdflag=-NoLogo\ -ExecutionPolicy\ RemoteSigned\ -Command
+  set shellredir=\|\ Out-File\ -Encoding\ UTF8
+endif
+
 
 " fzf keybindings
 nmap <C-;> :Buffers<CR>
