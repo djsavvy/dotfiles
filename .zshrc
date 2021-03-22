@@ -55,6 +55,29 @@ function drop_caches() {
     echo 1 > /proc/sys/vm/compact_memory
 }
 
+# Args: instance name, start/stop/terminate/etc, region (optional)
+function ec2state() {
+  aws ec2 $2-instances \
+    --region ${3:-us-east-1} \
+    --instance-ids \
+    $( \
+      aws ec2 describe-instances \
+      --filter Name=tag:Name,Values=$1 \
+      --query Reservations\[\*\].Instances\[\*\].InstanceId \
+      --output text \
+      --region ${3:-us-east-1}\
+    )
+}
+
+# Args: keypair file, instance name
+function ec2connect() {
+  mosh \
+    --ssh="ssh -i $1" \
+    ubuntu@$(ec2state $2 describe | jq .Reservations\[\].Instances\[\].PublicIpAddress -r) \
+    -- \
+    tmux
+}
+
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
 
