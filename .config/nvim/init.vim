@@ -264,11 +264,10 @@ let g:airline_extensions=[]
 " Color schemes
 " Note: for PaperColor light, set termguicolors. For noctu, don't.
 " if (has("termguicolors"))
- " set termguicolors
+  " set termguicolors
 " endif
 " set background=light | colorscheme PaperColor
-colorscheme noctu
-
+set background=light | colorscheme noctu
 
 " user terminal background color for vim
 " hi Normal ctermbg=none
@@ -277,7 +276,9 @@ colorscheme noctu
 " hi Comment ctermfg=49 guifg=#00ffaf
 " hi Comment cterm=italic gui=italic
 
-
+" Gui-specific customizations
+set guifont=Cascadia\ Code\ PL:h14
+" ==> ----->
 
 
 " Language Server Protocol (LSP) customizations (COC)
