@@ -265,7 +265,11 @@ autocmd User GoyoLeave call <SID>goyo_leave()
 " Airline customization
 set encoding=utf-8
 let g:airline_skip_empty_sections = 1
+if exists('g:neovide')
+  let g:airline_powerline_fonts = 0
+else
 let g:airline_powerline_fonts = 1
+endif
 let g:airline_theme='tender'
 let g:airline_extensions=[]
 
