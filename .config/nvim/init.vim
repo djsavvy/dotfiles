@@ -279,8 +279,14 @@ let g:airline_extensions=[]
 " if (has("termguicolors"))
   " set termguicolors
 " endif
-" set background=light | colorscheme PaperColor
-set background=light | colorscheme noctu
+
+if exists('g:neovide')
+  set termguicolors
+  set background=light | colorscheme PaperColor
+else
+  set background=light | colorscheme noctu
+endif
+
 
 " user terminal background color for vim
 " hi Normal ctermbg=none
