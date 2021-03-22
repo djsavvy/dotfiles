@@ -296,7 +296,9 @@ endif
 " hi Comment cterm=italic gui=italic
 
 " Gui-specific customizations
-set guifont=Cascadia\ Code\ PL:h14
+set guifont=Cascadia\ Code\ PL:h15
+set guifont=Iosevka
+" set guifont=*
 " ==> ----->
 
 
