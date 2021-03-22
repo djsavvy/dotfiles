@@ -38,6 +38,7 @@ alias firefox="/mnt/c/Program\ Files/Firefox\ Nightly/firefox.exe"
 alias edge="/mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe"
 alias shutdown="wsl.exe --shutdown"
 alias cmdrun="cmd.exe /c"
+alias neovide="neovide-0.7.0.exe --multiGrid --disowned"
 function win-notify() {
     powershell.exe -executionpolicy bypass -command New-BurntToastNotification -Text "\"$@\""
 }
