@@ -13,14 +13,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; For more details, see https://github.com/microsoft/terminal/issues/8954 
 #Enter::
     Run, wt
-    Sleep, 300
-    WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+    ; Sleep, 300
+    ; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
 
 #+Enter::
-    Run, wt -p "Windows PowerShell"
-    Sleep, 300
-    WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+    Run, wt -w 0 -p "PowerShell"
+    ; Sleep, 300
+    ; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
 
 #Backspace::
