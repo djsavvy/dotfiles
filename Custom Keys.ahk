@@ -18,7 +18,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 #+Enter::
-    Run, wt -w 0 -p "PowerShell"
+    Run, wt -w 0 -p "PowerShell Core with Developer Command Prompt"
     ; Sleep, 300
     ; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
