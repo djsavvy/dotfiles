@@ -37,6 +37,12 @@
         }
       }
     },
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    },
     "ocaml-lsp": {
       "command": "opam",
       "args": ["config", "exec", "--", "ocamllsp"],
