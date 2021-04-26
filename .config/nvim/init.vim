@@ -88,6 +88,7 @@ set tabstop=2
 " Set splits
 set splitbelow
 set splitright
+command! Vs vs
 
 " Change shell for ! commands to powershell on windows
 if has('win32')
