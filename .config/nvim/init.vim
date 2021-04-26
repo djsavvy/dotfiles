@@ -325,7 +325,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <C-]> <Plug>(coc-definition)
 
 " gy - go to type definition
-nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
 
 " gi - go to implementation
 nmap <silent> gi <Plug>(coc-implementation)
