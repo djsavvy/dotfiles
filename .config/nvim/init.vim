@@ -312,7 +312,13 @@ set guifont=Iosevka
 
 " Language Server Protocol (LSP) customizations (COC)
 set updatetime=300
-set signcolumn=yes
+
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 " gd - go to definition of word under cursor
 nmap <silent> gd <Plug>(coc-definition)
