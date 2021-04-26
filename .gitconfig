@@ -15,3 +15,5 @@
 	; recurse = true
 [pull]
 	ff = only
+[core]
+  autoclrf = input

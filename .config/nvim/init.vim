@@ -29,6 +29,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'neoclide/jsonc.vim'
+    Plug 'leafOfTree/vim-svelte-plugin'
 
     " Autocompleting pairs/autoclosing tags
     Plug 'jiangmiao/auto-pairs'
@@ -94,6 +95,10 @@ if has('win32')
   set shellredir=\|\ Out-File\ -Encoding\ UTF8
 endif
 
+" Disable ctrl+z in windows
+if has('win32')
+  map <C-z> <Nop>
+endif
 
 " fzf keybindings
 nmap <C-;> :Buffers<CR>
@@ -232,7 +237,6 @@ command! WW w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null
 command! W w
 command! Q q
 command! Qa qa
-
 
 " Distraction-free writing
 let g:limelight_conceal_ctermfg = 'gray'
