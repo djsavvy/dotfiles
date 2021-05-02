@@ -24,11 +24,11 @@ return
 return
 
 #Backspace::
-    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe
+    Run, C:\Program Files\Firefox Developer Edition\firefox.exe
 return
 
 #+Backspace::
-    Run, C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe --inprivate
+    Run, C:\Program Files\Firefox Developer Edition\firefox.exe -private-window
 return
 
 #Esc::#l
