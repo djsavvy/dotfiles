@@ -105,6 +105,7 @@ alias :E="vim "
 alias :q="exit"
 alias :Q="exit"
 alias exi="exit"
+alias g="git"
 
 alias cd..="cd .."
 
