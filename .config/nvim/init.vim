@@ -518,7 +518,7 @@ let g:mkdp_open_ip = '127.0.0.1'
 " let g:mkdp_port = 8080
 function! g:OpenBrowser(url)
     " :echo a:url
-    silent execute "!" . shellescape("/mnt/c/Program\ Files (x86)/Microsoft/Edge Dev/Application/msedge.exe") shellescape(a:url)
+    silent execute "!" . shellescape("/mnt/c/Program\ Files/Firefox Developer Edition/firefox.exe") shellescape(a:url)
 endfunction
 let g:mkdp_browserfunc = 'g:OpenBrowser'
 let g:mkdp_auto_close = 0
