@@ -12,6 +12,7 @@
   p = pull
   c = checkout
   pul = pull
+  upll = pull
   checout = checkout
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
