@@ -18,8 +18,10 @@
   ri = rebase -i
   d = diff
   ds = diff --staged
+  a = add
   ap = add -p
   cm = commit -m
+  s = stash
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 ; [submodule]
