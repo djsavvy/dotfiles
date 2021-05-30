@@ -163,13 +163,6 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
-
 ### End of Zinit's installer chunk
 
 # Zinit Configuration
@@ -179,7 +172,7 @@ zinit light zdharma/fast-syntax-highlighting
 
 # Get some Oh-My-ZSH functionality
 zinit snippet OMZ::plugins/shrink-path/shrink-path.plugin.zsh
-zinit for \
+zinit wait lucid light-mode for \
     OMZ::lib/history.zsh \
     OMZ::lib/key-bindings.zsh \
     OMZ::lib/spectrum.zsh \
