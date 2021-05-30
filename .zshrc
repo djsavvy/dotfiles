@@ -134,8 +134,9 @@ export EDITOR="/bin/nvim"
 
 # python pyenv configuration
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PATH="/home/ubuntu/.pyenv/bin:$PATH"
-eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 
