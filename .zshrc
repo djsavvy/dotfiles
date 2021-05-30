@@ -117,8 +117,10 @@ alias gr="git rebase"
 alias gri="git rebase -i"
 alias gd="git diff"
 alias gds="git diff --staged"
+alias ga="git add"
 alias gap="git add -p"
 alias gcm="git commit -m"
+alias gs="git stash"
 
 alias cd..="cd .."
 
