@@ -123,6 +123,9 @@ inoremap <C-H> <C-W>
 " Navigate between tabs
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
+" Fix the fact that <C-i> is now broken --- remap it to ",i". Note that <C-i>
+" and <Tab> are identical to vim.
+nnoremap ,i <C-i>
 
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
