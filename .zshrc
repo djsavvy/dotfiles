@@ -29,7 +29,7 @@ export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
 # fzf quality of life
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git/'
 
 # Call Windows programs from terminal
 alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
