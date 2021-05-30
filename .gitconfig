@@ -9,6 +9,8 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   ls-all = ls-tree -r HEAD
   check-whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
+  p = pull
+  c = checkout
   pul = pull
   checout = checkout
 [url "ssh://git@github.com/"]
