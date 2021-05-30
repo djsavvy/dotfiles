@@ -167,8 +167,10 @@ autoload -Uz _zinit
 
 # Zinit Configuration
 
-zinit light zsh-users/zsh-completions
-zinit light zdharma/fast-syntax-highlighting
+zinit wait lucid light-mode for \
+    zdharma/fast-syntax-highlighting \
+  blockf \
+    zsh-users/zsh-completions \
 
 # Get some Oh-My-ZSH functionality
 zinit snippet OMZ::plugins/shrink-path/shrink-path.plugin.zsh
