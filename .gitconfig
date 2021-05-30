@@ -12,7 +12,6 @@
   pul = pull
   upll = pull
   checout = checkout
-  p = pull
   c = checkout
   cp = cherry-pick
   r = rebase
