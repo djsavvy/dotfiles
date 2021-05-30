@@ -295,7 +295,7 @@ if exists('g:neovide')
   set termguicolors
   set background=light | colorscheme PaperColor
 else
-  set background=light | colorscheme noctu
+  set background=light | colorscheme PaperColor
 endif
 
 
