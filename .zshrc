@@ -94,6 +94,8 @@ alias ls="exa"
 export BAT_THEME="base16"
 alias cat="bat"
 
+export SYSTEMD_EDITOR="/bin/nvim"
+export EDITOR="/bin/nvim"
 alias vim="nvim"
 alias vi="nvim"
 # Note that you can use \vim to ignore the alias
@@ -124,14 +126,12 @@ function setbrightnessratio() {
 disable r
 
 
+
 # QT go binding env var setup
 export QT_PKG_CONFIG=true
 
 # opam configuration
 test -r /home/savvy/.opam/opam-init/init.zsh && . /home/savvy/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-export SYSTEMD_EDITOR="/bin/nvim"
-export EDITOR="/bin/nvim"
 
 # python pyenv configuration
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
@@ -139,6 +139,15 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+
+# Rust configuration
+source "$HOME/.cargo/env"
+
+# nvm configuration
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /usr/share/nvm/init-nvm.sh
 
 
 ### Added by Zinit's installer
@@ -188,11 +197,3 @@ zinit light romkatv/powerlevel10k
 autoload -Uz compinit
 compinit
 zinit cdreplay -q
-
-
-source "$HOME/.cargo/env"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source /usr/share/nvm/init-nvm.sh
