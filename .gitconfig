@@ -9,11 +9,18 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   ls-all = ls-tree -r HEAD
   check-whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
-  p = pull
-  c = checkout
   pul = pull
   upll = pull
   checout = checkout
+  p = pull
+  c = checkout
+  cp = cherry-pick
+  r = rebase
+  ri = rebase -i
+  d = diff
+  ds = diff --staged
+  ap = add -p
+  cm = commit -m
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 ; [submodule]
