@@ -28,8 +28,9 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
-# fzf quality of life
+# fzf/ripgrep quality of life
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git/'
+export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
 
 # Call Windows programs from terminal
 alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
