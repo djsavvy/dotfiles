@@ -121,6 +121,9 @@ alias ga="git add"
 alias gap="git add -p"
 alias gcm="git commit -m"
 alias gs="git stash"
+alias gpush="git push"
+alias gpul="git pull"
+alias gpull="git pull"
 
 alias cd..="cd .."
 
