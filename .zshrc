@@ -188,9 +188,11 @@ zinit wait lucid light-mode for \
 
 # Get some Oh-My-ZSH functionality
 zinit snippet OMZ::plugins/shrink-path/shrink-path.plugin.zsh
+zinit light-mode for \
+  OMZ::lib/history.zsh \
+  OMZ::lib/key-bindings.zsh
+
 zinit wait lucid light-mode for \
-    OMZ::lib/history.zsh \
-    OMZ::lib/key-bindings.zsh \
     OMZ::lib/spectrum.zsh \
     OMZ::lib/termsupport.zsh \
     OMZ::lib/directories.zsh \
