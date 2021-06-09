@@ -486,6 +486,8 @@ let g:go_highlight_build_constraints = 1
 let g:go_gocode_propose_builtins = 1
 let g:go_auto_type_info = 0
 let g:go_auto_sameids = 0
+let g:go_fmt_command = 'gofmt'
+let g:go_imports_autosave = 0
 " let g:go_gopls_enabled = 0
 " let g:go_def_mapping_enabled = 0
 
