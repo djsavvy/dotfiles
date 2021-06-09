@@ -3,6 +3,6 @@
 --max-columns-preview
 
 --hidden
---glob=!git/*
+--glob=!.git/*
 
 --smart-case
