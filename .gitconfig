@@ -21,7 +21,7 @@
   a = add
   ap = add -p
   cm = commit -m
-  s = stash
+  stat = status
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 ; [submodule]
