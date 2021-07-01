@@ -12,6 +12,7 @@
   pul = pull
   upl = pull
   upll = pull
+  tpush = push
   checout = checkout
   c = checkout
   cp = cherry-pick
