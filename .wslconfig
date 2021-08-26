@@ -1,0 +1,3 @@
+[wsl2]
+memory=24G
+swap = 0
