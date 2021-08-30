@@ -32,7 +32,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'leafOfTree/vim-svelte-plugin'
 
     " TreeSitter
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     " Autocompleting pairs/autoclosing tags
     Plug 'jiangmiao/auto-pairs'
@@ -317,19 +317,19 @@ set guifont=Iosevka
 
 
 " Treesitter config
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = { }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { },  -- list of language that will be disabled
-  },
-  indent = {
-    enable = true
-  }
-}
-EOF
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+  " ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  " ignore_install = { }, -- List of parsers to ignore installing
+  " highlight = {
+    " enable = true,              -- false will disable the whole extension
+    " disable = { },  -- list of language that will be disabled
+  " },
+  " indent = {
+    " enable = true
+  " }
+" }
+" EOF
 
 
 
