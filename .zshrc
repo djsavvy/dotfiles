@@ -16,14 +16,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 
-# Vagrant on WSL
-export PATH="/mnt/c/Program Files/Oracle/VirtualBox:$PATH"
-export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
-
-# WSL2 GUI apps with VcXsrv
-# set DISPLAY variable to the IP automatically assigned to WSL2
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-
 # read manpages in neovim
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
@@ -31,31 +23,6 @@ export MANWIDTH=999
 # fzf/ripgrep quality of life
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git/'
 export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
-
-# Call Windows programs from terminal
-alias sumatra="/mnt/c/Users/savvy/AppData/Local/SumatraPDF/SumatraPDF.exe"
-alias explorer="/mnt/c/Windows/SysWOW64/explorer.exe"
-alias firefox="/mnt/c/Program\ Files/Firefox\ Developer\ Edition/firefox.exe"
-alias edge="/mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe"
-alias shutdown="wsl.exe --shutdown"
-alias cmdrun="cmd.exe /c"
-alias neovide="neovide-0.7.0.exe --multiGrid --disowned"
-function win-notify() {
-    powershell.exe -executionpolicy bypass -command New-BurntToastNotification -Text "\"$@\""
-}
-
-# Drop caches to free up memory in Windows host (note, this needs to be executed as root)
-function drop_caches() {
-    local integer amt=$1
-    if [[ $# == 0 || ($amt < 1 || $amt > 3) ]];
-    then
-        amt=1
-    fi
-    echo "executing: echo $amt > /proc/sys/vm/drop_caches"
-    echo $amt > /proc/sys/vm/drop_caches
-    echo "executing: echo 1 > /proc/sys/vm/compact_memory"
-    echo 1 > /proc/sys/vm/compact_memory
-}
 
 # Args: instance name, start/stop/terminate/etc, region (optional)
 function ec2state() {
