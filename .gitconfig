@@ -31,5 +31,6 @@
 	; recurse = true
 [pull]
 	ff = only
+	rebase = true
 [core]
   autoclrf = input
