@@ -62,8 +62,8 @@ alias ls="exa"
 export BAT_THEME="base16"
 alias cat="bat"
 
-export SYSTEMD_EDITOR="/bin/nvim"
-export EDITOR="/bin/nvim"
+export SYSTEMD_EDITOR=$(which nvim)
+export EDITOR=$(which nvim)
 alias vim="nvim"
 alias vi="nvim"
 # Note that you can use \vim to ignore the alias
