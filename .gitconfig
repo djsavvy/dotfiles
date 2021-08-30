@@ -24,6 +24,7 @@
   ap = add -p
   cm = commit -m
   stat = status
+  tlg = lg
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 ; [submodule]
