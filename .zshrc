@@ -11,6 +11,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Use gnu sed on macOS
+export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+
 
 # custom ssh-agent systemd service
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
