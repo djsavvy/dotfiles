@@ -39,6 +39,9 @@ call plug#begin('~/.nvim/plugged')
     Plug 'alvan/vim-closetag'
 
     " Snippets
+    
+    " The Devil
+    Plug 'github/copilot.vim'
 
     " Git
     Plug 'tpope/vim-fugitive'
