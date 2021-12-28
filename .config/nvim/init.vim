@@ -41,7 +41,7 @@ call plug#begin('~/.nvim/plugged')
     " Snippets
     
     " The Devil
-    Plug 'github/copilot.vim'
+    " Plug 'github/copilot.vim'
 
     " Git
     Plug 'tpope/vim-fugitive'
