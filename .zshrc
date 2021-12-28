@@ -43,13 +43,25 @@ function ec2state() {
 }
 
 # Args: keypair file, instance name
-function ec2connect() {
+function ec2connect_mosh() {
   mosh \
     --ssh="ssh -i $1" \
     ubuntu@$(ec2state $2 describe | jq .Reservations\[\].Instances\[\].PublicIpAddress -r) \
     -- \
     tmux
 }
+
+# Args: keypair file, instance name
+function ec2connect() {
+    et \
+    ubuntu@$(ec2state $2 describe | jq .Reservations\[\].Instances\[\].PublicIpAddress -r)
+}
+
+function podman_start() {
+  podman machine init
+  podman machine start
+}
+
 
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
@@ -99,6 +111,8 @@ alias gstat="git status"
 alias gpush="git push"
 
 alias cd..="cd .."
+alias mke="make"
+alias speedtest.net="speedtest"
 
 # Increase brightness beyond 100
 function setbrightnessratio() {
