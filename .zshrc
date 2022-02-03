@@ -28,6 +28,11 @@ export MANWIDTH=999
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git/'
 export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
 
+# Set some options for sccache
+export SCCACHE_CACHE_SIZE=100G     # some of us use 100GB; you can use less if needed
+export RUSTC_WRAPPER=$(which sccache) # to use sccache for rust
+export SCCACHE_BUCKET=whist-brave-sccache # to build brave
+
 # Args: instance name, start/stop/terminate/etc, region (optional)
 function ec2state() {
   aws ec2 $2-instances \
