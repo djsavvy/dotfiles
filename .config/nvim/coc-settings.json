@@ -2,7 +2,7 @@
   "coc.source.around.enable": false,
   "coc.source.buffer.enable": false,
   // "diagnostic.displayByAle": true,
-  "rust-analyzer.serverPath": "/usr/sbin/rust-analyzer",
+  "rust-analyzer.serverPath": "rust-analyzer",
   "rust-analyzer.inlayHints.enable": false,
   "coc.preferences.formatOnSaveFiletypes": [],
   "diagnostic.checkCurrentLine": true,
