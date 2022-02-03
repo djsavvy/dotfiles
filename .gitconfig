@@ -12,6 +12,7 @@
   pul = pull
   upl = pull
   upll = pull
+  tpul = pull
   tpush = push
   checout = checkout
   c = checkout
