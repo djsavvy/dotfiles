@@ -14,7 +14,9 @@
   upl = pull
   upll = pull
   tpul = pull
+  pus = push
   tpush = push
+  pf = push --force
   checout = checkout
   c = checkout
   cp = cherry-pick
@@ -26,7 +28,6 @@
   ap = add -p
   cm = commit -m
   stat = status
-  pf = push --force
   ca = commit --amend
   s = stash
   ssp = stash show -p
