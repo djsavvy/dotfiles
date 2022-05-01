@@ -7,6 +7,7 @@
 	ui = auto
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  tlg = lg
   ls-all = ls-tree -r HEAD
   check-whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
   pul = pull
@@ -25,7 +26,12 @@
   ap = add -p
   cm = commit -m
   stat = status
-  tlg = lg
+  pf = push --force
+  ca = commit --amend
+  s = stash
+  ssp = stash show -p
+  sd = stash drop
+  sp = show -p
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 ; [submodule]
@@ -35,3 +41,5 @@
 	rebase = true
 [core]
   autoclrf = input
+[merge]
+	conflictstyle = diff3
