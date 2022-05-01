@@ -30,6 +30,9 @@ call plug#begin('~/.nvim/plugged')
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'neoclide/jsonc.vim'
     Plug 'leafOfTree/vim-svelte-plugin'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'jez/vim-ispc'
 
     " TreeSitter
     " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -39,7 +42,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'alvan/vim-closetag'
 
     " Snippets
-    
+
     " The Devil
     " Plug 'github/copilot.vim'
 
@@ -210,10 +213,10 @@ if !exists("*User_compile")
         " compiling vimrc/nvim.init is just reloading it
         if &ft == 'vim'
             source $MYVIMRC
-        " latex
         elseif &ft == 'tex' || &ft == 'latex'
             VimtexCompile
-        " markdown
+        elseif &ft == 'pandoc'
+            Pandoc! pdf
         elseif &ft == 'markdown'
             :execute "normal \<Plug>MarkdownPreviewToggle"
         end
@@ -414,6 +417,8 @@ endif
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
+" Map Coc Filetypes
+let g:coc_filetype_map = {'pandoc': 'markdown'}
 
 " Coc Snippets
 let g:coc_snippet_next = '<tab>'
@@ -469,6 +474,8 @@ if !exists("*User_toggle_table_of_contents")
     function User_toggle_table_of_contents()
         if &ft == 'tex' || &ft == 'latex'
             :call b:vimtex.toc.open()
+        elseif &ft == 'pandoc'
+            TOC
         else
             TagbarToggle
         end
@@ -505,8 +512,9 @@ autocmd FileType python let b:coc_root_patterns = ['app.json', '.git', '.env', '
 
 " Latex customization
 " vimtex neovim support
-let g:vimtex_compiler_progname = 'nvr'
 let g:tex_flavor = 'latex'
+let g:vimtex_view_general_viewer = 'skim'
+let g:vimtex_view_method = 'skim'
 let g:vimtex_compiler_latexmk = {
     \ 'backend' : 'nvim',
     \ 'background' : 1,
@@ -524,9 +532,8 @@ let g:vimtex_compiler_latexmk = {
     \ ],
     \}
 " vimtex pdf viewer
-let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_syntax_conceal_disable = 1
 let g:vimtex_toc_config = {}
 let g:vimtex_toc_config.split_pos = 'vert rightbelow'
 let g:vimtex_toc_config.split_width = 50
@@ -552,3 +559,10 @@ let g:mkdp_browserfunc = 'g:OpenBrowser'
 let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 let g:mkdp_page_title = "${name}.md"
+
+
+" vim-pandoc settings
+let g:pandoc#modules#disabled = ["folding"]
+let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#syntax#codeblocks#embeds#use = 1
+let g:pandoc#keyboard#use_default_mappings = 0
