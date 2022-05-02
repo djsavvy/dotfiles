@@ -106,6 +106,9 @@ alias gpull="git pull"
 alias gpush="git push"
 alias gpus="git push"
 alias gpf="git push --force"
+function gpuo {
+  git push -u origin "$(git branch --show-current)"
+}
 alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gcp="git cherry-pick"
@@ -123,9 +126,7 @@ alias gs="git stash"
 alias gssp="git stash show -p"
 alias gsd="git stash drop"
 alias gsp="git show -p"
-function gpuo {
-  git push -u origin "$(git branch --show-current)"
-}
+alias gf="git fetch"
 
 alias cd..="cd .."
 alias mke="make"
