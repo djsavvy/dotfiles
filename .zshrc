@@ -123,6 +123,9 @@ alias gs="git stash"
 alias gssp="git stash show -p"
 alias gsd="git stash drop"
 alias gsp="git show -p"
+function gpuo {
+  git push -u origin "$(git branch --show-current)"
+}
 
 alias cd..="cd .."
 alias mke="make"
