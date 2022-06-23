@@ -24,11 +24,13 @@ return
 return
 
 #Backspace::
-    Run, C:\Program Files\Firefox Developer Edition\firefox.exe
+    Run, MicrosoftEdge.exe
+    ; Run, C:\Program Files\Firefox Developer Edition\firefox.exe
 return
 
 #+Backspace::
-    Run, C:\Program Files\Firefox Developer Edition\firefox.exe -private-window
+    Run, MicrosoftEdge.exe --private
+    ; Run, C:\Program Files\Firefox Developer Edition\firefox.exe -private-window
 return
 
 #Esc::#l
