@@ -49,6 +49,7 @@ Remove-Alias -Name gcm -Force
 function gcm { git commit -m $args }
 function gstat { git status $args }
 function gca { git commit --amend $args }
+function gcam { git commit --amend $args }
 function gs { git stash $args }
 function gssp { git stash show -p $args }
 function gsd { git stash drop $args }
