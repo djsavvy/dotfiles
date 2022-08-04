@@ -35,6 +35,8 @@ function gpull { git pull $args }
 function gpush { git push $args }
 function gpf { git push --force $args }
 function gpuo { git push -u origin "$(git branch --show-current)" }
+
+Remove-Alias -Name gc -Force
 function gc { git checkout $args }
 function gcb { git checkout -b $args }
 function gcp { git cherry-pick $args }
@@ -68,5 +70,8 @@ function ll { Get-ChildItem -Force $args }
 Import-Module posh-git
 
 $ENV:STARSHIP_CONFIG = "$HOME\.starship"
-$ENV:RIPGREP_CONFIG_PATH = "\\wsl$\Arch\home\savvy\dotfiles\.config\.ripgreprc"
+$ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
+$env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm-root-ca.cer'
+
+Remove-Alias -Name gcb -Force
 Invoke-Expression (&starship init powershell)
