@@ -60,3 +60,7 @@ RAlt & F10::SendInput {Volume_Mute}
 RAlt & F11::SendInput {Volume_Down}
 RAlt & F12::SendInput {Volume_Up}
 F13::SendInput {PrintScreen}
+
+F14::SendInput {Media_Prev}
+F18::SendInput {Media_Play_Pause}
+F22::SendInput {Media_Next}
