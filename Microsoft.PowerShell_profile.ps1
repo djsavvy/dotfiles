@@ -12,7 +12,7 @@ Set-PSReadLineKeyHandler -Key Tab -Function Complete
 function vim { 
   if ((Test-Path Env:\TERM_PROGRAM) -and ("vscode" -eq (Get-Item -Path Env:\TERM_PROGRAM).Value)) {
     if (-not ($args.Count -eq 0)) {
-      code $args
+      code-insiders $args
     }
   }
   else {
