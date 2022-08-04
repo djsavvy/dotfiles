@@ -35,6 +35,8 @@ return
 
 #Esc::#l
 
+CapsLock::Esc
+
 ; Apple Magic Keyboard-specific bindings
 
 ; Set Win+Tab to Alt+Tab for muscle memory compatibility
