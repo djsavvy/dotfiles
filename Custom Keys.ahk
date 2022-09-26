@@ -16,7 +16,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ; Sleep, 300
     ; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
-
 #+Enter::
     Run, wt -w 0 -p "PowerShell Core with Developer Command Prompt"
     ; Sleep, 300
@@ -42,7 +41,7 @@ CapsLock::Esc
 ; Apple Magic Keyboard-specific bindings
 
 ; Set Win+Tab to Alt+Tab for muscle memory compatibility
-; Lwin & Tab::AltTab
+Lwin & Tab::AltTab
 
 ; Remap media keys
 RAlt & F1::
