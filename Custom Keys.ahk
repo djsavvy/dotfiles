@@ -65,3 +65,9 @@ F13::SendInput {PrintScreen}
 F14::SendInput {Media_Prev}
 F18::SendInput {Media_Play_Pause}
 F22::SendInput {Media_Next}
+
+; https://simshaun.medium.com/inserting-en-dash-and-em-dash-on-windows-in-any-application-using-autohotkey-1fd010f4f7eb
+; Shift+Alt+Minus = Em dash
++!-::
+Send {—}
+return
