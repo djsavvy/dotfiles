@@ -1,3 +1,6 @@
+# uncomment to profile
+# zmodload zsh/zprof
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -25,13 +28,12 @@ export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
 # fzf/ripgrep quality of life
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git/'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git/ --exclude .yarn/'
 export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
 
 # Set some options for sccache
 export SCCACHE_CACHE_SIZE=100G     # some of us use 100GB; you can use less if needed
 export RUSTC_WRAPPER=$(which sccache) # to use sccache for rust
-export SCCACHE_BUCKET=whist-brave-sccache # to build brave
 
 # Args: instance name, start/stop/terminate/etc, region (optional)
 function ec2state() {
@@ -122,11 +124,21 @@ alias ga.="git add ."
 alias gcm="git commit -m"
 alias gstat="git status"
 alias gca="git commit --amend"
+alias gcam="git commit --amend"
 alias gs="git stash"
 alias gssp="git stash show -p"
 alias gsd="git stash drop"
 alias gsp="git show -p"
 alias gf="git fetch"
+alias grh="git reset --hard"
+
+# Cargo aliases
+alias carog="cargo"
+alias c="cargo" 
+alias cb="cargo build"
+alias cbr="cargo build --release"
+alias cr="cargo run"
+alias crr="cargo run --release"
 
 alias cd..="cd .."
 alias mke="make"
@@ -188,48 +200,53 @@ eval "$(pyenv virtualenv-init -)"
 # Rust configuration
 source "$HOME/.cargo/env"
 
-# nvm configuration
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Add fzf to zsh
 source "$(brew --prefix fzf)/shell/completion.zsh"
 source "$(brew --prefix fzf)/shell/key-bindings.zsh"
 
 ### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-source "$HOME/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+# don't need because compinit comes after sourcing zinit.zsh
+# autoload -Uz _zinit
+# (( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
 
 # Zinit Configuration
-
-zinit wait lucid light-mode for \
-    zdharma/fast-syntax-highlighting \
-  blockf \
-    zsh-users/zsh-completions \
-
 # Get some Oh-My-ZSH functionality
 zinit snippet OMZ::plugins/shrink-path/shrink-path.plugin.zsh
 zinit light-mode for \
+  OMZ::lib/functions.zsh \
   OMZ::lib/history.zsh \
   OMZ::lib/key-bindings.zsh
 
-zinit wait lucid light-mode for \
+zinit lucid light-mode for \
     OMZ::lib/spectrum.zsh \
     OMZ::lib/termsupport.zsh \
     OMZ::lib/directories.zsh \
     OMZ::lib/completion.zsh
+
+zinit lucid light-mode for \
+    zdharma-continuum/fast-syntax-highlighting \
+  blockf \
+    zsh-users/zsh-completions \
+
+export NVM_DIR="$HOME/.nvm"
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+zinit light lukechilds/zsh-nvm
 
 # Powerlevel10k prompt
 zinit ice depth=1
@@ -237,7 +254,28 @@ zinit light romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# needed for poetry completions to work
+fpath+=~/.zfunc
+
 # Establish completions with zinit
 autoload -Uz compinit
 compinit
 zinit cdreplay -q
+
+export HOMEBREW_GITHUB_API_TOKEN=placeholder
+
+# Created by `pipx` on 2023-05-06 06:58:56
+export PATH="$PATH:/Users/savvy/.local/bin"
+
+# Configure zsh history (doing this after the OMZ::lib/history call)
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+setopt INC_APPEND_HISTORY
+export HISTTIMEFORMAT="[%F %T] "
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+
+
+# uncomment to profile
+# zprof
+
