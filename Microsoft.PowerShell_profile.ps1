@@ -6,6 +6,7 @@ Set-PSReadLineKeyHandler -Chord ctrl+w -Function BackwardDeleteWord
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineOption -PredictionSource None
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
@@ -36,8 +37,41 @@ function gpush { git push $args }
 function gpf { git push --force $args }
 function gpuo { git push -u origin "$(git branch --show-current)" }
 
+Remove-Alias -Name gp -Force
+function gp { 
+  trap { "Error found. $_" }
+
+  git update-index --refresh;
+  git diff-index --quiet HEAD --;
+  $need_to_stash = -not ( $? )
+
+  if ( $need_to_stash ) {
+    git stash;
+  }  
+  git pull;
+  git push $args;
+  if ( $need_to_stash ) {
+    git stash pop;
+  }
+}
+
 Remove-Alias -Name gc -Force
-function gc { git checkout $args }
+function gc { 
+  trap { "Error found. $_" }
+
+  git update-index --refresh;
+  git diff-index --quiet HEAD --;
+  $need_to_stash = -not ( $? )
+
+  if ( $need_to_stash ) {
+    git stash;
+  }  
+  git checkout $args 
+  if ( $need_to_stash ) {
+    git stash pop;
+  }
+}
+
 function gcb { git checkout -b $args }
 function gcp { git cherry-pick $args }
 function gr { git rebase $args }
@@ -62,10 +96,12 @@ function gpush { git push $args }
 function cd.. { cd .. }
 function .. { cd .. }
 function ... { cd ../.. }
-function .... { cd ../../..}
+function .... { cd ../../.. }
 
 function ll { Get-ChildItem -Force $args }
 
+Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
+New-Alias which get-command
 
 Import-Module posh-git
 
