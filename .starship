@@ -14,6 +14,10 @@ error_symbol = "[✗](bold red) "             # The "success_symbol" segment is 
 [directory]
 fish_style_pwd_dir_length = 2
 
+[cmd_duration]
+min_time = 2000
+show_milliseconds = true
+
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
