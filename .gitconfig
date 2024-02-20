@@ -1,5 +1,5 @@
 [user]
-	email = sraghuvanshi@college.harvard.edu
+	email = kepler1729@gmail.com
 	name = djsavvy
 [core]
 	editor = nvim
@@ -13,6 +13,7 @@
   pul = pull
   upl = pull
   upll = pull
+  ull = pull
   tpul = pull
   pus = push
   tpush = push
@@ -41,9 +42,15 @@
 ; [submodule]
 	; recurse = true
 [pull]
-	ff = only
 	rebase = true
+	; ff = only
 [core]
   autoclrf = input
 [merge]
 	conflictstyle = diff3
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
+[submodule]
+	recurse = true
