@@ -44,13 +44,50 @@
 [pull]
 	rebase = true
 	; ff = only
+[push]
+	default = current
 [core]
   autoclrf = input
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 [fetch]
 	prune = true
 [diff]
+	algorithm = histogram
 	colorMoved = zebra
+	submodule = log
 [submodule]
 	recurse = true
+[rebase]
+	autosquash = true
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+[help]
+	autocorrect = 10
+[status]
+	submoduleSummary = true
+[branch]
+	sort = committerdate
+[tag]
+	sort = taggerdate
+
+; delta pager
+;[core]
+;	pager = delta
+;[interactive]
+;	diffFilter = delta --color-only
+
+
+; avoid some data corruption early
+[transfer]
+	fsckObjects=true
+[fetch]
+	fsckObjects=true
+[receive]
+	fsckObjects=true
+
+
+[credential "https://app-explor-wus-dev.scm.azurewebsites.net"]
+        provider = generic
