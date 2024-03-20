@@ -45,7 +45,7 @@ call plug#begin('~/.nvim/plugged')
 
     " The Devil
     " Plug 'github/copilot.vim'
-
+    
     " Git
     Plug 'tpope/vim-fugitive'
 
@@ -54,6 +54,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'noahfrederick/vim-noctu'
     Plug 'averak/laserwave.vim'
+    Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
     " Improved comments
     Plug 'scrooloose/nerdcommenter'
@@ -300,10 +301,13 @@ let g:airline_extensions=[]
   " set termguicolors
 " endif
 
+let g:catppuccin_flavor = "latte"
+
 if exists('g:neovide')
   set termguicolors
   set background=light | colorscheme PaperColor
 else
+  " colorscheme catppuccin
   set background=light | colorscheme PaperColor
 endif
 
