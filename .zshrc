@@ -143,6 +143,8 @@ alias crr="cargo run --release"
 alias cd..="cd .."
 alias mke="make"
 alias speedtest.net="speedtest"
+alias p="ping 1.1.1.1"
+alias speedtest="open https://speed.cloudflare.com"
 
 # Increase brightness beyond 100
 function setbrightnessratio() {
@@ -156,6 +158,8 @@ function setbrightnessratio() {
 
 # Disable r builtin
 disable r
+
+alias mixtral="ollama run mixtral"
 
 
 ### GPG Setup
@@ -232,7 +236,7 @@ zinit light-mode for \
   OMZ::lib/history.zsh \
   OMZ::lib/key-bindings.zsh
 
-zinit lucid light-mode for \
+zinit light-mode for \
     OMZ::lib/spectrum.zsh \
     OMZ::lib/termsupport.zsh \
     OMZ::lib/directories.zsh \
@@ -279,3 +283,10 @@ setopt HIST_FIND_NO_DUPS
 # uncomment to profile
 # zprof
 
+
+# bun completions
+[ -s "/Users/savvy/.bun/_bun" ] && source "/Users/savvy/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
