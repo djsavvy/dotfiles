@@ -32,11 +32,13 @@
   cm = commit -m
   stat = status
   ca = commit --amend
+  cam = commit --amend
   s = stash
   ssp = stash show -p
   sd = stash drop
   sp = show -p
   f = fetch
+  rh = reset --hard
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 ; [submodule]
@@ -91,3 +93,9 @@
 
 [credential "https://app-explor-wus-dev.scm.azurewebsites.net"]
         provider = generic
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
