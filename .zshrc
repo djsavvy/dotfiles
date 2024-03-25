@@ -193,14 +193,6 @@ export QT_PKG_CONFIG=true
 # opam configuration
 test -r /home/savvy/.opam/opam-init/init.zsh && . /home/savvy/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-# python pyenv configuration
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Rust configuration
 source "$HOME/.cargo/env"
 
@@ -286,6 +278,14 @@ setopt HIST_FIND_NO_DUPS
 
 # bun completions
 [ -s "/Users/savvy/.bun/_bun" ] && source "/Users/savvy/.bun/_bun"
+
+# python pyenv configuration
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
