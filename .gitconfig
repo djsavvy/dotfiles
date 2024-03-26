@@ -34,15 +34,11 @@
   ca = commit --amend
   cam = commit --amend
   s = stash
-  ssp = stash show -p
+  ssp = stash show -p --ext-diff
   sd = stash drop
-  sp = show -p
+  sp = show -p --ext-diff
   f = fetch
   rh = reset --hard
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
-; [submodule]
-	; recurse = true
 [pull]
 	rebase = true
 	; ff = only
@@ -75,12 +71,30 @@
 [tag]
 	sort = taggerdate
 
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+; difftastic
+[diff]
+        tool = difftastic
+        external = difft
+[difftool]
+        prompt = false
+[difftool "difftastic"]
+        cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+        difftool = true
+[alias]
+        dft = difftool
+
 ; delta pager
 ;[core]
 ;	pager = delta
 ;[interactive]
 ;	diffFilter = delta --color-only
-
 
 ; avoid some data corruption early
 [transfer]
@@ -93,9 +107,6 @@
 
 [credential "https://app-explor-wus-dev.scm.azurewebsites.net"]
         provider = generic
-
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+; for work, turn the following off:
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
