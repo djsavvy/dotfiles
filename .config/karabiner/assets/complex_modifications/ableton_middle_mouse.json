@@ -1,0 +1,27 @@
+{
+  "title": "Ableton middle mouse button to pan",
+  "rules": [
+    {
+      "description": "Ableton middle mouse button to pan",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["^com\\.ableton\\.live$"],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "description": "ableton middle mouse",
+          "from": {
+            "pointing_button": "button3"
+          },
+          "to": {
+            "modifiers": ["left_command", "left_option"],
+            "pointing_button": "button1"
+          },
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

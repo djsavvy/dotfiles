@@ -1,0 +1,1 @@
+{"title":"Disable Escape Key","rules":[{"description":"Disable Escape Key in FF Fullscreen","manipulators":[{"type":"basic","from":{"key_code":"escape"},"conditions":[{"type":"frontmost_application_if","file_paths":["/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox"]}]}]}]}

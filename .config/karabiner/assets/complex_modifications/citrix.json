@@ -1,0 +1,64 @@
+{
+  "title": "Citrix rules by Savvy",
+  "rules": [
+    {
+      "description": "Citrix rules by Savvy",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["^com\\.citrix\\.receiver\\.icaviewer\\.mac$"],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "description": "command+f to ctrl+f",
+          "from": {
+            "key_code": "f",
+            "modifiers": ["left_command"]
+          },
+          "to": {
+            "key_code": "f",
+            "modifiers": ["control"]
+          },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["^com\\.citrix\\.receiver\\.icaviewer\\.mac$"],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "description": "command+t to ctrl+t",
+          "from": {
+            "key_code": "t",
+            "modifiers": ["left_command"]
+          },
+          "to": {
+            "key_code": "t",
+            "modifiers": ["control"]
+          },
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["^com\\.citrix\\.receiver\\.icaviewer\\.mac$"],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "description": "command+shift+t to ctrl+shift+t",
+          "from": {
+            "key_code": "t",
+            "modifiers": ["shift", "left_command"]
+          },
+          "to": {
+            "key_code": "t",
+            "modifiers": ["shift", "control"]
+          },
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
