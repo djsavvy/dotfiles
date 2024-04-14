@@ -1,0 +1,1 @@
+{"title":"ableton live middle button pan","rules":[{"description":"","manipulators":[{"type":"basic","from":{"pointing_button":"button3"},"conditions":[{"type":"frontmost_application_if","bundle_identifiers":["com\\.ableton\\.live"]}],"to":[{"repeat":true,"pointing_button":"button1","modifiers":["left_gui","left_alt"]}]}]}]}
