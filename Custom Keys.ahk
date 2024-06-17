@@ -71,3 +71,7 @@ F22::SendInput {Media_Next}
 +!-::
 Send {—}
 return
++#-::
+Send {—}
+return
+
