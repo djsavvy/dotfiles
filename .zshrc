@@ -13,6 +13,7 @@ export PATH="$HOME/.config/xboxdrv/scripts/:$HOME/go/bin:/usr/lib/ccache/bin/:$H
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 # Use gnu sed, make, etc. on macOS
 export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -79,11 +80,11 @@ zstyle :prompt:pure:git:stash show yes
 # User configuration
 export MANPATH="/usr/local/man:$MANPATH"
 
-alias ls="exa"
+alias ls="eza"
 # Note that you can use \ls to ignore the alias
 
 export BAT_THEME="base16"
-alias cat="bat"
+# alias cat="bat"
 
 export SYSTEMD_EDITOR=$(which nvim)
 export EDITOR=$(which nvim)
@@ -239,6 +240,8 @@ zinit lucid light-mode for \
   blockf \
     zsh-users/zsh-completions \
 
+zinit load atuinsh/atuin
+
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
@@ -290,3 +293,6 @@ eval "$(pyenv virtualenv-init -)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
