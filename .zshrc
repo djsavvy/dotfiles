@@ -70,7 +70,6 @@ function podman_start() {
   podman machine start
 }
 
-
 # enable smooth scrolling in firefox on X.org
 export MOZ_USE_XINPUT2=1
 
@@ -111,6 +110,14 @@ alias gpus="git push"
 alias gpf="git push --force"
 function gpuo {
   git push -u origin "$(git branch --show-current)"
+}
+function gp() {
+  local stashed=0
+  git diff-index --quiet HEAD -- || {
+    git stash && stashed=1
+  }
+  git pull && git push "$@"
+  [[ $stashed -eq 1 ]] && git stash pop
 }
 alias gc="git checkout"
 alias gcb="git checkout -b"
