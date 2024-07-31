@@ -3,3 +3,5 @@ tags
 .config/systemd/user/default.target.wants
 **/.DS_Store
 Custom Keys.exe
+
+.config/karabiner/automatic_backups
