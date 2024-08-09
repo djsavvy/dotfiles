@@ -13,7 +13,7 @@ Set-PSReadLineKeyHandler -Key Tab -Function Complete
 function vim { 
   if ((Test-Path Env:\TERM_PROGRAM) -and ("vscode" -eq (Get-Item -Path Env:\TERM_PROGRAM).Value)) {
     if (-not ($args.Count -eq 0)) {
-      code-insiders $args
+      code $args
     }
   }
   else {
@@ -28,8 +28,22 @@ function :q { exit }
 function :Q { exit }
 function exi { exit }
 
+function upgrade { explorer https://explor.faralloncapital.com/upgrade }
+function upgrad { explorer https://explor.faralloncapital.com/upgrade }
+function upgra { explorer https://explor.faralloncapital.com/upgrade }
+function upgr { upgrade } 
+function upg { upgrade } 
+function up { upgrade}
+
+function y { yarn $args } 
+function yd { yarn dev } 
+function yts { yarn ts $args }
+
+function e { cd ~/src/explor/app }
+
 # Git aliases
 function g { git $args }
+function it { git $args }
 function gi { git $args }
 function gpul { git pull $args }
 function gpull { git pull $args }
@@ -93,12 +107,15 @@ function gsp { git show -p $args }
 function gf { git fetch $args }
 function gpush { git push $args }
 
+function ghrv { gh repo view -w }
+
 function cd.. { cd .. }
 function .. { cd .. }
 function ... { cd ../.. }
 function .... { cd ../../.. }
 
-function ll { Get-ChildItem -Force $args }
+# function ll { Get-ChildItem -Force $args }
+function ll { eza $args } 
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
 New-Alias which get-command
@@ -111,3 +128,8 @@ $env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm
 
 Remove-Alias -Name gcb -Force
 Invoke-Expression (&starship init powershell)
+
+#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
+
+Import-Module -Name Microsoft.WinGet.CommandNotFound
+#f45873b3-b655-43a6-b217-97c00aa0db58
