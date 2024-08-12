@@ -10,14 +10,19 @@ Set-PSReadLineOption -PredictionSource None
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
-function vim { 
+$ENV:STARSHIP_CONFIG = "$HOME\.starship"
+$ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
+$env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm-root-ca.cer'
+$env:AZURE_OPENAI_KEY_EUS_EXPLOR = 'PLACEHOLDER_AZURE_OPENAI_KEY_EUS_EXPLOR'
+
+function vim {
   if ((Test-Path Env:\TERM_PROGRAM) -and ("vscode" -eq (Get-Item -Path Env:\TERM_PROGRAM).Value)) {
     if (-not ($args.Count -eq 0)) {
       code $args
     }
   }
   else {
-    nvim $args 
+    nvim $args
   }
 }
 function vi { vim $args }
@@ -31,12 +36,12 @@ function exi { exit }
 function upgrade { explorer https://explor.faralloncapital.com/upgrade }
 function upgrad { explorer https://explor.faralloncapital.com/upgrade }
 function upgra { explorer https://explor.faralloncapital.com/upgrade }
-function upgr { upgrade } 
-function upg { upgrade } 
-function up { upgrade}
+function upgr { upgrade }
+function upg { upgrade }
+function up { upgrade }
 
-function y { yarn $args } 
-function yd { yarn dev } 
+function y { yarn $args }
+function yd { yarn dev }
 function yts { yarn ts $args }
 
 function e { cd ~/src/explor/app }
@@ -52,7 +57,7 @@ function gpf { git push --force $args }
 function gpuo { git push -u origin "$(git branch --show-current)" }
 
 Remove-Alias -Name gp -Force
-function gp { 
+function gp {
   trap { "Error found. $_" }
 
   git update-index --refresh;
@@ -61,7 +66,7 @@ function gp {
 
   if ( $need_to_stash ) {
     git stash;
-  }  
+  }
   git pull;
   git push $args;
   if ( $need_to_stash ) {
@@ -70,7 +75,7 @@ function gp {
 }
 
 Remove-Alias -Name gc -Force
-function gc { 
+function gc {
   trap { "Error found. $_" }
 
   git update-index --refresh;
@@ -79,8 +84,8 @@ function gc {
 
   if ( $need_to_stash ) {
     git stash;
-  }  
-  git checkout $args 
+  }
+  git checkout $args
   if ( $need_to_stash ) {
     git stash pop;
   }
@@ -107,6 +112,110 @@ function gsp { git show -p $args }
 function gf { git fetch $args }
 function gpush { git push $args }
 
+function aigcm {
+  # Get the git diff
+  $diff = git diff --staged -W -U200
+
+  # Check if there are any changes
+  if ([string]::IsNullOrWhiteSpace($diff)) {
+    Write-Host "No changes to commit."
+    return
+  }
+
+  # Hardcoded Azure OpenAI API details
+  $hostname = 'openai-explor-eus-prod.openai.azure.com'
+  $path = '/openai/deployments/gpt-4o/chat/completions?api-version=2024-04-01-preview'
+  $apiKey = $env:AZURE_OPENAI_KEY_EUS_EXPLOR
+
+  if ([string]::IsNullOrWhiteSpace($apiKey)) {
+    Write-Host "Azure OpenAI API key is not set. Please set the environment variable AZURE_OPENAI_KEY_EUS_EXPLOR."
+    return
+  }
+
+  # Prepare the API request
+  $headers = @{
+    "Content-Type" = "application/json"
+    "api-key"      = $apiKey
+  }
+
+  $body = @{
+    "messages"   = @(
+      @{
+        "role"    = "system"
+        "content" = @"
+You are tasked with writing a commit message based on the output of a `git diff` command. This is an
+important skill for maintaining clear and informative version control history. Your goal is to
+create a concise commit message that accurately represents the changes made in the code but elides
+minor details.
+
+Here is the output of the `git diff` command:
+
+
+$diff
+
+
+To write an effective commit message, follow these steps:
+
+1. Carefully analyze the git diff output. Pay attention to:
+ - Files that have been modified, added, or deleted
+ - The nature of the changes (e.g., bug fixes, new features, refactoring)
+ - Any patterns or themes in the changes
+ - Note that lines that start with a + are additions, and lines that start
+ with a - are deletions. Other lines were already present in the file and
+ were not changed. Your task is to write a commit message only for the changes
+ present in this commit; DO NOT describe pre-existing code.
+
+2. Summarize the main purpose of the changes in a single, concise sentence. This will be the first
+line of your commit message. It should:
+ - Not be too long (ideally under 100 characters)
+ - Use the imperative mood (e.g., "Fix bug" not "Fixed bug" or "Fixes bug")
+ - Clearly convey the primary impact of the changes
+
+3. ONLY IF NECESSARY, provide additional details after two newlines. These details should:
+ - Explain the reasoning behind the changes
+ - Highlight any important side effects or implications
+ - Be formatted as bullet points for clarity
+
+4. Avoid including obvious or redundant information, such as "I updated file X" or listing every
+single file changed. Minor changes should not be detailed in the commit message unless they are the
+only changes.
+
+Remember, a good commit message should allow someone to understand the essence of the changes
+without having to look at the code.
+
+Respond with only your commit message. Ensure that there are two newlines between the summary line
+and any additional details. For example:
+
+
+Implement user authentication
+
+- Add login and registration forms
+ - Set up JWT token generation and validation
+ - Create protected routes for authenticated users
+"@
+      }
+    )
+    "max_tokens" = 2000
+  } | ConvertTo-Json
+
+  # Make the API call
+  $uri = "https://$hostname$path"
+  $response = Invoke-RestMethod -Method Post -Uri $uri -Headers $headers -Body $body
+
+  # Extract the commit message
+  $commitMessage = $response.choices[0].message.content.Trim()
+
+  # Create a temporary file with the commit message
+  $tempFile = [System.IO.Path]::GetTempFileName()
+  Set-Content -Path $tempFile -Value $commitMessage
+
+  # Call git commit with the prepared message
+  git commit -e -F $tempFile
+
+  # Clean up the temporary file
+  Remove-Item -Path $tempFile
+}
+
 function ghrv { gh repo view -w }
 
 function cd.. { cd .. }
@@ -115,16 +224,12 @@ function ... { cd ../.. }
 function .... { cd ../../.. }
 
 # function ll { Get-ChildItem -Force $args }
-function ll { eza $args } 
+function ll { eza $args }
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
 New-Alias which get-command
 
 Import-Module posh-git
-
-$ENV:STARSHIP_CONFIG = "$HOME\.starship"
-$ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
-$env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm-root-ca.cer'
 
 Remove-Alias -Name gcb -Force
 Invoke-Expression (&starship init powershell)
