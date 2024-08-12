@@ -10,10 +10,17 @@ Set-PSReadLineOption -PredictionSource None
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
+Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
+  $name, $value = $_.Split('=')
+  if ($name -and $value -and ($name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$')) {
+    [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
+  }
+}
+
+
 $ENV:STARSHIP_CONFIG = "$HOME\.starship"
 $ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
 $env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm-root-ca.cer'
-$env:AZURE_OPENAI_KEY_EUS_EXPLOR = 'PLACEHOLDER_AZURE_OPENAI_KEY_EUS_EXPLOR'
 
 function vim {
   if ((Test-Path Env:\TERM_PROGRAM) -and ("vscode" -eq (Get-Item -Path Env:\TERM_PROGRAM).Value)) {
