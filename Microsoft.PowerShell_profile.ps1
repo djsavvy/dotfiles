@@ -78,6 +78,11 @@ Remove-Alias -Name gc -Force
 function gc {
   trap { "Error found. $_" }
 
+  if ($args -contains '--') {
+    git checkout $args
+    return
+  }
+
   git update-index --refresh;
   git diff-index --quiet HEAD --;
   $need_to_stash = -not ( $? )
