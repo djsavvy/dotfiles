@@ -12,7 +12,7 @@ Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
 Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
   $name, $value = $_.Split('=')
-  if ($name -and $value -and ($name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$')) {
+  if ($name -and $value -and ($name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^ANTHROPIC_.*$')) {
     [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
   }
 }
@@ -49,9 +49,12 @@ function up { upgrade }
 
 function y { yarn $args }
 function yd { yarn dev }
-function yts { yarn ts $args }
+function yts { if (-not ($args.Count -eq 0)) { yarn ts $args } else { yarn ts } }
 
 function e { cd ~/src/explor/app }
+function a { cd ~/src/applets }
+function d { cd ~/src/trades_table_pipeline }
+function exp { cd ~/src/experiments }
 
 # Git aliases
 function g { git $args }
@@ -107,6 +110,7 @@ function gcb { git checkout -b $args }
 function gcp { git cherry-pick $args }
 function gr { git rebase $args }
 function gri { git rebase -i $args }
+function grc { git rebase --continue }
 function gd { git diff $args }
 function gds { git diff --staged $args }
 function ga { git add $args }
@@ -227,6 +231,7 @@ Implement user authentication
   # Clean up the temporary file
   Remove-Item -Path $tempFile
 }
+function gcmai { aigcm $args }
 
 function ghrv { gh repo view -w }
 
@@ -237,6 +242,11 @@ function .... { cd ../../.. }
 
 # function ll { Get-ChildItem -Force $args }
 function ll { eza $args }
+
+
+function p3 { python3 $args }
+function py3 { python3 $args }
+
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
 New-Alias which get-command
