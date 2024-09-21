@@ -153,6 +153,7 @@ alias mke="make"
 alias speedtest.net="speedtest"
 alias p="ping 1.1.1.1"
 alias speedtest="open https://speed.cloudflare.com"
+alias bu="brew update && brew upgrade"
 
 # Increase brightness beyond 100
 function setbrightnessratio() {
@@ -302,4 +303,3 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
