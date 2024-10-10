@@ -47,13 +47,13 @@ function upgr { upgrade }
 function upg { upgrade }
 function up { upgrade }
 
-function y { yarn $args }
+function y { if (-not ($args.Count -eq 0)) { yarn $args } else { yarn } }
 function yd { yarn dev }
 function yts { if (-not ($args.Count -eq 0)) { yarn ts $args } else { yarn ts } }
 
 function e { cd ~/src/explor/app }
 function a { cd ~/src/applets }
-function d { cd ~/src/trades_table_pipeline }
+function deft { cd ~/src/trades_table_pipeline }
 function exp { cd ~/src/experiments }
 
 # Git aliases
@@ -112,6 +112,7 @@ function gr { git rebase $args }
 function gri { git rebase -i $args }
 function grc { git rebase --continue }
 function gd { git diff $args }
+function d { git diff $args }
 function gds { git diff --staged $args }
 function ga { git add $args }
 function gap { git add -p $args }
