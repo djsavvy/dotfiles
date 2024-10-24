@@ -41,11 +41,15 @@ function :Q { exit }
 function exi { exit }
 
 function upgrade { explorer https://explor.faralloncapital.com/upgrade }
-function upgrad { explorer https://explor.faralloncapital.com/upgrade }
-function upgra { explorer https://explor.faralloncapital.com/upgrade }
+function upgrad { upgrade }
+function upgra { upgrade }
 function upgr { upgrade }
 function upg { upgrade }
-function up { upgrade }
+
+function uptime { explorer https://explor.faralloncapital.com/uptime }
+function uptim { uptime }
+function upti { uptime }
+function upt { uptime }
 
 function y { if (-not ($args.Count -eq 0)) { yarn $args } else { yarn } }
 function yd { yarn dev }
