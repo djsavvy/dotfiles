@@ -78,13 +78,13 @@
 	clean = git-lfs clean -- %f
 
 ; difftastic
-[diff]
-        tool = difftastic
-        external = difft
-[difftool]
-        prompt = false
-[difftool "difftastic"]
-        cmd = difft "$LOCAL" "$REMOTE"
+# [diff]
+#         tool = difftastic
+#         external = difft
+# [difftool]
+#         prompt = false
+# [difftool "difftastic"]
+#         cmd = difft "$LOCAL" "$REMOTE"
 [pager]
         difftool = true
 [alias]
