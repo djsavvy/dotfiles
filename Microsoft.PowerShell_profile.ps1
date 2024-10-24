@@ -234,6 +234,26 @@ Implement user authentication
 }
 function gcmai { aigcm $args }
 
+# immortalizing an absolutely unhinged email @bijection got
+function hi_guillermo {
+  git commit -m @"
+Hi Guillermo,
+
+It's called a mail merge.
+
+It seems that there could be something wrong with your cerebrum.
+
+Someone who needs a job is attempting to find someone who has available work. Upon noticing this pattern you attempted to murder the job seeker so that you can later eat them as food.
+
+If you analyze the strange trajectory of emotions that you entertained leading up to writing your e-mail, during writing the e-mail, and after writing the e-mail, in very fine detail, you'll realize that you were attempting to fool any law enforcement who later reads your e-mail into thinking that you didn't want to eat me.
+
+When in fact that is exactly what you want.
+
+Best,
+Brian
+"@
+}
+
 function ghrv { gh repo view -w }
 
 function cd.. { cd .. }
