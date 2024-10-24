@@ -133,7 +133,60 @@ function gsp { git show -p $args }
 function gf { git fetch $args }
 function gpush { git push $args }
 
-function aigcm {
+function aigcm { aigcm_azure_openai $args }
+function gcmai { aigcm $args }
+
+# immortalizing an absolutely unhinged email @bijection got
+function hi_guillermo {
+  git commit -m @"
+Hi Guillermo,
+
+It's called a mail merge.
+
+It seems that there could be something wrong with your cerebrum.
+
+Someone who needs a job is attempting to find someone who has available work. Upon noticing this pattern you attempted to murder the job seeker so that you can later eat them as food.
+
+If you analyze the strange trajectory of emotions that you entertained leading up to writing your e-mail, during writing the e-mail, and after writing the e-mail, in very fine detail, you'll realize that you were attempting to fool any law enforcement who later reads your e-mail into thinking that you didn't want to eat me.
+
+When in fact that is exactly what you want.
+
+Best,
+Brian
+"@
+}
+
+function ghrv { gh repo view -w }
+
+function cd.. { cd .. }
+function .. { cd .. }
+function ... { cd ../.. }
+function .... { cd ../../.. }
+
+# function ll { Get-ChildItem -Force $args }
+function ll { eza $args }
+
+
+function p3 { python3 $args }
+function py3 { python3 $args }
+
+
+Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
+New-Alias which get-command
+
+Import-Module posh-git
+
+Remove-Alias -Name gcb -Force
+Invoke-Expression (&starship init powershell)
+
+#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
+
+Import-Module -Name Microsoft.WinGet.CommandNotFound
+#f45873b3-b655-43a6-b217-97c00aa0db58
+
+
+
+function aigcm_azure_openai {
   # Get the git diff
   $diff = git diff --staged -W -U200
 
@@ -236,52 +289,3 @@ Implement user authentication
   # Clean up the temporary file
   Remove-Item -Path $tempFile
 }
-function gcmai { aigcm $args }
-
-# immortalizing an absolutely unhinged email @bijection got
-function hi_guillermo {
-  git commit -m @"
-Hi Guillermo,
-
-It's called a mail merge.
-
-It seems that there could be something wrong with your cerebrum.
-
-Someone who needs a job is attempting to find someone who has available work. Upon noticing this pattern you attempted to murder the job seeker so that you can later eat them as food.
-
-If you analyze the strange trajectory of emotions that you entertained leading up to writing your e-mail, during writing the e-mail, and after writing the e-mail, in very fine detail, you'll realize that you were attempting to fool any law enforcement who later reads your e-mail into thinking that you didn't want to eat me.
-
-When in fact that is exactly what you want.
-
-Best,
-Brian
-"@
-}
-
-function ghrv { gh repo view -w }
-
-function cd.. { cd .. }
-function .. { cd .. }
-function ... { cd ../.. }
-function .... { cd ../../.. }
-
-# function ll { Get-ChildItem -Force $args }
-function ll { eza $args }
-
-
-function p3 { python3 $args }
-function py3 { python3 $args }
-
-
-Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
-New-Alias which get-command
-
-Import-Module posh-git
-
-Remove-Alias -Name gcb -Force
-Invoke-Expression (&starship init powershell)
-
-#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
-
-Import-Module -Name Microsoft.WinGet.CommandNotFound
-#f45873b3-b655-43a6-b217-97c00aa0db58
