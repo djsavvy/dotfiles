@@ -42,7 +42,7 @@ Set-PSReadLineKeyHandler -Key Alt+w `
 }
 
 # Insert text from the clipboard as a here string
-Set-PSReadLineKeyHandler -Key Ctrl+V `
+Set-PSReadLineKeyHandler -Key Ctrl+Alt+v `
   -BriefDescription PasteAsHereString `
   -LongDescription "Paste the clipboard text as a here string" `
   -ScriptBlock {
