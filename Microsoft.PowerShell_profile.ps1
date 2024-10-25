@@ -70,7 +70,9 @@ function gpush { git push $args }
 function gpf { git push --force $args }
 function gpuo { git push -u origin "$(git branch --show-current)" }
 
-Remove-Alias -Name gp -Force
+if (Test-Path Alias:gp) {
+  Remove-Alias -Name gp -Force
+}
 function gp {
   trap { "Error found. $_" }
 
@@ -88,7 +90,10 @@ function gp {
   }
 }
 
-Remove-Alias -Name gc -Force
+
+if (Test-Path Alias:gc) {
+  Remove-Alias -Name gc -Force
+}
 function gc {
   trap { "Error found. $_" }
 
@@ -121,7 +126,10 @@ function gds { git diff --staged $args }
 function ga { git add $args }
 function gap { git add -p $args }
 function ga. { git add . $args }
-Remove-Alias -Name gcm -Force
+
+if (Test-Path Alias:gcm) {
+  Remove-Alias -Name gcm -Force
+}
 function gcm { git commit -m $args }
 function gstat { git status $args }
 function gca { git commit --amend $args }
@@ -172,11 +180,16 @@ function py3 { python3 $args }
 
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
-New-Alias which get-command
+if (-not (Test-Path Alias:which)) {
+  New-Alias which get-command
+}
 
 Import-Module posh-git
 
-Remove-Alias -Name gcb -Force
+
+if (Test-Path Alias:gcb) {
+  Remove-Alias -Name gcb -Force
+}
 Invoke-Expression (&starship init powershell)
 
 #f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
