@@ -114,6 +114,44 @@ function gc {
     git stash pop;
   }
 }
+# git branch search
+function gcbrs {
+  git branch `
+    --no-color `
+    --sort=-committerdate `
+    --format='%(refname:short)' |
+  fzf --header 'git checkout' |
+  ForEach-Object { gc $_ }
+}
+function gcbs { gcbrs }
+function gco { gcbrs }
+function gcos { gcbrs }
+
+function gcprs {
+  gh pr list `
+    --search "sort:updated-desc" `
+    --json "number,title,headRefName,updatedAt" `
+    --template '{{range .}}{{tablerow (printf "#%v" .number) .title .headRefName (timeago .updatedAt)}}{{end}}' |
+  fzf --header 'Checkout PR' |
+  ForEach-Object { ($_ -split '\s+')[0] } |
+  ForEach-Object { ($_ -split '#')[1] } |
+  ForEach-Object { gh pr checkout $_ }
+}
+function gcprs_me {
+  gh pr list `
+    --search "sort:updated-desc" `
+    --author "@me" `
+    --json "number,title,headRefName,updatedAt" `
+    --template '{{range .}}{{tablerow (printf "#%v" .number) .title .headRefName (timeago .updatedAt)}}{{end}}' |
+  fzf --header 'Checkout PR' |
+  ForEach-Object { ($_ -split '\s+')[0] } |
+  ForEach-Object { ($_ -split '#')[1] } |
+  ForEach-Object { gh pr checkout $_ }
+}
+function ghprs { gcprs }
+function ghprs_me { gcprs_me }
+function gcprsme { gcprs_me }
+function ghprsme { gcprs_me }
 
 function gcb { git checkout -b $args }
 function gcp { git cherry-pick $args }
