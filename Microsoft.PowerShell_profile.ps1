@@ -1,6 +1,7 @@
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
-Set-PSReadLineOption -BellStyle None -EditMode Emacs
+
+Set-PSReadLineOption -BellStyle None -EditMode Vi
 Set-PSReadLineKeyHandler -Chord ctrl+w -Function BackwardDeleteWord
 
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
@@ -9,6 +10,57 @@ Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -PredictionSource None
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
+
+# from https://github.com/PowerShell/PSReadLine/blob/master/PSReadLine/SamplePSReadLineProfile.ps1
+
+# The built-in word movement uses character delimiters, but token based word
+# movement is also very useful - these are the bindings you'd use if you
+# prefer the token based movements bound to the normal emacs word movement
+# key bindings.
+Set-PSReadLineKeyHandler -Key Alt+d -Function ShellKillWord
+Set-PSReadLineKeyHandler -Key Alt+Backspace -Function ShellBackwardKillWord
+Set-PSReadLineKeyHandler -Key Alt+b -Function ShellBackwardWord
+Set-PSReadLineKeyHandler -Key Alt+f -Function ShellForwardWord
+Set-PSReadLineKeyHandler -Key Alt+B -Function SelectShellBackwardWord
+Set-PSReadLineKeyHandler -Key Alt+F -Function SelectShellForwardWord
+
+# Sometimes you enter a command but realize you forgot to do something else first.
+# This binding will let you save that command in the history so you can recall it,
+# but it doesn't actually execute.  It also clears the line with RevertLine so the
+# undo stack is reset - though redo will still reconstruct the command line.
+Set-PSReadLineKeyHandler -Key Alt+w `
+  -BriefDescription SaveInHistory `
+  -LongDescription "Save current line in history but do not execute" `
+  -ScriptBlock {
+  param($key, $arg)
+
+  $line = $null
+  $cursor = $null
+  [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+  [Microsoft.PowerShell.PSConsoleReadLine]::AddToHistory($line)
+  [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+}
+
+# Insert text from the clipboard as a here string
+Set-PSReadLineKeyHandler -Key Ctrl+V `
+  -BriefDescription PasteAsHereString `
+  -LongDescription "Paste the clipboard text as a here string" `
+  -ScriptBlock {
+  param($key, $arg)
+
+  Add-Type -Assembly PresentationCore
+  if ([System.Windows.Clipboard]::ContainsText()) {
+    # Get clipboard text - remove trailing spaces, convert \r\n to \n, and remove the final \n.
+    $text = ([System.Windows.Clipboard]::GetText() -replace "\p{Zs}*`r?`n", "`n").TrimEnd()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("@'`n$text`n'@")
+  }
+  else {
+    [Microsoft.PowerShell.PSConsoleReadLine]::Ding()
+  }
+}
+
+
+
 
 Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
   $name, $value = $_.Split('=')
