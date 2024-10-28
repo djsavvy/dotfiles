@@ -10,6 +10,10 @@ disabled = true
 [character]
 success_symbol = "[➜](bold green) "         # The name of the module we are configuring is "character"
 error_symbol = "[✗](bold red) "             # The "success_symbol" segment is being set to "➜" with the color "bold green"
+vimcmd_symbol = '[VI ❯](bold green) '
+vimcmd_replace_symbol = '[VI ❯](bold purple) '
+vimcmd_replace_one_symbol = '[VI ❯](bold purple) '
+vimcmd_visual_symbol = '[VI ❯](bold yellow) '
 
 [directory]
 fish_style_pwd_dir_length = 2
