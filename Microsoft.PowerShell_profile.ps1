@@ -61,6 +61,47 @@ Set-PSReadLineKeyHandler -Key Ctrl+Alt+v `
 
 
 
+
+function Edit-CommandInNvim {
+  param([System.ConsoleKeyInfo] $key)
+
+  # Get the current command line text
+  $text = $null
+  [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$text, [ref]$null)
+
+  # Create a temporary file with the command
+  $tempFile = [System.IO.Path]::GetTempFileName()
+  $tempFile = [System.IO.Path]::ChangeExtension($tempFile, "ps1")
+
+  try {
+    # Write the current command to the temp file
+    Set-Content -Path $tempFile -Value $text -Encoding UTF8
+
+    # Start nvim in a new process and wait for it to complete
+    $process = Start-Process -FilePath "nvim" -ArgumentList $tempFile -Wait -PassThru
+
+    if ($process.ExitCode -eq 0) {
+      # Read the modified content
+      $newContent = Get-Content -Path $tempFile -Raw
+
+      # If content was modified, update the command line
+      if ($newContent) {
+        [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+        [Microsoft.PowerShell.PSConsoleReadLine]::Insert($newContent.TrimEnd())
+      }
+    }
+  }
+  finally {
+    if (Test-Path $tempFile) { Remove-Item -Path $tempFile -Force }
+  }
+}
+Set-PSReadLineKeyHandler -Chord 'v' -ScriptBlock ${function:Edit-CommandInNvim} -ViMode Command
+
+
+
+
+
+
 Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
   $name, $value = $_.Split('=')
   if ($name -and $value -and ($name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^ANTHROPIC_.*$')) {
