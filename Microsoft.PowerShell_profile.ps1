@@ -143,7 +143,7 @@ function uptim { uptime }
 function upti { uptime }
 function upt { uptime }
 
-function y { if (-not ($args.Count -eq 0)) { yarn $args } else { yarn } }
+# function y { if (-not ($args.Count -eq 0)) { yarn $args } else { yarn } }
 function yd { yarn dev }
 function yts { if (-not ($args.Count -eq 0)) { yarn ts $args } else { yarn ts } }
 
