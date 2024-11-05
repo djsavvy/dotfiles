@@ -58,6 +58,7 @@
 	recurse = true
 [rebase]
 	autosquash = true
+  autostash = true
 [commit]
 	verbose = true
 [rerere]
