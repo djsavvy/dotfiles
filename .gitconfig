@@ -39,6 +39,8 @@
   sp = show -p --ext-diff
   f = fetch
   rh = reset --hard
+  # Will likely have to add --force afterwards for it to work but I don't want to add that in the alias itself
+  prune-local-branches = !npx git-removed-branches --prune
 [pull]
 	rebase = true
 	; ff = only
