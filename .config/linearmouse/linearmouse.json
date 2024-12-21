@@ -1,0 +1,83 @@
+{
+  "schemes" : [
+    {
+      "buttons" : {
+        "universalBackForward" : false
+      },
+      "pointer" : {
+        "acceleration" : 0.9092,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "reverse" : false
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x27da",
+          "vendorID" : "0x16c0",
+          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
+          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.9092,
+        "disableAcceleration" : false
+      }
+    },
+    {
+      "pointer" : {
+        "acceleration" : 1.5,
+        "speed" : 0.1418,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc547",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0xc094",
+          "productName" : "PRO X Wireless",
+          "vendorID" : "0x46d",
+          "serialNumber" : "C2EBE8C5",
+          "category" : "mouse"
+        }
+      },
+      "pointer" : {
+        "speed" : 0.1418,
+        "acceleration" : 1.5
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}
