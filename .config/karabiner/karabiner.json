@@ -113,7 +113,7 @@
                         ]
                     },
                     {
-                        "description": "Lofree/Akko/Apple Keyboards: switch left cmd and option in RDP/Citrix",
+                        "description": "Lofree/Akko Keyboards: switch left cmd and option in RDP/Citrix",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -133,8 +133,7 @@
                                             {
                                                 "product_id": 16387,
                                                 "vendor_id": 12625
-                                            },
-                                            { "is_built_in_keyboard": true }
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -161,8 +160,7 @@
                                             {
                                                 "product_id": 16387,
                                                 "vendor_id": 12625
-                                            },
-                                            { "is_built_in_keyboard": true }
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -189,8 +187,7 @@
                                             {
                                                 "product_id": 16387,
                                                 "vendor_id": 12625
-                                            },
-                                            { "is_built_in_keyboard": true }
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -223,8 +220,7 @@
                                             {
                                                 "product_id": 16387,
                                                 "vendor_id": 12625
-                                            },
-                                            { "is_built_in_keyboard": true }
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
