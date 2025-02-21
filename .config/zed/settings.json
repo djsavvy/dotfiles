@@ -1,0 +1,36 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": "Atelier Forest Light",
+  "vim_mode": true,
+  "ui_font_size": 14,
+  "buffer_font_size": 13.5,
+  "buffer_line_height": {
+    "custom": 1.5
+  },
+  "tabs": {
+    // Show git status colors in the editor tabs.
+    "git_status": true
+  },
+  // "terminal": {
+  //   "default_height": 600
+  // }
+  "vim": {
+    "use_smartcase_find": true
+  },
+
+  "languages": {
+    "Plain Text": {
+      "soft_wrap": "editor_width"
+    },
+    "Markdown": {
+      "soft_wrap": "editor_width"
+    }
+  }
+}
