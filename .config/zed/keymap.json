@@ -1,0 +1,32 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-tab": "pane::ActivatePrevItem",
+      "ctrl-tab": "pane::ActivateNextItem"
+      // "ctrl-l": "buffer_search::Dismiss"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "ctrl-l": "buffer_search::Dismiss"
+    }
+  },
+  {
+    "context": "Editor && VimControl",
+    "bindings": { "j": ["workspace::SendKeystrokes", "g j"] }
+  },
+  {
+    "context": "Editor && VimControl",
+    "bindings": { "k": ["workspace::SendKeystrokes", "g k"] }
+  },
+  {
+    "context": "Editor && VimControl",
+    "bindings": { "$": ["workspace::SendKeystrokes", "g $"] }
+  },
+  {
+    "context": "Editor && VimControl",
+    "bindings": { "0": ["workspace::SendKeystrokes", "g 0"] }
+  }
+]
