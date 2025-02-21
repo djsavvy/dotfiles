@@ -113,3 +113,5 @@
 ; for work, turn the following off:
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
+[init]
+	defaultBranch = main
