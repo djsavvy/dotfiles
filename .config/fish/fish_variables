@@ -40,4 +40,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/savvy/\x2elocal/bin\x1e/opt/homebrew/opt/make/libexec/gnubin\x1e/opt/homebrew/opt/gnu\x2dsed/libexec/gnubin\x1e/Users/savvy/\x2ecargo/bin
+SETUVAR fish_user_paths:/Users/savvy/\x2ebun/bin\x1e/Users/savvy/\x2eghcup/bin\x1e/usr/local/bin\x1e/Users/savvy/go/bin\x1e/Users/savvy/\x2elocal/bin\x1e/opt/homebrew/opt/make/libexec/gnubin\x1e/opt/homebrew/opt/gnu\x2dsed/libexec/gnubin\x1e/Users/savvy/\x2ecargo/bin
