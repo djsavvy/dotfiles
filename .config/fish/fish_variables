@@ -7,9 +7,10 @@ SETUVAR __fish_git_prompt_showstashstate:1
 SETUVAR __fish_git_prompt_showuntrackedfiles:1
 SETUVAR __fish_git_prompt_showupstream:auto
 SETUVAR __fish_initialized:3800
+SETUVAR _fisher_aohorodnyk_2F_fish_2D_autovenv_files:\x7e/\x2econfig/fish/conf\x2ed/autovenv\x2efish
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass\x1eaohorodnyk/fish\x2dautovenv
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
