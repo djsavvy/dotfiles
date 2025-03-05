@@ -44,7 +44,7 @@ if status is-interactive
     atuin init fish | source
 
     # Aliases
-    alias ls="eza"
+    alias ls="eza -a"
     alias vim="nvim"
     alias vi="nvim"
     alias sudo="sudo "
