@@ -269,7 +269,10 @@ autoload -Uz compinit
 compinit
 zinit cdreplay -q
 
-export HOMEBREW_GITHUB_API_TOKEN=placeholder
+# Source environment variables
+if [[ -f "$HOME/.env" ]]; then
+  source "$HOME/.env"
+fi
 
 # Created by `pipx` on 2023-05-06 06:58:56
 export PATH="$PATH:/Users/savvy/.local/bin"

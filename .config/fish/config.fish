@@ -1,5 +1,13 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Source environment variables
+if test -f "$HOME/.env"
+    set -l env_file_vars (cat "$HOME/.env" | grep -v "^#" | sed -E "s/^([A-Za-z0-9_]+)=(.*)/set --export \1 \2/g")
+    for var in $env_file_vars
+        eval $var
+    end
+end
+
 # PATH setup
 fish_add_path "$HOME/go/bin" "/usr/lib/ccache/bin/"
 fish_add_path "$HOME/bin" "/usr/local/bin"
