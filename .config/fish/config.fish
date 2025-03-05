@@ -1,7 +1,3 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # bun
@@ -25,3 +21,8 @@ end
 
 # uv
 fish_add_path "/Users/savvy/.local/bin"
+
+if status is-interactive
+    atuin init fish | source
+    # Commands to run in interactive sessions can go here
+end
