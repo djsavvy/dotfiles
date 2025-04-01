@@ -432,3 +432,10 @@ Implement user authentication
   # Clean up the temporary file
   Remove-Item -Path $tempFile
 }
+
+$env:MCFLY_LIGHT = "TRUE"
+$env:MCFLY_KEY_SCHEME="vim"
+$env:MCFLY_FUZZY=2
+$env:MCFLY_RESULTS=50
+$env:MCFLY_PROMPT=">"
+Invoke-Expression -Command $(mcfly init powershell | out-string)
