@@ -1,4 +1,4 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+test (uname) = "Darwin" && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Source environment variables
 if test -f "$HOME/.env"
@@ -14,8 +14,8 @@ fish_add_path "$HOME/bin" "/usr/local/bin"
 fish_add_path "$HOME/.gem/ruby/2.7.0/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/.cabal/bin" "$HOME/.ghcup/bin"
-fish_add_path "$(brew --prefix)/opt/gnu-sed/libexec/gnubin"
-fish_add_path "$(brew --prefix)/opt/make/libexec/gnubin"
+test (uname) = "Darwin" && fish_add_path "$(brew --prefix)/opt/gnu-sed/libexec/gnubin"
+test (uname) = "Darwin" && fish_add_path "$(brew --prefix)/opt/make/libexec/gnubin"
 fish_add_path "/Users/savvy/.local/bin"
 
 # bun
@@ -33,10 +33,12 @@ set --export BAT_THEME "base16"
 set --export EDITOR (which nvim)
 
 # NVM setup
-bass source ~/.nvm/nvm.sh
-set --export NVM_DIR "$HOME/.nvm"
-function nvm
-    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+if test (uname) = "Darwin"
+    bass source ~/.nvm/nvm.sh
+    set --export NVM_DIR "$HOME/.nvm"
+    function nvm
+        bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+    end
 end
 
 if status is-interactive
@@ -116,11 +118,13 @@ if status is-interactive
     alias speedtest.net="speedtest"
     alias p="ping 1.1.1.1"
     alias speedtest="open https://speed.cloudflare.com"
-    alias bu="brew update && brew upgrade"
+
+    test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
+
     alias mixtral="ollama run mixtral"
 
     # Source fzf integration
-    source "$(brew --prefix fzf)/shell/key-bindings.fish" 2>/dev/null
+    test (uname) = "Darwin" && source "$(brew --prefix fzf)/shell/key-bindings.fish" 2>/dev/null
 end
 
 # Source cargo environment if available
