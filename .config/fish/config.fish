@@ -33,12 +33,20 @@ set --export BAT_THEME "base16"
 set --export EDITOR (which nvim)
 
 # NVM setup
-if test (uname) = "Darwin"
-    bass source ~/.nvm/nvm.sh
-    set --export NVM_DIR "$HOME/.nvm"
-    function nvm
-        bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
-    end
+switch (uname)
+    case Darwin
+        bass source ~/.nvm/nvm.sh
+        set --export NVM_DIR "$HOME/.nvm"
+        function nvm
+            bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+        end
+    case Linux
+        bass source /usr/share/nvm/init-nvm.sh
+        bass source ~/.nvm/nvm.sh
+        set --export NVM_DIR "$HOME/.nvm"
+        function nvm
+            bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+        end
 end
 
 if status is-interactive
