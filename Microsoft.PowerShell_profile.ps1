@@ -104,7 +104,7 @@ Set-PSReadLineKeyHandler -Chord 'v' -ScriptBlock ${function:Edit-CommandInNvim} 
 
 Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
   $name, $value = $_.Split('=')
-  if ($name -and $value -and ($name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^ANTHROPIC_.*$')) {
+  if ($name -and $value -and ($name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^ANTHROPIC_.*$' -or $name -match '^GEMINI_.*$')) {
     [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
   }
 }
@@ -328,6 +328,10 @@ Import-Module -Name Microsoft.WinGet.CommandNotFound
 #f45873b3-b655-43a6-b217-97c00aa0db58
 
 
+$env:AZURE_API_BASE = 'https://openai-explor-eus2-prod.openai.azure.com'
+$env:AZURE_API_VERSION = '2024-12-01-preview'
+$env:AZURE_API_KEY = $env:AZURE_OPENAI_KEY_EUS2_EXPLOR
+
 
 function aigcm_azure_openai {
   # Get the git diff
@@ -342,7 +346,7 @@ function aigcm_azure_openai {
   # Hardcoded Azure OpenAI API details
   $hostname = 'openai-explor-eus-prod.openai.azure.com'
   $path = '/openai/deployments/gpt-4o/chat/completions?api-version=2024-04-01-preview'
-  $apiKey = $env:AZURE_OPENAI_KEY_EUS_EXPLOR
+  $apiKey = $env:AZURE_OPENAI_KEY_EUS2_EXPLOR
 
   if ([string]::IsNullOrWhiteSpace($apiKey)) {
     Write-Host "Azure OpenAI API key is not set. Please set the environment variable AZURE_OPENAI_KEY_EUS_EXPLOR."
@@ -432,6 +436,8 @@ Implement user authentication
   # Clean up the temporary file
   Remove-Item -Path $tempFile
 }
+
+function aider { uvx --python 3.12 --from aider-chat@latest aider --vim --watch-files --model azure/gpt-4o --weak-model azure/gpt-4o --editor-model azure/gpt-4o --show-model-warnings $args }
 
 $env:MCFLY_LIGHT = "TRUE"
 $env:MCFLY_KEY_SCHEME="vim"
