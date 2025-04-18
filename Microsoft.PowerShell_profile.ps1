@@ -332,6 +332,49 @@ $env:AZURE_API_BASE = 'https://openai-explor-eus2-prod.openai.azure.com'
 $env:AZURE_API_VERSION = '2024-12-01-preview'
 $env:AZURE_API_KEY = $env:AZURE_OPENAI_KEY_EUS2_EXPLOR
 
+function gcm_trivial {
+  # Hardcoded Azure OpenAI API details
+  $hostname = $env:AZURE_API_BASE
+  $path = '/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview'
+  $apiKey = $env:AZURE_API_KEY
+
+  if ([string]::IsNullOrWhiteSpace($apiKey)) {
+    Write-Host "Azure OpenAI API key is not set. Please set the environment variable AZURE_API_KEY."
+    return
+  }
+
+  $headers = @{
+    "Content-Type" = "application/json"
+    "api-key"      = $apiKey
+  }
+
+  $body = @{
+    "messages"   = @(
+      @{
+        "role"    = "system"
+        "content" = @"
+Please write a funnily grandiose commit message for a commit that does not actually do anything meaningful. Only respond with the commit message; do not add any explanatory prefix or suffix.
+"@
+      }
+    )
+    "max_tokens" = 2000
+  } | ConvertTo-Json
+
+  $uri = "https://$hostname$path"
+  $response = Invoke-RestMethod -Method Post -Uri $uri -Headers $headers -Body $body
+
+  $commitMessage = $response.choices[0].message.content.Trim()
+
+  # Create a temporary file with the commit message
+  $tempFile = [System.IO.Path]::GetTempFileName()
+  Set-Content -Path $tempFile -Value $commitMessage
+
+  # Call git commit with the prepared message
+  git commit -e -F $tempFile
+
+  # Clean up the temporary file
+  Remove-Item -Path $tempFile
+}
 
 function aigcm_azure_openai {
   # Get the git diff
@@ -440,8 +483,8 @@ Implement user authentication
 function aider { uvx --python 3.12 --from aider-chat@latest aider --vim --watch-files --model azure/gpt-4o --weak-model azure/gpt-4o --editor-model azure/gpt-4o --show-model-warnings $args }
 
 $env:MCFLY_LIGHT = "TRUE"
-$env:MCFLY_KEY_SCHEME="vim"
-$env:MCFLY_FUZZY=2
-$env:MCFLY_RESULTS=50
-$env:MCFLY_PROMPT=">"
+$env:MCFLY_KEY_SCHEME = "vim"
+$env:MCFLY_FUZZY = 2
+$env:MCFLY_RESULTS = 50
+$env:MCFLY_PROMPT = ">"
 Invoke-Expression -Command $(mcfly init powershell | out-string)
