@@ -1,60 +1,61 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
-      "buttons" : {
-        "universalBackForward" : false
-      },
-      "pointer" : {
-        "acceleration" : 0.9092,
-        "disableAcceleration" : false
-      },
       "if" : {
         "device" : {
           "category" : "mouse"
         }
       },
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 0.9092
+      },
       "scrolling" : {
         "reverse" : false
+      },
+      "buttons" : {
+        "universalBackForward" : false
       }
     },
     {
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 0.9092
+      },
       "if" : {
         "device" : {
-          "category" : "mouse",
-          "productID" : "0x27da",
           "vendorID" : "0x16c0",
           "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
+          "productID" : "0x27da",
+          "category" : "mouse",
           "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0"
         }
-      },
-      "pointer" : {
-        "acceleration" : 0.9092,
-        "disableAcceleration" : false
       }
     },
     {
-      "pointer" : {
-        "acceleration" : 1.5,
-        "speed" : 0.1418,
-        "disableAcceleration" : false
-      },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0xc547",
-          "productName" : "USB Receiver",
-          "vendorID" : "0x46d"
-        }
-      },
       "scrolling" : {
-        "speed" : {
-          "vertical" : 0
-        },
         "distance" : {
           "vertical" : "auto"
         },
         "acceleration" : {
           "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      },
+      "pointer" : {
+        "speed" : 0.1418,
+        "acceleration" : 1.5,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0xc547",
+          "category" : "mouse",
+          "vendorID" : "0x46d",
+          "productName" : "USB Receiver"
         }
       }
     },
@@ -64,20 +65,19 @@
           "vertical" : 1
         }
       },
+      "pointer" : {
+        "acceleration" : 1.5,
+        "speed" : 0.1418
+      },
       "if" : {
         "device" : {
-          "productID" : "0xc094",
           "productName" : "PRO X Wireless",
+          "productID" : "0xc094",
           "vendorID" : "0x46d",
           "serialNumber" : "C2EBE8C5",
           "category" : "mouse"
         }
-      },
-      "pointer" : {
-        "speed" : 0.1418,
-        "acceleration" : 1.5
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }
