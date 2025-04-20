@@ -130,6 +130,7 @@ if status is-interactive
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
     alias mixtral="ollama run mixtral"
+    alias yd="yarn dev"
 
     # Source fzf integration
     test (uname) = "Darwin" && source "$(brew --prefix fzf)/shell/key-bindings.fish" 2>/dev/null
