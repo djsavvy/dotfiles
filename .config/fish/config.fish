@@ -176,6 +176,11 @@ if status is-interactive
     alias mixtral="ollama run mixtral"
     alias yd="yarn dev"
 
+    if test -n "$WSL_DISTRO_NAME"
+        alias pbcopy='clip.exe'
+        alias pbpaste="powershell.exe -command 'Get-Clipboard' | tr -d '\r' | head -n -1"
+    end
+
     # Source fzf integration
     test (uname) = "Darwin" && source "$(brew --prefix fzf)/shell/key-bindings.fish" 2>/dev/null
 
