@@ -112,6 +112,50 @@ if status is-interactive
         end
     end
 
+    # git branch search
+    function gcbrs
+        git branch \
+            --no-color \
+            --sort=-committerdate \
+            --format='%(refname:short)' | \
+        fzf --header 'git checkout' | \
+        xargs -r git checkout
+    end
+    
+    # Aliases for gcbrs
+    alias gcbs="gcbrs"
+    alias gco="gcbrs"
+    alias gcos="gcbrs"
+    
+    function gcprs
+        gh pr list \
+            --search "sort:updated-desc" \
+            --json "number,title,headRefName,updatedAt" \
+            --template '{{range .}}{{tablerow (printf "#%v" .number) .title .headRefName (timeago .updatedAt)}}{{end}}' | \
+        fzf --header 'Checkout PR' | \
+        string split -f1 ' ' | \
+        string replace '#' '' | \
+        xargs -r gh pr checkout
+    end
+    
+    function gcprs_me
+        gh pr list \
+            --search "sort:updated-desc" \
+            --author "@me" \
+            --json "number,title,headRefName,updatedAt" \
+            --template '{{range .}}{{tablerow (printf "#%v" .number) .title .headRefName (timeago .updatedAt)}}{{end}}' | \
+        fzf --header 'Checkout PR' | \
+        string split -f1 ' ' | \
+        string replace '#' '' | \
+        xargs -r gh pr checkout
+    end
+    
+    # Aliases for PR functions
+    alias ghprs="gcprs"
+    alias ghprs_me="gcprs_me"
+    alias gcprsme="gcprs_me"
+    alias ghprsme="gcprs_me"
+
     # Cargo aliases
     alias carog="cargo"
     alias c="cargo"
@@ -134,6 +178,10 @@ if status is-interactive
 
     # Source fzf integration
     test (uname) = "Darwin" && source "$(brew --prefix fzf)/shell/key-bindings.fish" 2>/dev/null
+
+    if command -v thefuck >/dev/null
+        thefuck --alias | source
+    end
 end
 
 # Source cargo environment if available
