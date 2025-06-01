@@ -28,9 +28,9 @@ set --export MANWIDTH 999
 set --export FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git/ --exclude .yarn/'
 set --export RIPGREP_CONFIG_PATH "$HOME/.config/.ripgreprc"
 set --export SCCACHE_CACHE_SIZE 100G
-set --export RUSTC_WRAPPER (which sccache)
+set --export RUSTC_WRAPPER (command which sccache)
 set --export BAT_THEME "base16"
-set --export EDITOR (which nvim)
+set --export EDITOR (command which nvim)
 
 # NVM setup
 switch (uname)
@@ -121,12 +121,12 @@ if status is-interactive
         fzf --header 'git checkout' | \
         xargs -r git checkout
     end
-    
+
     # Aliases for gcbrs
     alias gcbs="gcbrs"
     alias gco="gcbrs"
     alias gcos="gcbrs"
-    
+
     function gcprs
         gh pr list \
             --search "sort:updated-desc" \
@@ -137,7 +137,7 @@ if status is-interactive
         string replace '#' '' | \
         xargs -r gh pr checkout
     end
-    
+
     function gcprs_me
         gh pr list \
             --search "sort:updated-desc" \
@@ -149,12 +149,28 @@ if status is-interactive
         string replace '#' '' | \
         xargs -r gh pr checkout
     end
-    
+
     # Aliases for PR functions
     alias ghprs="gcprs"
     alias ghprs_me="gcprs_me"
     alias gcprsme="gcprs_me"
     alias ghprsme="gcprs_me"
+
+    function which
+        if test (count $argv) -eq 0
+            echo "Usage: which command_name"
+            return 1
+        end
+
+        for cmd in $argv
+            echo "=== running both `which` and `type` on `$cmd` ==="
+            echo -n "which: "
+            command which $cmd 2>/dev/null || echo "$cmd not found"
+            echo -n "type:  "
+            type $cmd 2>/dev/null || echo "$cmd not found"
+            echo
+        end
+    end
 
     # Cargo aliases
     alias carog="cargo"
