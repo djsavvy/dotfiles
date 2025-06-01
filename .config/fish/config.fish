@@ -171,6 +171,8 @@ if status is-interactive
     alias p="ping 1.1.1.1"
     alias speedtest="open https://speed.cloudflare.com"
 
+    alias claude="/Users/savvy/.claude/local/claude"
+
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
     alias mixtral="ollama run mixtral"
@@ -193,4 +195,3 @@ end
 if test -f "$HOME/.cargo/env"
     source "$HOME/.cargo/env"
 end
-alias claude="/Users/savvy/.claude/local/claude"
