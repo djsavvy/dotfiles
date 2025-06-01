@@ -193,3 +193,4 @@ end
 if test -f "$HOME/.cargo/env"
     source "$HOME/.cargo/env"
 end
+alias claude="/Users/savvy/.claude/local/claude"
