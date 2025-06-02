@@ -166,7 +166,8 @@ if status is-interactive
             echo "=== running both `which` and `type` on `$cmd` ==="
             echo -n "which: "
             command which $cmd 2>/dev/null || echo "$cmd not found"
-            echo -n "type:  "
+            echo
+            echo -n "type: "
             type $cmd 2>/dev/null || echo "$cmd not found"
             echo
         end
