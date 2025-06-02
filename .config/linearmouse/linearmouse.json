@@ -7,12 +7,12 @@
           "category" : "mouse"
         }
       },
-      "pointer" : {
-        "disableAcceleration" : false,
-        "acceleration" : 0.9092
-      },
       "scrolling" : {
         "reverse" : false
+      },
+      "pointer" : {
+        "acceleration" : 0.9092,
+        "disableAcceleration" : false
       },
       "buttons" : {
         "universalBackForward" : false
@@ -25,15 +25,28 @@
       },
       "if" : {
         "device" : {
-          "vendorID" : "0x16c0",
           "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
+          "vendorID" : "0x16c0",
           "productID" : "0x27da",
-          "category" : "mouse",
-          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0"
+          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0",
+          "category" : "mouse"
         }
       }
     },
     {
+      "pointer" : {
+        "acceleration" : 1,
+        "disableAcceleration" : true,
+        "speed" : 0.4761
+      },
+      "if" : {
+        "device" : {
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d",
+          "productID" : "0xc547",
+          "category" : "mouse"
+        }
+      },
       "scrolling" : {
         "distance" : {
           "vertical" : "auto"
@@ -44,19 +57,6 @@
         "speed" : {
           "vertical" : 0
         }
-      },
-      "pointer" : {
-        "speed" : 0.1418,
-        "acceleration" : 1.5,
-        "disableAcceleration" : false
-      },
-      "if" : {
-        "device" : {
-          "productID" : "0xc547",
-          "category" : "mouse",
-          "vendorID" : "0x46d",
-          "productName" : "USB Receiver"
-        }
       }
     },
     {
@@ -65,18 +65,18 @@
           "vertical" : 1
         }
       },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "serialNumber" : "C2EBE8C5",
+          "category" : "mouse",
+          "productName" : "PRO X Wireless",
+          "productID" : "0xc094"
+        }
+      },
       "pointer" : {
         "acceleration" : 1.5,
         "speed" : 0.1418
-      },
-      "if" : {
-        "device" : {
-          "productName" : "PRO X Wireless",
-          "productID" : "0xc094",
-          "vendorID" : "0x46d",
-          "serialNumber" : "C2EBE8C5",
-          "category" : "mouse"
-        }
       }
     }
   ]
