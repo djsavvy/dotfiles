@@ -188,7 +188,7 @@ if status is-interactive
     alias p="ping 1.1.1.1"
     alias speedtest="open https://speed.cloudflare.com"
 
-    alias claude="/Users/savvy/.claude/local/claude"
+    alias claude="~/.claude/local/claude"
 
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
