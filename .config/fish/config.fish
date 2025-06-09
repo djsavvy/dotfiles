@@ -206,6 +206,10 @@ if status is-interactive
     if command -v thefuck >/dev/null
         thefuck --alias | source
     end
+
+    if test (hostname) = "SAVVY0422"
+        alias upgr="explorer.exe https://explor.faralloncapital.com/upgrade"
+    end
 end
 
 # Source cargo environment if available
