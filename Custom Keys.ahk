@@ -7,31 +7,31 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Uncomment for debugging
 ; KeyHistory
 
-; For this to work consistently, we need to set the following registry key to 0: 
+; For this to work consistently, we need to set the following registry key to 0:
 ; `HKEY_CURRENT_USER\Control Panel\Desktop ... REG_DWORD ... ForegroundLockTimeout`
 ; (The default value is 200000 (0x30D40)).
-; For more details, see https://github.com/microsoft/terminal/issues/8954 
+; For more details, see https://github.com/microsoft/terminal/issues/8954
 #Enter::
     Run, wt
-    ; Sleep, 300
-    ; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+; Sleep, 300
+; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
 #+Enter::
     Run, wt -w 0 -p "PowerShell Core with Developer Command Prompt"
-    ; Sleep, 300
-    ; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+; Sleep, 300
+; WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 return
 
 #Backspace::
-    Run, chrome.exe
-    ; Run, MicrosoftEdge.exe
-    ; Run, C:\Program Files\Firefox Developer Edition\firefox.exe
+; Run, chrome.exe
+; Run, MicrosoftEdge.exe
+; Run, C:\Program Files\Firefox Developer Edition\firefox.exe
 return
 
 #+Backspace::
-    Run, chrome.exe --incognito
-    ; Run, MicrosoftEdge.exe --private
-    ; Run, C:\Program Files\Firefox Developer Edition\firefox.exe -private-window
+; Run, chrome.exe --incognito
+; Run, MicrosoftEdge.exe --private
+; Run, C:\Program Files\Firefox Developer Edition\firefox.exe -private-window
 return
 
 #Esc::#l
@@ -69,9 +69,14 @@ F22::SendInput {Media_Next}
 ; https://simshaun.medium.com/inserting-en-dash-and-em-dash-on-windows-in-any-application-using-autohotkey-1fd010f4f7eb
 ; Shift+Alt+Minus = Em dash
 +!-::
-Send {—}
+    Send {—}
 return
 +#-::
-Send {—}
+    Send {—}
 return
 
+#IfWinActive ahk_exe WindowsTerminal.exe
+    +Enter::
+        Send \{Enter}
+    return
+#IfWinActive
