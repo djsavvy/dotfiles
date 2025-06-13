@@ -80,3 +80,6 @@ return
         Send \{Enter}
     return
 #IfWinActive
+
+XButton1::Send, ^#{Left}    ; Back button = Previous desktop
+XButton2::Send, ^#{Right}   ; Forward button = Next desktop
