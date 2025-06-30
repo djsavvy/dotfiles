@@ -113,5 +113,6 @@
 [credential "https://app-explor-wus-dev.scm.azurewebsites.net"]
         provider = generic
 ; for work, turn the following off:
-; [url "ssh://git@github.com/"]
-;  insteadOf = https://github.com/
+; at home it makes ssh auth work by default
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
