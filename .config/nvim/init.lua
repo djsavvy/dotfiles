@@ -74,11 +74,11 @@ vim.g.python3_host_skip_check = 1
 
 -- Platform-specific settings
 if vim.fn.has("win32") == 1 then
-  opt.shell = "pwsh.exe -NoLogo"
-  opt.shellpipe = "|"
+  opt.shell = "pwsh.exe\\ -NoLogo"
+  opt.shellpipe = "\\|"
   opt.shellxquote = ""
-  opt.shellcmdflag = "-NoLogo -ExecutionPolicy RemoteSigned -Command"
-  opt.shellredir = "| Out-File -Encoding UTF8"
+  opt.shellcmdflag = "-NoLogo\\ -ExecutionPolicy\\ RemoteSigned\\ -Command"
+  opt.shellredir = "\\|\\ Out-File\\ -Encoding\\ UTF8"
 end
 
 -- Highlight line numbers in grey
@@ -90,32 +90,37 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- Filetype-specific settings
 autocmd("FileType", {
+  group = augroup("FiletypeSettings", { clear = true }),
   pattern = { "ocaml", "javascript", "html" },
   callback = function()
-    opt.expandtab = true
-    opt.shiftwidth = 2
-    opt.softtabstop = 2
-    opt.tabstop = 2
+    vim.opt_local.expandtab = true
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.tabstop = 2
   end,
 })
 
 -- FZF settings
+local fzf_group = augroup("FzfSettings", { clear = true })
+
 autocmd("FileType", {
+  group = fzf_group,
   pattern = "fzf",
   callback = function()
-    opt.laststatus = 0
-    opt.showmode = false
-    opt.ruler = false
+    vim.opt_local.laststatus = 0
+    vim.opt_local.showmode = false
+    vim.opt_local.ruler = false
   end,
 })
 
 autocmd("BufLeave", {
+  group = fzf_group,
   pattern = "*",
   callback = function()
     if vim.bo.filetype == "fzf" then
-      opt.laststatus = 2
-      opt.showmode = true
-      opt.ruler = true
+      vim.opt.laststatus = 2
+      vim.opt.showmode = true
+      vim.opt.ruler = true
     end
   end,
 })
@@ -202,6 +207,10 @@ vim.api.nvim_create_user_command("Qa", "qa", {})
 
 -- Leader+ll to compile
 keymap("n", "<leader>ll", user_compile)
+
+-- Plugin settings
+vim.g.closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+vim.g.closetag_filetypes = 'html,xhtml,phtml,javascript,jsx,javascript.jsx,javascriptreact,typescript.jsx,typescript.tsx,typescriptreact'
 
 -- Legacy settings
 vim.g.C_Ctrl_j = "off"
