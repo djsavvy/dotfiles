@@ -1,5 +1,4 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "buttons" : {
@@ -10,27 +9,27 @@
           "category" : "mouse"
         }
       },
-      "pointer" : {
-        "acceleration" : 0.9092,
-        "disableAcceleration" : false
-      },
       "scrolling" : {
         "reverse" : false
+      },
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 0.9092
       }
     },
     {
-      "pointer" : {
-        "acceleration" : 0.9092,
-        "disableAcceleration" : false
-      },
       "if" : {
         "device" : {
-          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
-          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0",
-          "category" : "mouse",
           "vendorID" : "0x16c0",
-          "productID" : "0x27da"
+          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0",
+          "productID" : "0x27da",
+          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
+          "category" : "mouse"
         }
+      },
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 0.9092
       }
     },
     {
@@ -38,12 +37,17 @@
         "distance" : {
           "vertical" : "auto"
         },
-        "acceleration" : {
-          "vertical" : 1
-        },
         "speed" : {
           "vertical" : 0
+        },
+        "acceleration" : {
+          "vertical" : 1
         }
+      },
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 1,
+        "speed" : 0.1
       },
       "if" : {
         "device" : {
@@ -52,11 +56,6 @@
           "vendorID" : "0x46d",
           "category" : "mouse"
         }
-      },
-      "pointer" : {
-        "speed" : 0.15,
-        "acceleration" : 1.5,
-        "disableAcceleration" : false
       }
     },
     {
@@ -67,10 +66,10 @@
       "if" : {
         "device" : {
           "vendorID" : "0x46d",
-          "productID" : "0xc094",
-          "productName" : "PRO X Wireless",
+          "category" : "mouse",
           "serialNumber" : "C2EBE8C5",
-          "category" : "mouse"
+          "productName" : "PRO X Wireless",
+          "productID" : "0xc094"
         }
       },
       "scrolling" : {
@@ -79,5 +78,6 @@
         }
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }
