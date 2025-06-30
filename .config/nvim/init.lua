@@ -1,53 +1,19 @@
--- Modern Neovim Configuration in Lua
--- Migrated from init.vim to match modern standards
-
--- Set leader key early
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
--- Disable built-in vim plugins
-vim.g.loaded_gzip = 1
-vim.g.loaded_zip = 1
-vim.g.loaded_zipPlugin = 1
-vim.g.loaded_tar = 1
-vim.g.loaded_tarPlugin = 1
-vim.g.loaded_getscript = 1
-vim.g.loaded_getscriptPlugin = 1
-vim.g.loaded_vimball = 1
-vim.g.loaded_vimballPlugin = 1
-vim.g.loaded_2html_plugin = 1
-vim.g.loaded_logiPat = 1
-vim.g.loaded_rrhelper = 1
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_netrwSettings = 1
-vim.g.loaded_netrwFileHandlers = 1
-
--- General Options
 local opt = vim.opt
 
 -- UI
 opt.number = true
-opt.relativenumber = false
 opt.showtabline = 2
-opt.showmode = false
-opt.cmdheight = 1
 opt.ignorecase = true
 opt.smartcase = true
-opt.showmatch = true
 opt.foldcolumn = "1"
-opt.wildmenu = true
 opt.inccommand = "split"
 opt.hidden = true
 opt.spell = true
-opt.wrap = true
 opt.linebreak = true
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
 
 -- Indentation
-opt.autoindent = true
-opt.smartindent = true
 opt.expandtab = true
 opt.shiftwidth = 2
 opt.tabstop = 2
@@ -82,10 +48,10 @@ if vim.fn.has("win32") == 1 then
 end
 
 -- Use terminal colors
-vim.cmd("set notermguicolors")
+vim.opt.termguicolors = false
 
 -- Highlight line numbers in grey
-vim.cmd("highlight LineNr ctermfg=DarkGrey")
+vim.api.nvim_set_hl(0, "LineNr", { ctermfg = "DarkGrey" })
 
 -- Auto Commands
 local augroup = vim.api.nvim_create_augroup
@@ -105,7 +71,6 @@ autocmd("FileType", {
 
 -- FZF settings
 local fzf_group = augroup("FzfSettings", { clear = true })
-
 autocmd("FileType", {
   group = fzf_group,
   pattern = "fzf",
@@ -113,107 +78,97 @@ autocmd("FileType", {
     vim.opt_local.laststatus = 0
     vim.opt_local.showmode = false
     vim.opt_local.ruler = false
+    -- Create the BufLeave command here, for this buffer only
+    autocmd("BufLeave", {
+      buffer = 0, -- 0 means current buffer
+      once = true, -- The command should only fire once and then delete itself
+      callback = function()
+        vim.opt.laststatus = 2
+        vim.opt.showmode = true
+        vim.opt.ruler = true
+      end,
+    })
   end,
 })
 
-autocmd("BufLeave", {
-  group = fzf_group,
-  pattern = "*",
-  callback = function()
-    if vim.bo.filetype == "fzf" then
-      vim.opt.laststatus = 2
-      vim.opt.showmode = true
-      vim.opt.ruler = true
-    end
-  end,
-})
 
 -- Key Mappings
+local map_opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 -- Disable Ctrl+Z on Windows
 if vim.fn.has("win32") == 1 then
-  keymap("n", "<C-z>", "<Nop>")
+  keymap({ "n", "i" }, "<C-z>", "<Nop>", { noremap = true })
 end
 
 -- Insert mode mappings
-keymap("i", "<C-H>", "<C-W>") -- Ctrl+Backspace to delete word
-keymap("i", "<C-s>", "<Esc>:w<CR>i") -- Ctrl+S to save
+keymap("i", "<C-H>", "<C-W>", { noremap = true, desc = "Delete word before cursor" }) -- Ctrl+Backspace to delete word
+keymap("i", "<C-s>", "<Esc>:w<CR>i", { noremap = true, desc = "Save file" }) -- Ctrl+S to save
 
 -- Tab navigation
-keymap("n", "<Tab>", ":tabnext<CR>")
-keymap("n", "<S-Tab>", ":tabprevious<CR>")
-keymap("n", ",i", "<C-i>") -- Fix for Tab breaking Ctrl+i
+keymap("n", "<Tab>", ":tabnext<CR>", { noremap = true, desc = "Next tab" })
+keymap("n", "<S-Tab>", ":tabprevious<CR>", { noremap = true, desc = "Previous tab" })
+keymap("n", ",i", "<C-i>", { noremap = true, desc = "Jump forward in jumplist" }) -- Fix for Tab breaking Ctrl+i
 
 -- Clear search highlighting
-keymap("n", "<C-L>", ":nohlsearch<CR><C-L>", { silent = true })
+keymap("n", "<C-L>", ":nohlsearch<CR><C-L>", { noremap = true, silent = true, desc = "Clear search highlight" })
 
 -- Search for whole word
-keymap("n", "<leader>/", "/\\<\\><left><left>")
+keymap("n", "<leader>/", "/\\<\\><left><left>", { noremap = true, desc = "Search for whole word" })
 
 -- Handle wrapped lines
-keymap("n", "j", "gj", { silent = true })
-keymap("n", "k", "gk", { silent = true })
-keymap("n", "0", "g0", { silent = true })
-keymap("n", "$", "g$", { silent = true })
+keymap("n", "j", "gj", map_opts)
+keymap("n", "k", "gk", map_opts)
+keymap("n", "0", "g0", map_opts)
+keymap("n", "$", "g$", map_opts)
 
 -- Move lines up/down
-keymap("n", "<C-S-j>", ":m .+1<CR>==")
-keymap("n", "<C-S-k>", ":m .-2<CR>==")
-keymap("i", "<C-S-j>", "<Esc>:m .+1<CR>==gi")
-keymap("i", "<C-S-k>", "<Esc>:m .-2<CR>==gi")
-keymap("v", "<C-S-j>", ":m '>+1<CR>gv=gv")
-keymap("v", "<C-S-k>", ":m '<-2<CR>gv=gv")
+keymap("n", "<C-S-j>", ":m .+1<CR>==", { noremap = true, desc = "Move line down" })
+keymap("n", "<C-S-k>", ":m .-2<CR>==", { noremap = true, desc = "Move line up" })
+keymap("i", "<C-S-j>", "<Esc>:m .+1<CR>==gi", { noremap = true, desc = "Move line down" })
+keymap("i", "<C-S-k>", "<Esc>:m .-2<CR>==gi", { noremap = true, desc = "Move line up" })
+keymap("v", "<C-S-j>", ":m '>+1<CR>gv=gv", { noremap = true, desc = "Move selection down" })
+keymap("v", "<C-S-k>", ":m '<-2<CR>gv=gv", { noremap = true, desc = "Move selection up" })
 
 -- Get help/documentation
-keymap("n", "gh", function()
-  if vim.bo.filetype == "vim" then
-    vim.cmd("help " .. vim.fn.expand("<cword>"))
-  end
-end, { silent = true })
+keymap("n", "gh", vim.lsp.buf.hover, { desc = "Show documentation" })
 
 -- Disable F1
-keymap("n", "<F1>", "<Esc>")
-keymap("i", "<F1>", "<Esc>")
+keymap({ "n", "i" }, "<F1>", "<Esc>", { noremap = true })
 
--- Disable middle mouse
-keymap("", "<MiddleMouse>", "<Nop>")
-keymap("i", "<MiddleMouse>", "<Nop>")
-keymap("", "<2-MiddleMouse>", "<Nop>")
-keymap("i", "<2-MiddleMouse>", "<Nop>")
-keymap("", "<3-MiddleMouse>", "<Nop>")
-keymap("i", "<3-MiddleMouse>", "<Nop>")
-keymap("", "<4-MiddleMouse>", "<Nop>")
-keymap("i", "<4-MiddleMouse>", "<Nop>")
+-- Disable middle mouse paste
+keymap({ "", "i" }, "<MiddleMouse>", "<Nop>", { noremap = true })
+keymap({ "", "i" }, "<2-MiddleMouse>", "<Nop>", { noremap = true })
+keymap({ "", "i" }, "<3-MiddleMouse>", "<Nop>", { noremap = true })
+keymap({ "", "i" }, "<4-MiddleMouse>", "<Nop>", { noremap = true })
 
--- Functions
+
+
 local function trim_trailing_whitespace()
   local save = vim.fn.winsaveview()
   vim.cmd("keeppatterns %s/\\s\\+$//e")
   vim.fn.winrestview(save)
 end
 
+
+-- Function to reload vimrc/init.lua
 local function user_compile()
   if vim.bo.filetype == "vim" then
     vim.cmd("source $MYVIMRC")
+    vim.notify("Sourced $MYVIMRC", vim.log.levels.INFO)
+  elseif vim.bo.filetype == "lua" and vim.fn.expand("%:t") == "init.lua" then
+    vim.cmd("source $MYVIMRC")
+    vim.notify("Sourced $MYVIMRC (init.lua)", vim.log.levels.INFO)
   end
 end
+keymap("n", "<leader>ll", user_compile, { noremap = true, desc = "Reload configuration" })
 
--- Commands
+
+-- Custom Commands
 vim.api.nvim_create_user_command("TrimTrailingWhitespace", trim_trailing_whitespace, {})
 vim.api.nvim_create_user_command("TRimTrailingWhitespace", trim_trailing_whitespace, {})
-vim.api.nvim_create_user_command("Vs", "vs", {})
+vim.api.nvim_create_user_command("Vs", "vs", { nargs = "?", complete = "file" }) -- Add completion
 vim.api.nvim_create_user_command("WW", "w !SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass sudo -A tee % > /dev/null", {})
 vim.api.nvim_create_user_command("W", "w", {})
 vim.api.nvim_create_user_command("Q", "q", {})
 vim.api.nvim_create_user_command("Qa", "qa", {})
-
--- Leader+ll to compile
-keymap("n", "<leader>ll", user_compile)
-
--- Plugin settings
-vim.g.closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
-vim.g.closetag_filetypes = 'html,xhtml,phtml,javascript,jsx,javascript.jsx,javascriptreact,typescript.jsx,typescript.tsx,typescriptreact'
-
--- Legacy settings
-vim.g.C_Ctrl_j = "off"
