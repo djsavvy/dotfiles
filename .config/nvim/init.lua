@@ -2,7 +2,7 @@
 -- Migrated from init.vim to match modern standards
 
 -- Set leader key early
-vim.g.mapleader = " "
+vim.g.mapleader = "\\"
 vim.g.maplocalleader = " "
 
 -- Disable built-in vim plugins
