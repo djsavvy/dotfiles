@@ -189,6 +189,7 @@ if status is-interactive
     alias speedtest="open https://speed.cloudflare.com"
 
     alias claude="~/.claude/local/claude"
+    alias ccusage="npx ccusage@latest"
 
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
