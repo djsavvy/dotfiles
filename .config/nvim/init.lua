@@ -81,6 +81,9 @@ if vim.fn.has("win32") == 1 then
   opt.shellredir = "\\|\\ Out-File\\ -Encoding\\ UTF8"
 end
 
+-- Use terminal colors
+vim.cmd("set notermguicolors")
+
 -- Highlight line numbers in grey
 vim.cmd("highlight LineNr ctermfg=DarkGrey")
 
