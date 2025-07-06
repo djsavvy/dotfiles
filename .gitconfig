@@ -48,6 +48,7 @@
 	default = current
 [core]
   autoclrf = input
+	excludesfile = /Users/savvy/.gitignore_global
 [merge]
 	conflictstyle = zdiff3
 [fetch]
