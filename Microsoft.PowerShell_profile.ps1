@@ -146,9 +146,12 @@ function upt { uptime }
 # function y { if (-not ($args.Count -eq 0)) { yarn $args } else { yarn } }
 function yd { yarn dev }
 function yts { if (-not ($args.Count -eq 0)) { yarn ts $args } else { yarn ts } }
+function ybeo { yarn build-extension-only }
 
 function e { cd ~/src/explor/app }
-function a { cd ~/src/applets }
+function a { wsl -d Arch --cd ~/applets }
+function a_win { cd ~/src/applets }
+function w { wsl -d Arch --cd ~ }
 function deft { cd ~/src/trades_table_pipeline }
 function exp { cd ~/src/experiments }
 
@@ -308,6 +311,9 @@ function ll { eza $args }
 function p3 { python3 $args }
 function py3 { python3 $args }
 
+function claude { wsl claude $args }
+function ccusage { wsl npx ccusage@latest $args }
+
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
 if (-not (Test-Path Alias:which)) {
@@ -328,7 +334,7 @@ Import-Module -Name Microsoft.WinGet.CommandNotFound
 #f45873b3-b655-43a6-b217-97c00aa0db58
 
 
-$env:AZURE_API_BASE = 'https://openai-explor-eus2-prod.openai.azure.com'
+$env:AZURE_API_BASE = 'openai-explor-eus2-prod.openai.azure.com'
 $env:AZURE_API_VERSION = '2024-12-01-preview'
 $env:AZURE_API_KEY = $env:AZURE_OPENAI_KEY_EUS2_EXPLOR
 
@@ -361,6 +367,7 @@ Please write a funnily grandiose commit message for a commit that does not actua
   } | ConvertTo-Json
 
   $uri = "https://$hostname$path"
+  echo $uri
   $response = Invoke-RestMethod -Method Post -Uri $uri -Headers $headers -Body $body
 
   $commitMessage = $response.choices[0].message.content.Trim()
@@ -482,9 +489,32 @@ Implement user authentication
 
 function aider { uvx --python 3.12 --from aider-chat@latest aider --vim --watch-files --model azure/gpt-4o --weak-model azure/gpt-4o --editor-model azure/gpt-4o --show-model-warnings $args }
 
+
+function pbcopy {
+    [CmdletBinding()]
+    param(
+        [Parameter(ValueFromPipeline=$true)]
+        [string[]]$InputObject
+    )
+    
+    begin {
+        $text = @()
+    }
+    
+    process {
+        $text += $InputObject
+    }
+    
+    end {
+        $text -join "`n" | Set-Clipboard
+    }
+}
+
+
 $env:MCFLY_LIGHT = "TRUE"
 $env:MCFLY_KEY_SCHEME = "vim"
 $env:MCFLY_FUZZY = 2
 $env:MCFLY_RESULTS = 50
 $env:MCFLY_PROMPT = ">"
 Invoke-Expression -Command $(mcfly init powershell | out-string)
+
