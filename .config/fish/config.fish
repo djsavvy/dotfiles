@@ -188,7 +188,6 @@ if status is-interactive
     alias p="ping 1.1.1.1"
     alias speedtest="open https://speed.cloudflare.com"
 
-    alias claude="~/.claude/local/claude"
     alias ccusage="npx ccusage@latest"
     alias fun_claude="claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)'"
     alias func="claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)'"
