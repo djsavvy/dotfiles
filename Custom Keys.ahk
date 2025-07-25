@@ -38,6 +38,9 @@ return
 
 CapsLock::Esc
 
+; Map Ctrl+Shift+W to Ctrl+W
+^+w::^w
+
 ; Apple Magic Keyboard-specific bindings
 
 ; Set Win+Tab to Alt+Tab for muscle memory compatibility
