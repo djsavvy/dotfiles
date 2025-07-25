@@ -313,6 +313,8 @@ function py3 { python3 $args }
 
 function claude { wsl claude $args }
 function ccusage { wsl npx ccusage@latest $args }
+function fun_claude { claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)' }
+function func { fun_claude }
 
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
