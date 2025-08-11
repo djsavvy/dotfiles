@@ -1,5 +1,5 @@
 # Don't let ripgrep vomit really long lines to my terminal, and show a preview.
---max-columns=150
+--max-columns=1000
 --max-columns-preview
 
 --hidden
