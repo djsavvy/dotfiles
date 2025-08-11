@@ -1,4 +1,5 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.1",
   "schemes" : [
     {
       "buttons" : {
@@ -9,75 +10,91 @@
           "category" : "mouse"
         }
       },
+      "pointer" : {
+        "acceleration" : 0.9092,
+        "disableAcceleration" : false
+      },
       "scrolling" : {
         "reverse" : false
-      },
-      "pointer" : {
-        "disableAcceleration" : false,
-        "acceleration" : 0.9092
       }
     },
     {
       "if" : {
         "device" : {
-          "vendorID" : "0x16c0",
-          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0",
+          "category" : "mouse",
           "productID" : "0x27da",
+          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.7.0",
           "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
-          "category" : "mouse"
+          "vendorID" : "0x16c0"
         }
       },
       "pointer" : {
-        "disableAcceleration" : false,
-        "acceleration" : 0.9092
+        "acceleration" : 0.9092,
+        "disableAcceleration" : false
       }
     },
     {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc547",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1,
+        "disableAcceleration" : false,
+        "speed" : 0.1
+      },
       "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
         "distance" : {
           "vertical" : "auto"
         },
         "speed" : {
           "vertical" : 0
-        },
-        "acceleration" : {
-          "vertical" : 1
-        }
-      },
-      "pointer" : {
-        "disableAcceleration" : false,
-        "acceleration" : 1,
-        "speed" : 0.1
-      },
-      "if" : {
-        "device" : {
-          "productName" : "USB Receiver",
-          "productID" : "0xc547",
-          "vendorID" : "0x46d",
-          "category" : "mouse"
         }
       }
     },
     {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc094",
+          "productName" : "PRO X Wireless",
+          "serialNumber" : "C2EBE8C5",
+          "vendorID" : "0x46d"
+        }
+      },
       "pointer" : {
         "acceleration" : 1.5,
         "speed" : 0.1418
-      },
-      "if" : {
-        "device" : {
-          "vendorID" : "0x46d",
-          "category" : "mouse",
-          "serialNumber" : "C2EBE8C5",
-          "productName" : "PRO X Wireless",
-          "productID" : "0xc094"
-        }
       },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
         }
       }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x265",
+          "productName" : "Savvy’s Magic Trackpad 2",
+          "serialNumber" : "3C:7D:0A:5C:DF:48",
+          "vendorID" : "0x4c"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.75,
+        "disableAcceleration" : false,
+        "redirectsToScroll" : false,
+        "speed" : 0.0689655172413792768
+      }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }
