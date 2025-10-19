@@ -1,9 +1,8 @@
 {
-  "model": "sonnet",
   "permissions": {
-   "deny": [
-     "Glob",
-     "Grep"
-   ]
+    "deny": [
+      "Glob",
+      "Grep"
+    ]
   }
 }

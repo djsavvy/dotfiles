@@ -190,7 +190,7 @@ if status is-interactive
 
     alias ccusage="npx ccusage@latest"
     alias fun_claude="claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)'"
-    alias func="claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)'"
+    alias func="fun_claude"
 
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
@@ -218,3 +218,6 @@ end
 if test -f "$HOME/.cargo/env"
     source "$HOME/.cargo/env"
 end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/savvy/.cache/lm-studio/bin
