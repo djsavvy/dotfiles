@@ -149,6 +149,8 @@ function yts { if (-not ($args.Count -eq 0)) { yarn ts $args } else { yarn ts } 
 function ybeo { yarn build-extension-only }
 
 function e { cd ~/src/explor/app }
+function e2 { cd ~/src/2explor/app }
+function e3 { cd ~/src/3explor/app }
 function a { wsl -d Arch --cd ~/applets }
 function a_win { cd ~/src/applets }
 function w { wsl -d Arch --cd ~ }
@@ -311,10 +313,10 @@ function ll { eza $args }
 function p3 { python3 $args }
 function py3 { python3 $args }
 
-function claude { wsl claude $args }
-function ccusage { wsl npx ccusage@latest $args }
-function fun_claude { claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)' }
-function func { fun_claude }
+# function claude { wsl claude $args }
+# function ccusage { wsl npx ccusage@latest $args }
+function fun_claude { claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)' $args }
+function func { fun_claude $args }
 
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
