@@ -113,6 +113,7 @@ Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
 $ENV:STARSHIP_CONFIG = "$HOME\.starship"
 $ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
 $env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm-root-ca.cer'
+$env:GIT_DIFF_OPTS="-u7"
 
 function vim {
   if ((Test-Path Env:\TERM_PROGRAM) -and ("vscode" -eq (Get-Item -Path Env:\TERM_PROGRAM).Value)) {
@@ -255,9 +256,11 @@ function gcp { git cherry-pick $args }
 function gr { git rebase $args }
 function gri { git rebase -i $args }
 function grc { git rebase --continue }
-function gd { git diff $args }
-function d { git diff $args }
-function gds { git diff --staged $args }
+function gd { git diff -w $args }
+function gdiw { git diff $args }
+function d { git diff -w $args }
+function gds { git diff --staged -w $args }
+function gdsiw { git diff --staged $args }
 function ga { git add $args }
 function gap { git add -p $args }
 function ga. { git add . $args }
