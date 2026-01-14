@@ -115,6 +115,8 @@ $ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgrepr
 $env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm-root-ca.cer'
 $env:GIT_DIFF_OPTS="-u7"
 
+[Environment]::SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS",  "C:\Users\sraghuvanshi\langgraph.json", "User") 
+
 function vim {
   if ((Test-Path Env:\TERM_PROGRAM) -and ("vscode" -eq (Get-Item -Path Env:\TERM_PROGRAM).Value)) {
     if (-not ($args.Count -eq 0)) {
