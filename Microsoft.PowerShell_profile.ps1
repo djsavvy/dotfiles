@@ -318,6 +318,9 @@ function ll { eza $args }
 function p3 { python3 $args }
 function py3 { python3 $args }
 
+function open { explorer $args }
+
+
 # function claude { wsl claude $args }
 # function ccusage { wsl npx ccusage@latest $args }
 function fun_claude { claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)' $args }
@@ -526,4 +529,3 @@ $env:MCFLY_FUZZY = 2
 $env:MCFLY_RESULTS = 50
 $env:MCFLY_PROMPT = ">"
 Invoke-Expression -Command $(mcfly init powershell | out-string)
-
