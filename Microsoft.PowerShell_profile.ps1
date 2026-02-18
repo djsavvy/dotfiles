@@ -112,10 +112,9 @@ Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
 
 $ENV:STARSHIP_CONFIG = "$HOME\.starship"
 $ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
-$env:NODE_EXTRA_CA_CERTS = 'C:\Users\sraghuvanshi\src\EXPLOR\notes\SSL_SETUP\fcm-root-ca.cer'
 $env:GIT_DIFF_OPTS="-u7"
 
-[Environment]::SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS",  "C:\Users\sraghuvanshi\langgraph.json", "User") 
+# [Environment]::SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS",  "C:\Users\sraghuvanshi\langgraph.json", "User") 
 
 function vim {
   if ((Test-Path Env:\TERM_PROGRAM) -and ("vscode" -eq (Get-Item -Path Env:\TERM_PROGRAM).Value)) {
@@ -154,8 +153,8 @@ function ybeo { yarn build-extension-only }
 function e { cd ~/src/explor/app }
 function e2 { cd ~/src/2explor/app }
 function e3 { cd ~/src/3explor/app }
-function a { wsl -d Arch --cd ~/applets }
-function a_win { cd ~/src/applets }
+function a_wsl { wsl -d Arch --cd ~/applets }
+function a { cd ~/src/applets }
 function w { wsl -d Arch --cd ~ }
 function deft { cd ~/src/trades_table_pipeline }
 function exp { cd ~/src/experiments }
