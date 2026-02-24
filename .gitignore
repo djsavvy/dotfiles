@@ -1,7 +1,10 @@
 tags
 .config/nvim/.netrwhist
 .config/systemd/user/default.target.wants
+.config/atuin/atuin-receipt.json
 **/.DS_Store
 Custom Keys.exe
 
 .config/karabiner/automatic_backups
+
+**/.ssh/**

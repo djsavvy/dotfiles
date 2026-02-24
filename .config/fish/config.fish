@@ -191,6 +191,7 @@ if status is-interactive
     alias ccusage="npx ccusage@latest"
     alias fun_claude="claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)'"
     alias func="fun_claude"
+    alias claude="claude.exe"
 
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
