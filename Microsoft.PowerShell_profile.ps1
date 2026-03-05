@@ -104,7 +104,7 @@ Set-PSReadLineKeyHandler -Chord 'v' -ScriptBlock ${function:Edit-CommandInNvim} 
 
 Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
   $name, $value = $_.Split('=')
-  if ($name -and $value -and ($name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^ANTHROPIC_.*$' -or $name -match '^GEMINI_.*$')) {
+  if ($name -and $value -and ($name -match '^SEC_.*' -or $name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^GEMINI_.*$' -or $name -match '^OAUTH_.*$')) {
     [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
   }
 }
@@ -149,6 +149,7 @@ function upt { uptime }
 function yd { yarn dev }
 function yts { if (-not ($args.Count -eq 0)) { yarn ts $args } else { yarn ts } }
 function ybeo { yarn build-extension-only }
+function ybno { yarn build-native-only }
 
 function e { cd ~/src/explor/app }
 function e2 { cd ~/src/2explor/app }
