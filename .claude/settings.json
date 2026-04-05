@@ -4,5 +4,8 @@
       "Glob",
       "Grep"
     ]
-  }
+  },
+  "model": "opus[1m]",
+  "skipDangerousModePermissionPrompt": true,
+  "autoUpdatesChannel": "stable"
 }
