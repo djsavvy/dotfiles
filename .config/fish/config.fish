@@ -191,7 +191,6 @@ if status is-interactive
     alias ccusage="npx ccusage@latest"
     alias fun_claude="claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)'"
     alias func="fun_claude"
-    alias claude="claude.exe"
 
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
@@ -201,6 +200,7 @@ if status is-interactive
     if test -n "$WSL_DISTRO_NAME"
         alias pbcopy='clip.exe'
         alias pbpaste="powershell.exe -command 'Get-Clipboard' | tr -d '\r' | head -n -1"
+        alias claude="claude.exe"
     end
 
     # Source fzf integration
