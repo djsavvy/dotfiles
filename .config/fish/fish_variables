@@ -12,5 +12,4 @@ SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass\x1eaohorodnyk/fish\x2dautovenv
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_user_paths:/home/savvy/go/bin\x1e/Users/savvy/\x2ebun/bin\x1e/Users/savvy/\x2eghcup/bin\x1e/usr/local/bin\x1e/Users/savvy/go/bin\x1e/Users/savvy/\x2elocal/bin\x1e/opt/homebrew/opt/make/libexec/gnubin\x1e/opt/homebrew/opt/gnu\x2dsed/libexec/gnubin\x1e/Users/savvy/\x2ecargo/bin\x1e/Applications/Ghostty\x2eapp/Contents/MacOS
