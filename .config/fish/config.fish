@@ -173,6 +173,9 @@ if status is-interactive
         end
     end
 
+    # npx aliases
+    alias defuddle="npx defuddle"
+
     # Cargo aliases
     alias carog="cargo"
     alias c="cargo"
