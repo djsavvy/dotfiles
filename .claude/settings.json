@@ -5,7 +5,6 @@
       "Grep"
     ]
   },
-  "model": "opus[1m]",
-  "skipDangerousModePermissionPrompt": true,
-  "autoUpdatesChannel": "stable"
+  "model": "claude-opus-4-7[1m]",
+  "skipDangerousModePermissionPrompt": true
 }
