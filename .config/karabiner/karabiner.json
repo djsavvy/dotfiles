@@ -324,6 +324,16 @@
                     ]
                 }
             ],
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f5" },
+                    "to": [{ "key_code": "f5" }]
+                },
+                {
+                    "from": { "key_code": "f6" },
+                    "to": [{ "key_code": "f6" }]
+                }
+            ],
             "name": "Default profile",
             "selected": true,
             "simple_modifications": [
