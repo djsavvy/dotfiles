@@ -332,17 +332,21 @@ if (-not (Test-Path Alias:which)) {
   New-Alias which get-command
 }
 
-Import-Module posh-git
+# posh-git removed for startup speed (~538ms): starship's `format = "$all"` already
+# renders git branch + status, so the prompt is unchanged. Re-add this line if you
+# rely on posh-git's tab-completion or its $GitPromptSettings.
+# Import-Module posh-git
 
 
 if (Test-Path Alias:gcb) {
   Remove-Alias -Name gcb -Force
 }
-Invoke-Expression (&starship init powershell)
+Invoke-Expression (@(&starship init powershell --print-full-init) -join "`n")
 
 #f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
-
-Import-Module -Name Microsoft.WinGet.CommandNotFound
+# Disabled for startup speed (~170ms). This only suggests a winget package when you
+# type an unknown command; re-enable the import below if you want that back.
+# Import-Module -Name Microsoft.WinGet.CommandNotFound
 #f45873b3-b655-43a6-b217-97c00aa0db58
 
 
@@ -529,7 +533,24 @@ $env:MCFLY_KEY_SCHEME = "vim"
 $env:MCFLY_FUZZY = 2
 $env:MCFLY_RESULTS = 50
 $env:MCFLY_PROMPT = ">"
-Invoke-Expression -Command $(mcfly init powershell | out-string)
+# Lazy-load mcfly on first Ctrl+R instead of at startup. mcfly's init copies the
+# entire PSReadLine history file (~80k lines) into temp files every shell launch,
+# which cost ~1.1-2.0s. Deferring it makes new shells fast; the first Ctrl+R in a
+# given shell pays a one-time ~1s init, every Ctrl+R after that is instant.
+$global:__mcflyLoaded = $false
+Set-PSReadLineKeyHandler -Chord 'Ctrl+r' -ScriptBlock {
+  if (-not $global:__mcflyLoaded) {
+    Invoke-Expression -Command $(mcfly init powershell | Out-String)
+    $global:__mcflyLoaded = $true
+  }
+  # mcfly's init rebinds Ctrl+r to its own handler; replay this keystroke into it.
+  $line = $null; $cursor = $null
+  [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+  if (Get-Command Invoke-McFly -ErrorAction SilentlyContinue) {
+    "#mcfly: $line" | Out-File -FilePath $env:MCFLY_HISTORY -Append
+    Invoke-McFly -CommandToComplete "`"$line`""
+  }
+}
 
 # turn on in a bit
 # Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
