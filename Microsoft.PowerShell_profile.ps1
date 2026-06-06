@@ -528,29 +528,12 @@ function pbcopy {
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
-$env:MCFLY_LIGHT = "TRUE"
-$env:MCFLY_KEY_SCHEME = "vim"
-$env:MCFLY_FUZZY = 2
-$env:MCFLY_RESULTS = 50
-$env:MCFLY_PROMPT = ">"
-# Lazy-load mcfly on first Ctrl+R instead of at startup. mcfly's init copies the
-# entire PSReadLine history file (~80k lines) into temp files every shell launch,
-# which cost ~1.1-2.0s. Deferring it makes new shells fast; the first Ctrl+R in a
-# given shell pays a one-time ~1s init, every Ctrl+R after that is instant.
-$global:__mcflyLoaded = $false
-Set-PSReadLineKeyHandler -Chord 'Ctrl+r' -ScriptBlock {
-  if (-not $global:__mcflyLoaded) {
-    Invoke-Expression -Command $(mcfly init powershell | Out-String)
-    $global:__mcflyLoaded = $true
-  }
-  # mcfly's init rebinds Ctrl+r to its own handler; replay this keystroke into it.
-  $line = $null; $cursor = $null
-  [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
-  if (Get-Command Invoke-McFly -ErrorAction SilentlyContinue) {
-    "#mcfly: $line" | Out-File -FilePath $env:MCFLY_HISTORY -Append
-    Invoke-McFly -CommandToComplete "`"$line`""
-  }
-}
+# Atuin: SQLite-backed shell history (replaces mcfly). Local-only, no cloud sync.
+# Config lives at ~/.config/atuin/config.toml (search mode, vim keymap, etc).
+# This MUST stay below the `Set-PSReadLineOption -EditMode Vi` line near the top of
+# this profile, or vi-mode clobbers atuin's Ctrl+R / Up-arrow keybindings.
+# atuin's init is cheap (no per-startup history copy), so it's fine to run eagerly.
+atuin init powershell | Out-String | Invoke-Expression
 
 # turn on in a bit
 # Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
