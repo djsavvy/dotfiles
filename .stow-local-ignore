@@ -1,0 +1,36 @@
+# Stow ignore list for this dotfiles package.
+# NOTE: providing this file REPLACES stow's built-in default ignore list, so the
+# standard entries (.git, README, etc.) are reproduced below, followed by our
+# own additions.
+
+# --- stow defaults ---
+RCS
+.+,v
+
+CVS
+\.\#.+
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+.+~
+\#.*\#
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# --- our additions ---
+\.stow-local-ignore
+
+# Windows-only files kept in the repo for reference; don't symlink into $HOME.
+# Anchored to the repo root so nested settings.json files (.config/zed,
+# .claude, etc.) still stow normally.
+^/settings\.json$
+^/wt-startup-layout\.ps1$
