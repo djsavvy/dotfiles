@@ -2,9 +2,30 @@
   "permissions": {
     "deny": [
       "Glob",
-      "Grep"
+      "Grep",
+      "Bash(git add -A:*)",
+      "Bash(git add --all:*)",
+      "Bash(git add .:*)",
+      "Bash(git add -u:*)",
+      "Bash(git add --update:*)",
+      "Bash(git add -A)",
+      "Bash(git add --all)",
+      "Bash(git add .)",
+      "Bash(git add -u)",
+      "Bash(git add --update)",
+      "Bash(git commit -a:*)",
+      "Bash(git commit -am:*)",
+      "Bash(git commit --all:*)"
     ]
   },
-  "model": "claude-opus-4-7[1m]",
-  "skipDangerousModePermissionPrompt": true
+  "model": "claude-opus-4-8",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto",
+  "editorMode": "vim",
+  "remoteControlAtStartup": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  }
 }
