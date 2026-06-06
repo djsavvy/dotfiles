@@ -104,7 +104,7 @@ Set-PSReadLineKeyHandler -Chord 'v' -ScriptBlock ${function:Edit-CommandInNvim} 
 
 Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
   $name, $value = $_.Split('=')
-  if ($name -and $value -and ($name -match '^SEC_.*' -or $name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^GEMINI_.*$' -or $name -match '^OAUTH_.*$')) {
+  if ($name -and $value -and ($name -match '^EXA_.*' -or $name -match '^SEC_.*' -or $name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^GEMINI_.*$' -or $name -match '^OAUTH_.*$')) {
     [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
   }
 }
