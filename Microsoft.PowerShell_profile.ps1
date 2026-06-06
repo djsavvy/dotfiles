@@ -114,6 +114,9 @@ $ENV:STARSHIP_CONFIG = "$HOME\.starship"
 $ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
 $env:GIT_DIFF_OPTS="-u7"
 
+# Enable Claude Code's native PowerShell tool (routes its shell commands through pwsh).
+$env:CLAUDE_CODE_USE_POWERSHELL_TOOL = "1"
+
 # [Environment]::SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS",  "C:\Users\sraghuvanshi\langgraph.json", "User") 
 
 function vim {
