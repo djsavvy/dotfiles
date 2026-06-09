@@ -107,6 +107,12 @@ Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
   if ($name -and $value -and ($name -match '^EXA_.*' -or $name -match '^SEC_.*' -or $name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^GEMINI_.*$' -or $name -match '^OAUTH_.*$')) {
     [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
   }
+  # Expose the Anthropic key under a DIFFERENT name so it never becomes
+  # ANTHROPIC_API_KEY in this shell (which would override Vertex for the managed
+  # Claude Code). Only the sandboxed Docker Claude reads PUBLIC_ANTHROPIC_API_KEY.
+  if ($name.Trim() -eq 'ANTHROPIC_API_KEY' -and $value) {
+    [Environment]::SetEnvironmentVariable('PUBLIC_ANTHROPIC_API_KEY', $value.Trim(), "Process")
+  }
 }
 
 
@@ -328,6 +334,13 @@ function open { explorer $args }
 # function ccusage { wsl npx ccusage@latest $args }
 function fun_claude { claude --dangerously-skip-permissions --disallowedTools 'Bash(git push:*)' $args }
 function func { fun_claude $args }
+
+# Sandboxed Claude Code: public Anthropic API + Exa only, in Docker, isolated
+# config/auth/data. Mounts the CURRENT directory as the workspace so it works
+# anywhere. Pass claude flags after `--`, e.g.  func_PUBLIC -- -p "research X"
+function func_PUBLIC {
+  & "C:\Users\sraghuvanshi\claude-sandbox\claude-sandbox.ps1" -Workspace (Get-Location).Path @args
+}
 
 
 Set-Alias -Name "less" -Value "${env:ProgramFiles}\Git\usr\bin\less.exe"
