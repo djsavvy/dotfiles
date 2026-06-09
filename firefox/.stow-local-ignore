@@ -1,0 +1,25 @@
+# Only chrome/ should be linked into the Firefox profile dir.
+# Providing this file REPLACES stow's built-in defaults, so the standard
+# entries are reproduced below, followed by our own additions.
+
+# --- stow defaults ---
+RCS
+.+,v
+CVS
+\.\#.+
+\.cvsignore
+\.svn
+_darcs
+\.hg
+\.git
+\.gitignore
+\.gitmodules
+.+~
+\#.*\#
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# --- our additions: repo-management files, not Firefox config ---
+\.stow-local-ignore
+^/install\.sh$

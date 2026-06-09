@@ -34,3 +34,8 @@ _darcs
 # .claude, etc.) still stow normally.
 ^/settings\.json$
 ^/wt-startup-layout\.ps1$
+
+# Firefox userChrome lives in firefox/ but is NOT stowed into $HOME. It targets
+# the Firefox profile dir instead (path/profile name is machine-specific).
+# Run firefox/install.sh to (re)link it. See firefox/README.md.
+^/firefox$

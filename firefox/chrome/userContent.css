@@ -1,0 +1,16 @@
+/* light vs dark theme */
+/* frame is sidebar background */
+/* toolbar is header background */
+/*#root.root {
+    #root[data-frame-color-scheme="light"] {
+        --frame-bg: green !important;
+        --toolbar-bg: green !important;
+        --scroll-color: green !important;
+    }
+
+    #root[data-frame-color-scheme="dark"] {
+        --frame-bg: red !important;
+        --toolbar-bg: red !important;
+        --scroll-color: red !important;
+    }
+}*/
