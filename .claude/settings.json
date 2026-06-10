@@ -19,13 +19,13 @@
     ]
   },
   "model": "claude-opus-4-8",
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  },
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
   "editorMode": "vim",
   "remoteControlAtStartup": true,
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true
-  }
+  "agentPushNotifEnabled": true
 }
