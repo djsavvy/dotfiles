@@ -53,6 +53,10 @@ if status is-interactive
     # Load atuin
     atuin init fish | source
 
+    # Load zoxide (smart `cd`). `z <dir>` to jump, `zi` for interactive picker.
+    # To make zoxide take over `cd` itself, change to: zoxide init fish --cmd cd | source
+    command -v zoxide >/dev/null && zoxide init fish | source
+
     # Aliases
     alias ls="eza -a -l --sort=modified"
     alias vim="nvim"
