@@ -51,6 +51,7 @@
 [core]
   autoclrf = input
 	symlinks = true
+	excludesfile = /Users/savvy/.gitignore_global
 [merge]
 	conflictstyle = zdiff3
 [fetch]
