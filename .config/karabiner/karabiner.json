@@ -42,7 +42,7 @@
                         ]
                     },
                     {
-                        "description": "MS Sculpt Keyboard: switch left cmd and option when not in RDP/Citrix",
+                        "description": "MS Sculpt / Logitech Keyboard: switch left cmd and option when not in RDP/Citrix",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -58,6 +58,10 @@
                                             {
                                                 "product_id": 1957,
                                                 "vendor_id": 1118
+                                            },
+                                            {
+                                                "product_id": 50504,
+                                                "vendor_id": 1133
                                             }
                                         ],
                                         "type": "device_if"
@@ -85,6 +89,10 @@
                                             {
                                                 "product_id": 1957,
                                                 "vendor_id": 1118
+                                            },
+                                            {
+                                                "product_id": 50504,
+                                                "vendor_id": 1133
                                             }
                                         ],
                                         "type": "device_if"
@@ -112,6 +120,10 @@
                                             {
                                                 "product_id": 1957,
                                                 "vendor_id": 1118
+                                            },
+                                            {
+                                                "product_id": 50504,
+                                                "vendor_id": 1133
                                             }
                                         ],
                                         "type": "device_if"
@@ -147,6 +159,10 @@
                                             {
                                                 "product_id": 1957,
                                                 "vendor_id": 1118
+                                            },
+                                            {
+                                                "product_id": 50504,
+                                                "vendor_id": 1133
                                             }
                                         ],
                                         "type": "device_if"
