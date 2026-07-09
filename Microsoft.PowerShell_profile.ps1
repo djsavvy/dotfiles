@@ -102,7 +102,7 @@ Set-PSReadLineKeyHandler -Chord 'v' -ScriptBlock ${function:Edit-CommandInNvim} 
 
 
 
-Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
+Get-Content "D:\src\EXPLOR\app\.env" | ForEach-Object {
   $name, $value = $_.Split('=')
   if ($name -and $value -and ($name -match '^EXA_.*' -or $name -match '^SEC_.*' -or $name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^GEMINI_.*$' -or $name -match '^OAUTH_.*$')) {
     [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
@@ -117,7 +117,7 @@ Get-Content "C:\Users\sraghuvanshi\src\EXPLOR\app\.env" | ForEach-Object {
 
 
 $ENV:STARSHIP_CONFIG = "$HOME\.starship"
-$ENV:RIPGREP_CONFIG_PATH = "C:\Users\sraghuvanshi\src\dotfiles\.config\.ripgreprc"
+$ENV:RIPGREP_CONFIG_PATH = "D:\src\dotfiles\.config\.ripgreprc"
 $env:GIT_DIFF_OPTS="-u7"
 
 # Enable Claude Code's native PowerShell tool (routes its shell commands through pwsh).
