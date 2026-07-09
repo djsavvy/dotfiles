@@ -8,3 +8,8 @@ Custom Keys.exe
 .config/karabiner/automatic_backups
 
 **/.ssh/**
+
+# Codex: track stable config/instructions only; keep runtime state out.
+.codex/*
+!.codex/AGENTS.md
+!.codex/config.toml
