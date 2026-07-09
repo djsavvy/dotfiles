@@ -553,3 +553,32 @@ atuin init powershell | Out-String | Invoke-Expression
 
 # turn on in a bit
 # Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
+
+# Tell Windows Terminal the current directory so restored tabs/panes reopen in
+# the right location after restart.
+function Set-WindowsTerminalCurrentDirectory {
+  if (-not $env:WT_SESSION) {
+    return
+  }
+
+  $cwd = (Get-Location).ProviderPath
+  if (-not $cwd -or $cwd.StartsWith('\\')) {
+    return
+  }
+
+  $esc = [char]27
+  $bel = [char]7
+  Write-Host -NoNewline "$esc]9;9;$cwd$bel"
+}
+
+if ((Get-Command prompt).Definition -notmatch 'Set-WindowsTerminalCurrentDirectory') {
+  if (Test-Path Function:\__WindowsTerminalOriginalPrompt) {
+    Remove-Item Function:\__WindowsTerminalOriginalPrompt -Force
+  }
+  Copy-Item Function:\prompt Function:\__WindowsTerminalOriginalPrompt
+
+  function global:prompt {
+    Set-WindowsTerminalCurrentDirectory
+    __WindowsTerminalOriginalPrompt
+  }
+}
