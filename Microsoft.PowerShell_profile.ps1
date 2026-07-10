@@ -370,6 +370,20 @@ $env:AZURE_API_BASE = 'openai-explor-eus2-prod.openai.azure.com'
 $env:AZURE_API_VERSION = '2024-12-01-preview'
 $env:AZURE_API_KEY = $env:AZURE_OPENAI_KEY_EUS2_EXPLOR
 
+# OMP uses the Azure OpenAI Responses API variable names.
+$ompAzureBase = $env:AZURE_API_BASE.Trim().TrimEnd("/")
+if (-not $ompAzureBase.StartsWith("https://", [StringComparison]::OrdinalIgnoreCase)) {
+	$ompAzureBase = "https://$ompAzureBase"
+}
+$env:AZURE_OPENAI_BASE_URL = if ($ompAzureBase.EndsWith("/openai/v1")) {
+	$ompAzureBase
+} else {
+	"$ompAzureBase/openai/v1"
+}
+$env:AZURE_OPENAI_API_VERSION = $env:AZURE_API_VERSION
+$env:AZURE_OPENAI_API_KEY = $env:AZURE_API_KEY
+Remove-Variable ompAzureBase
+
 function gcm_trivial {
   # Hardcoded Azure OpenAI API details
   $hostname = $env:AZURE_API_BASE
