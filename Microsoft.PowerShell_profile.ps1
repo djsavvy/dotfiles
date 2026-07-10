@@ -384,6 +384,20 @@ $env:AZURE_OPENAI_API_VERSION = $env:AZURE_API_VERSION
 $env:AZURE_OPENAI_API_KEY = $env:AZURE_API_KEY
 Remove-Variable ompAzureBase
 
+# OMP uses standard Google Cloud names, while Claude Code's Vertex setup uses
+# ANTHROPIC_VERTEX_PROJECT_ID and CLOUD_ML_REGION.
+if ($env:ANTHROPIC_VERTEX_PROJECT_ID) {
+	$env:GOOGLE_CLOUD_PROJECT = $env:ANTHROPIC_VERTEX_PROJECT_ID
+}
+if ($env:CLOUD_ML_REGION) {
+	$env:GOOGLE_CLOUD_LOCATION = $env:CLOUD_ML_REGION
+}
+$ompVertexAdcPath = Join-Path $env:APPDATA "gcloud\application_default_credentials.json"
+if (-not $env:GOOGLE_APPLICATION_CREDENTIALS -and (Test-Path -LiteralPath $ompVertexAdcPath)) {
+	$env:GOOGLE_APPLICATION_CREDENTIALS = $ompVertexAdcPath
+}
+Remove-Variable ompVertexAdcPath
+
 function gcm_trivial {
   # Hardcoded Azure OpenAI API details
   $hostname = $env:AZURE_API_BASE
