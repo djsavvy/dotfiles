@@ -205,6 +205,13 @@ if status is-interactive
     alias yd="yarn dev"
 
     if test -n "$WSL_DISTRO_NAME"
+        function __windows_terminal_report_cwd --on-variable PWD
+            if test -n "$WT_SESSION"; and command -q wslpath
+                printf "\e]9;9;%s\e\\" (wslpath -w "$PWD")
+            end
+        end
+        __windows_terminal_report_cwd
+
         alias pbcopy='clip.exe'
         alias pbpaste="powershell.exe -command 'Get-Clipboard' | tr -d '\r' | head -n -1"
         alias claude="claude.exe"
