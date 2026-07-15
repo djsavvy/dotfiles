@@ -102,7 +102,20 @@ Set-PSReadLineKeyHandler -Chord 'v' -ScriptBlock ${function:Edit-CommandInNvim} 
 
 
 
-Get-Content "D:\src\EXPLOR\app\.env" | ForEach-Object {
+# Locate the EXPLOR .env. We moved src from C:\src to D:\src, so prefer D: and
+# fall back to C:. If BOTH exist, that's ambiguous (stale copy left behind) and
+# we error out rather than silently picking one.
+$envCandidates = @('D:\src\EXPLOR\app\.env', 'C:\src\EXPLOR\app\.env')
+$envFilesFound = @($envCandidates | Where-Object { Test-Path -LiteralPath $_ })
+if ($envFilesFound.Count -gt 1) {
+  throw "EXPLOR .env found in multiple locations ($($envFilesFound -join ', ')); remove the stale one so only one remains."
+}
+$explorEnvPath = $envFilesFound | Select-Object -First 1
+if (-not $explorEnvPath) {
+  Write-Warning "EXPLOR .env not found in any of: $($envCandidates -join ', '). Skipping env var population."
+}
+else {
+Get-Content -LiteralPath $explorEnvPath | ForEach-Object {
   $name, $value = $_.Split('=')
   if ($name -and $value -and ($name -match '^EXA_.*' -or $name -match '^SEC_.*' -or $name -match '^AZURE_.*$' -or $name -match '^OPENAI_.*$' -or $name -match '^SNOWFLAKE_.*$' -or $name -match '^GEMINI_.*$' -or $name -match '^OAUTH_.*$')) {
     [Environment]::SetEnvironmentVariable($name.Trim(), $value.Trim(), "Process")
@@ -113,6 +126,7 @@ Get-Content "D:\src\EXPLOR\app\.env" | ForEach-Object {
   if ($name.Trim() -eq 'ANTHROPIC_API_KEY' -and $value) {
     [Environment]::SetEnvironmentVariable('PUBLIC_ANTHROPIC_API_KEY', $value.Trim(), "Process")
   }
+}
 }
 
 
