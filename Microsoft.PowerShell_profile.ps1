@@ -102,13 +102,33 @@ Set-PSReadLineKeyHandler -Chord 'v' -ScriptBlock ${function:Edit-CommandInNvim} 
 
 
 
-# Locate the EXPLOR .env. We moved src from C:\src to D:\src, so prefer D: and
-# fall back to C:. If BOTH exist, that's ambiguous (stale copy left behind) and
-# we error out rather than silently picking one.
-$envCandidates = @('D:\src\EXPLOR\app\.env', 'C:\src\EXPLOR\app\.env')
+# Locate the dotfiles checkout whether this profile is linked there or copied to
+# PowerShell's profile directory. This keeps C:-only laptops working too.
+$profileDirectory = Split-Path -Parent $PSCommandPath
+$dotfilesCandidates = @(
+  $profileDirectory,
+  'D:\src\dotfiles',
+  'C:\src\dotfiles',
+  (Join-Path $HOME 'src\dotfiles')
+) | Select-Object -Unique
+$dotfilesRoot = $dotfilesCandidates |
+  Where-Object { Test-Path -LiteralPath (Join-Path $_ '.config\.ripgreprc') } |
+  Select-Object -First 1
+if (-not $dotfilesRoot) {
+  $dotfilesRoot = $profileDirectory
+}
+
+# Locate the EXPLOR .env. Prefer the source tree next to the dotfiles checkout,
+# then support the older C:\src and D:\src layouts.
+$localSrcRoot = Split-Path -Parent $dotfilesRoot
+$envCandidates = @(
+  (Join-Path $localSrcRoot 'EXPLOR\app\.env'),
+  'D:\src\EXPLOR\app\.env',
+  'C:\src\EXPLOR\app\.env'
+) | Select-Object -Unique
 $envFilesFound = @($envCandidates | Where-Object { Test-Path -LiteralPath $_ })
 if ($envFilesFound.Count -gt 1) {
-  throw "EXPLOR .env found in multiple locations ($($envFilesFound -join ', ')); remove the stale one so only one remains."
+  Write-Warning "EXPLOR .env found in multiple locations; using $($envFilesFound[0])."
 }
 $explorEnvPath = $envFilesFound | Select-Object -First 1
 if (-not $explorEnvPath) {
@@ -131,7 +151,15 @@ Get-Content -LiteralPath $explorEnvPath | ForEach-Object {
 
 
 $ENV:STARSHIP_CONFIG = "$HOME\.starship"
-$ENV:RIPGREP_CONFIG_PATH = "D:\src\dotfiles\.config\.ripgreprc"
+$ripgrepConfig = Join-Path $dotfilesRoot '.config\.ripgreprc'
+if (Test-Path -LiteralPath $ripgrepConfig) {
+  $ENV:RIPGREP_CONFIG_PATH = $ripgrepConfig
+}
+else {
+  Remove-Item Env:\RIPGREP_CONFIG_PATH -ErrorAction SilentlyContinue
+}
+Remove-Variable ripgrepConfig
+Remove-Variable dotfilesCandidates, profileDirectory
 $env:GIT_DIFF_OPTS="-u7"
 
 # Enable Claude Code's native PowerShell tool (routes its shell commands through pwsh).
