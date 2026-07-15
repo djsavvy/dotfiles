@@ -112,7 +112,7 @@ $dotfilesCandidates = @(
   (Join-Path $HOME 'src\dotfiles')
 ) | Select-Object -Unique
 $dotfilesRoot = $dotfilesCandidates |
-  Where-Object { [System.IO.File]::Exists((Join-Path $_ '.config\.ripgreprc')) } |
+  Where-Object { [System.IO.File]::Exists([System.IO.Path]::Combine($_, '.config\.ripgreprc')) } |
   Select-Object -First 1
 if (-not $dotfilesRoot) {
   $dotfilesRoot = $profileDirectory
