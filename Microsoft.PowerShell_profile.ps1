@@ -112,7 +112,7 @@ $dotfilesCandidates = @(
   (Join-Path $HOME 'src\dotfiles')
 ) | Select-Object -Unique
 $dotfilesRoot = $dotfilesCandidates |
-  Where-Object { Test-Path -LiteralPath (Join-Path $_ '.config\.ripgreprc') } |
+  Where-Object { [System.IO.File]::Exists((Join-Path $_ '.config\.ripgreprc')) } |
   Select-Object -First 1
 if (-not $dotfilesRoot) {
   $dotfilesRoot = $profileDirectory
@@ -126,7 +126,7 @@ $envCandidates = @(
   'D:\src\EXPLOR\app\.env',
   'C:\src\EXPLOR\app\.env'
 ) | Select-Object -Unique
-$envFilesFound = @($envCandidates | Where-Object { Test-Path -LiteralPath $_ })
+$envFilesFound = @($envCandidates | Where-Object { [System.IO.File]::Exists($_) })
 if ($envFilesFound.Count -gt 1) {
   Write-Warning "EXPLOR .env found in multiple locations; using $($envFilesFound[0])."
 }
@@ -152,7 +152,7 @@ Get-Content -LiteralPath $explorEnvPath | ForEach-Object {
 
 $ENV:STARSHIP_CONFIG = "$HOME\.starship"
 $ripgrepConfig = Join-Path $dotfilesRoot '.config\.ripgreprc'
-if (Test-Path -LiteralPath $ripgrepConfig) {
+if ([System.IO.File]::Exists($ripgrepConfig)) {
   $ENV:RIPGREP_CONFIG_PATH = $ripgrepConfig
 }
 else {
