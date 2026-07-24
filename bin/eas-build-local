@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# eas-build-local — run `eas-cli build --platform ios --local` with a helpful
+# fallback when it fails because credentials for a NEW target/bundle id
+# haven't been bootstrapped yet.
+#
+# --non-interactive can only USE existing validated credentials, never CREATE
+# a Distribution Certificate or Provisioning Profile -- so the first build
+# after adding a target/bundle id (or a brand new app) fails with a generic
+# EAS error ("Distribution Certificate is not validated for non-interactive
+# builds"). This wrapper detects that specific failure and prints the
+# one-time interactive command to unblock it, instead of just failing.
+#
+# Shared across the Expo apps that build locally (never cloud): Anchor
+# (lockscreen-quotes), Snowball (expenses-tracking), Savor. Each app's own
+# scripts/build-ios-local.sh still owns its app-specific setup (Xcode
+# version pinning, PATH/sed ordering, output filename) and calls this for
+# the actual eas-cli invocation + fallback messaging, so that part isn't
+# duplicated three times.
+#
+# Usage: eas-build-local <output-ipa-path> [extra eas-cli build args...]
+# (assumes --platform ios --profile production --local --non-interactive;
+# DEVELOPER_DIR / PATH / Xcode selection is the caller's job, done before
+# invoking this.)
+set -euo pipefail
+
+if [[ $# -lt 1 ]]; then
+  echo "usage: eas-build-local <output-ipa-path> [extra eas-cli build args...]" >&2
+  exit 2
+fi
+OUTPUT="$1"
+shift
+
+BUILD_CMD=(npx eas-cli@latest build --platform ios --profile production --local
+  --non-interactive --output "$OUTPUT" "$@")
+LOG="$(mktemp)"
+trap 'rm -f "$LOG"' EXIT
+
+if ! "${BUILD_CMD[@]}" 2>&1 | tee "$LOG"; then
+  if grep -qE 'is not validated for non-interactive builds|Run this command again in interactive mode' "$LOG"; then
+    cat >&2 <<EOF
+
+==> This looks like a one-time credentials bootstrap issue, not a real build
+    failure: --non-interactive can't create a new Distribution Certificate or
+    Provisioning Profile, only use existing validated ones. Run this ONCE in a
+    real interactive terminal (accept the defaults to create new credentials),
+    then your normal local-build command will work headlessly:
+
+    cd "$(pwd)"
+    npx eas-cli@latest build --platform ios --profile production --local --output "$OUTPUT" $*
+
+EOF
+  fi
+  exit 1
+fi
