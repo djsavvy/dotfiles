@@ -13,3 +13,11 @@ Custom Keys.exe
 .codex/*
 !.codex/AGENTS.md
 !.codex/config.toml
+
+# Pi: track config & extensions only; keep auth/sessions/cache out.
+profiles/**/auth.json
+profiles/**/sessions/
+profiles/**/npm/
+profiles/**/git/
+profiles/**/*-cache
+

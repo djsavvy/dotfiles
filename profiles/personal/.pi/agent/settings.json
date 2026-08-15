@@ -1,0 +1,9 @@
+{
+  "theme": "dark",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-4-20250514",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-exa"
+  ]
+}

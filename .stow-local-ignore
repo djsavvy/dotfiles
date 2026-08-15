@@ -39,3 +39,6 @@ _darcs
 # the Firefox profile dir instead (path/profile name is machine-specific).
 # Run firefox/install.sh to (re)link it. See firefox/README.md.
 ^/firefox$
+
+# Profiles directory (use stow -d profiles -t ~ <profile>)
+^/profiles$

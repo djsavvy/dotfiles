@@ -1,0 +1,14 @@
+{
+  "lastChangelogVersion": "0.84.2",
+  "theme": "light",
+  "defaultProvider": "google-vertex",
+  "defaultModel": "gemini-3.7-flash",
+  "defaultThinkingLevel": "medium",
+  "enabledModels": [
+    "google-vertex/*",
+    "azure-openai-responses/*"
+  ],
+  "packages": [
+    "npm:pi-exa"
+  ]
+}
