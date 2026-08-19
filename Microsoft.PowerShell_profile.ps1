@@ -211,6 +211,17 @@ function w { wsl -d Arch --cd ~ }
 function deft { cd ~/src/trades_table_pipeline }
 function exp { cd ~/src/experiments }
 
+# Drop caches to free up memory in Windows host (note, this needs to be executed as root)
+function drop_caches {
+  param([int]$amt = 1)
+  if ($amt -lt 1 -or $amt -gt 3) {
+    $amt = 1
+  }
+  Write-Host "executing: echo $amt > /proc/sys/vm/drop_caches"
+  Write-Host "executing: echo 1 > /proc/sys/vm/compact_memory"
+  wsl -u root sh -c "echo $amt > /proc/sys/vm/drop_caches && echo 1 > /proc/sys/vm/compact_memory"
+}
+
 # Git aliases
 function g { git $args }
 function it { git $args }
