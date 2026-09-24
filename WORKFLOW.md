@@ -46,5 +46,5 @@ stow -d profiles -t ~ personal
   ```
 
 - **Windows Setup**:
-  See `Microsoft.PowerShell_profile.ps1`, `wt-startup-layout.ps1`, and `Custom Keys.ahk`.
-
+  Run `.\setup-windows.ps1` as administrator to set battery preferences and add
+  the AHK Startup shortcut. Safe to rerun; use `-WhatIf` to preview.
