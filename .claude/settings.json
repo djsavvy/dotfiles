@@ -18,7 +18,6 @@
       "Bash(git commit --all:*)"
     ]
   },
-  "model": "claude-opus-4-8",
   "enabledPlugins": {
     "swift-lsp@claude-plugins-official": true
   },
