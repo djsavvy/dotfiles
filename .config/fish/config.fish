@@ -59,6 +59,8 @@ if status is-interactive
 
     # Aliases
     alias ls="eza -a -l --sort=modified"
+    # Run Codex with full access and no approval prompts by default.
+    alias codex="command codex --yolo"
     alias vim="nvim"
     alias vi="nvim"
     alias sudo="sudo "
