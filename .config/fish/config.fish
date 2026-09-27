@@ -204,6 +204,15 @@ if status is-interactive
     test (uname) = "Darwin" && alias bu="brew update && brew upgrade"
 
     alias mixtral="ollama run mixtral"
+    # Local-only Ollama CLI: no readline history, cloud features, or request logs.
+    function ollama-incognito
+        set -lx OLLAMA_NOHISTORY 1
+        set -lx OLLAMA_NO_CLOUD 1
+        set -lx OLLAMA_DEBUG 0
+        set -lx OLLAMA_DEBUG_LOG_REQUESTS 0
+        command ollama run $argv
+    end
+    alias oi="ollama-incognito"
     alias yd="yarn dev"
 
     if test -n "$WSL_DISTRO_NAME"
