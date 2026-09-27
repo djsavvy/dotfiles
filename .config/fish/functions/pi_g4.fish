@@ -2,7 +2,7 @@
 # and shut it down ~1 min after the last pi exits.
 # The real binary is a node script under .../pi-coding-agent/.../bin/pi —
 # call it via `command pi`.
-function pi --description 'pi coding agent, auto-starting/stopping the local llama-server'
+function pi_g4 --description 'pi coding agent, auto-starting/stopping the local llama-server'
     set -l base http://127.0.0.1:8080
     if not curl -sf -m 2 $base/v1/models >/dev/null 2>&1
         echo "local-coding-agent: llama-server not running, starting it…" >&2
