@@ -7,14 +7,6 @@ SetWorkingDir A_ScriptDir
 ; Uncomment for debugging
 ; KeyHistory
 
-; For this to work consistently, we need to set the following registry key to 0:
-; `HKEY_CURRENT_USER\Control Panel\Desktop ... REG_DWORD ... ForegroundLockTimeout`
-; (The default value is 200000 (0x30D40)).
-; For more details, see https://github.com/microsoft/terminal/issues/8954
-#Enter:: Run "wt"
-#+Enter:: Run 'wt -w 0 -p "PowerShell Core with Developer Command Prompt"'
-
-; Win+Backspace / Win+Shift+Backspace reserved for browser shortcuts (chrome/firefox).
 ; Win+Escape locks the screen (same as Win+L).
 #Esc::#l
 
