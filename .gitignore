@@ -21,3 +21,6 @@ profiles/**/npm/
 profiles/**/git/
 profiles/**/*-cache
 
+
+# Claude Code per-machine permission approvals
+.claude/settings.local.json
