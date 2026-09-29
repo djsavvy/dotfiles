@@ -33,6 +33,7 @@ $nvimConfig = Join-Path $PSScriptRoot '.config\nvim'
 $terminalSettings = Join-Path $PSScriptRoot 'settings.json'
 $atuinConfig = Join-Path $PSScriptRoot '.config\atuin\config.toml'
 $zedConfigDir = Join-Path $PSScriptRoot '.config\zed'
+$piWorkProfile = Join-Path $PSScriptRoot 'profiles\work\.pi'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -319,6 +320,45 @@ function Set-ZedConfigLinks {
     }
 }
 
+function Set-PiWorkProfile {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$SourceDir)
+
+    # Mirror profiles/work/.pi into ~/.pi using symlinks. pi has no include
+    # mechanism so we link each file/folder individually.
+    $piDir = Join-Path $env:USERPROFILE '.pi'
+    $allConfigured = $true
+    foreach ($entry in Get-ChildItem -LiteralPath $SourceDir -Recurse -Force) {
+        $rel = $entry.FullName.Substring($SourceDir.Length).TrimStart('\')
+        $linkPath = Join-Path $piDir $rel
+        if ($entry.PSIsContainer) {
+            if (-not (Test-Path -LiteralPath $linkPath)) {
+                if ($PSCmdlet.ShouldProcess($linkPath, 'Create directory')) {
+                    New-Item -ItemType Directory -Path $linkPath -Force | Out-Null
+                }
+            }
+            continue
+        }
+        $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue
+        if ($item -and $item.LinkType -eq 'SymbolicLink' -and "$($item.Target)" -eq $entry.FullName) {
+            continue
+        }
+        if ($item -and $item.LinkType) {
+            throw "$linkPath is a $($item.LinkType) to $($item.Target), expected a symlink to $($entry.FullName). Move it aside and rerun setup."
+        }
+        $allConfigured = $false
+        if ($PSCmdlet.ShouldProcess($linkPath, "Link to $($entry.FullName)")) {
+            New-Item -ItemType Directory -Path (Split-Path -Parent $linkPath) -Force | Out-Null
+            if ($item) {
+                Copy-Item -LiteralPath $linkPath -Destination "$linkPath.bak" -Force
+                Remove-Item -LiteralPath $linkPath -Force
+            }
+            New-Item -ItemType SymbolicLink -Path $linkPath -Target $entry.FullName | Out-Null
+        }
+    }
+    if ($allConfigured) { Write-Host 'pi work profile is already configured.' }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -358,6 +398,9 @@ Set-AtuinConfigLink -Source $atuinConfig
 
 # 11. Point Zed's settings and keymap at the checkout.
 Set-ZedConfigLinks -SourceDir $zedConfigDir
+
+# 12. Apply the pi work profile from profiles/work/.pi.
+Set-PiWorkProfile -SourceDir $piWorkProfile
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
