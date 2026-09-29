@@ -44,7 +44,7 @@ CapsLock::Esc
 ; Apple Magic Keyboard-specific bindings
 
 ; Set Win+Tab to Alt+Tab for muscle memory compatibility
-Lwin & Tab::AltTab
+; Lwin & Tab::AltTab
 
 ; Remap media keys
 RAlt & F1::
