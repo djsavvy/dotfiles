@@ -27,6 +27,7 @@ if (-not $WhatIfPreference -and -not $isAdmin) {
 $hibernateTimeoutMinutes = 20
 $standbyConnectivityOnBattery = 0
 $hotkeyScript = Join-Path $PSScriptRoot 'Custom Keys.ahk'
+$powerShellProfile = Join-Path $PSScriptRoot 'Microsoft.PowerShell_profile.ps1'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -109,6 +110,45 @@ function Set-ClaudeFolderTrust {
     }
 }
 
+function Set-PowerShellProfileStub {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Source)
+
+    # Setup may run under Windows PowerShell, so build the pwsh path instead of using
+    # $PROFILE. GetFolderPath follows OneDrive's Documents redirection. profile.ps1 is
+    # the all-hosts profile, so the VS Code extension loads it too.
+    $profileDirectory = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'PowerShell'
+    $stubPath = Join-Path $profileDirectory 'profile.ps1'
+    # Dot-source instead of symlinking: no Developer Mode needed, and OneDrive and
+    # editors can't swap the link for a copy.
+    $stub = ". '$($Source -replace "'", "''")'"
+
+    # An earlier symlinked host profile would load the dotfile a second time.
+    $hostProfile = Join-Path $profileDirectory 'Microsoft.PowerShell_profile.ps1'
+    $hostItem = Get-Item -LiteralPath $hostProfile -Force -ErrorAction SilentlyContinue
+    if ($hostItem -and $hostItem.LinkType -eq 'SymbolicLink' -and
+        $PSCmdlet.ShouldProcess($hostProfile, 'Remove old profile symlink')) {
+        $hostItem.Delete()
+    }
+
+    $stubItem = Get-Item -LiteralPath $stubPath -Force -ErrorAction SilentlyContinue
+    if ($stubItem -and -not $stubItem.LinkType -and
+        (Get-Content -LiteralPath $stubPath -Raw).Trim() -eq $stub) {
+        Write-Host 'PowerShell profile stub is already configured.'
+        return
+    }
+    if ($PSCmdlet.ShouldProcess($stubPath, "Dot-source $Source")) {
+        New-Item -ItemType Directory -Path $profileDirectory -Force | Out-Null
+        if ($stubItem -and $stubItem.LinkType) {
+            $stubItem.Delete()
+        }
+        elseif ($stubItem) {
+            Copy-Item -LiteralPath $stubPath -Destination "$stubPath.bak" -Force
+        }
+        [IO.File]::WriteAllText($stubPath, "$stub`r`n", (New-Object Text.UTF8Encoding $false))
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -127,6 +167,9 @@ if ($PSCmdlet.ShouldProcess('Current Windows power plan', "Set battery hibernati
 
 # 3. Skip Claude Code's folder trust prompt under the trusted folder.
 Set-ClaudeFolderTrust -Folder $claudeTrustedFolder
+
+# 4. Load the dotfiles PowerShell profile from pwsh's profile directory.
+Set-PowerShellProfileStub -Source $powerShellProfile
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'

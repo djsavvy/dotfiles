@@ -46,5 +46,6 @@ stow -d profiles -t ~ personal
   ```
 
 - **Windows Setup**:
-  Run `.\setup-windows.ps1` as administrator to set battery preferences and add
-  the AHK Startup shortcut. Safe to rerun; use `-WhatIf` to preview.
+  Run `.\setup-windows.ps1` as administrator to set battery preferences, add
+  the AHK Startup shortcut, and point pwsh's profile at this checkout. Safe to
+  rerun; use `-WhatIf` to preview.
