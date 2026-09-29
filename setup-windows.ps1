@@ -30,6 +30,7 @@ $hotkeyScript = Join-Path $PSScriptRoot 'Custom Keys.ahk'
 $powerShellProfile = Join-Path $PSScriptRoot 'Microsoft.PowerShell_profile.ps1'
 $gitConfig = Join-Path $PSScriptRoot '.gitconfig'
 $nvimConfig = Join-Path $PSScriptRoot '.config\nvim'
+$terminalSettings = Join-Path $PSScriptRoot 'settings.json'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -212,6 +213,38 @@ function Set-NvimConfigJunction {
     throw "$linkPath is $found, expected a junction to $Source. Move it aside and rerun setup."
 }
 
+function Set-TerminalSettingsLink {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Source)
+
+    $packageDirectory = Join-Path $env:LOCALAPPDATA 'Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe'
+    if (-not (Test-Path -LiteralPath $packageDirectory)) {
+        Write-Host 'Skipping Windows Terminal Preview settings: not installed.'
+        return
+    }
+    # Terminal has no include mechanism and rewrites this file from its settings UI,
+    # so a stub or copy would drift. Symlinks need Developer Mode or elevation.
+    $linkPath = Join-Path $packageDirectory 'LocalState\settings.json'
+    $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue
+    if ($item -and $item.LinkType -eq 'SymbolicLink' -and "$($item.Target)" -eq $Source) {
+        Write-Host 'Windows Terminal Preview settings link is already configured.'
+        return
+    }
+    if ($item -and $item.LinkType) {
+        throw "$linkPath is a $($item.LinkType) to $($item.Target), expected a symlink to $Source. Move it aside and rerun setup."
+    }
+    if ($PSCmdlet.ShouldProcess($linkPath, "Link to $Source")) {
+        New-Item -ItemType Directory -Path (Split-Path -Parent $linkPath) -Force | Out-Null
+        # Terminal generates a default file on first launch, so back it up rather than
+        # failing on every new machine.
+        if ($item) {
+            Copy-Item -LiteralPath $linkPath -Destination "$linkPath.bak" -Force
+            Remove-Item -LiteralPath $linkPath -Force
+        }
+        New-Item -ItemType SymbolicLink -Path $linkPath -Target $Source | Out-Null
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -239,6 +272,9 @@ Set-GitConfigStub -Source $gitConfig
 
 # 6. Point Neovim's config directory at the checkout.
 Set-NvimConfigJunction -Source $nvimConfig
+
+# 7. Point Windows Terminal Preview's settings at the checkout.
+Set-TerminalSettingsLink -Source $terminalSettings
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'

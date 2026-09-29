@@ -47,5 +47,6 @@ stow -d profiles -t ~ personal
 
 - **Windows Setup**:
   Run `.\setup-windows.ps1` as administrator to set battery preferences, add
-  the AHK Startup shortcut, and point pwsh's profile, `~/.gitconfig`, and
-  Neovim's config at this checkout. Safe to rerun; use `-WhatIf` to preview.
+  the AHK Startup shortcut, and point pwsh's profile, `~/.gitconfig`, Neovim's
+  config, and Windows Terminal Preview's settings at this checkout. Safe to
+  rerun; use `-WhatIf` to preview.
