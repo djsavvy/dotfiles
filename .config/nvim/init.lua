@@ -40,11 +40,15 @@ vim.g.python3_host_skip_check = 1
 
 -- Platform-specific settings
 if vim.fn.has("win32") == 1 then
-  opt.shell = "pwsh.exe\\ -NoLogo"
-  opt.shellpipe = "\\|"
+  -- From :h shell-powershell. Lua takes these literally, so no :set-style escaping.
+  opt.shell = "pwsh"
+  opt.shellcmdflag = "-NoLogo -NonInteractive -ExecutionPolicy RemoteSigned -Command "
+    .. "[Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();"
+    .. "$PSDefaultParameterValues['Out-File:Encoding']='utf8';Remove-Alias -Force -ErrorAction SilentlyContinue tee;"
+  opt.shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
+  opt.shellpipe = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode'
+  opt.shellquote = ""
   opt.shellxquote = ""
-  opt.shellcmdflag = "-NoLogo\\ -ExecutionPolicy\\ RemoteSigned\\ -Command"
-  opt.shellredir = "\\|\\ Out-File\\ -Encoding\\ UTF8"
 end
 
 -- Use terminal colors
