@@ -280,18 +280,6 @@
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{9a529300-148d-55f9-8a1b-028796032f4c}",
-                "hidden": false,
-                "name": "SSH - fcwusxplorgpu01.faralloncapital.com",
-                "source": "Windows.Terminal.SSH"
-            },
-            {
-                "guid": "{16723009-26b1-57ef-9a76-98d1e80b76f0}",
-                "hidden": false,
-                "name": "SSH - fcwusxplorubu01.faralloncapital.com",
-                "source": "Windows.Terminal.SSH"
-            },
-            {
                 "guid": "{9fbd3450-8339-5dfd-983e-dd2720fdf805}",
                 "hidden": true,
                 "name": "Developer Command Prompt for VS 18",
@@ -320,6 +308,18 @@
                 "hidden": false,
                 "name": "Developer PowerShell for VS 18",
                 "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{9a529300-148d-55f9-8a1b-028796032f4c}",
+                "hidden": false,
+                "name": "SSH - fcwusxplorgpu01.faralloncapital.com",
+                "source": "Windows.Terminal.SSH"
+            },
+            {
+                "guid": "{16723009-26b1-57ef-9a76-98d1e80b76f0}",
+                "hidden": false,
+                "name": "SSH - fcwusxplorubu01.faralloncapital.com",
+                "source": "Windows.Terminal.SSH"
             }
         ]
     },
