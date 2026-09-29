@@ -28,6 +28,7 @@ $hibernateTimeoutMinutes = 20
 $standbyConnectivityOnBattery = 0
 $hotkeyScript = Join-Path $PSScriptRoot 'Custom Keys.ahk'
 $powerShellProfile = Join-Path $PSScriptRoot 'Microsoft.PowerShell_profile.ps1'
+$gitConfig = Join-Path $PSScriptRoot '.gitconfig'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -149,6 +150,42 @@ function Set-PowerShellProfileStub {
     }
 }
 
+function Set-GitConfigStub {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Source)
+
+    $stubPath = Join-Path $env:USERPROFILE '.gitconfig'
+    $ignorePath = Join-Path (Split-Path -Parent $Source) '.gitignore_global'
+    # Settings below the include override the shared config. Git for Windows' system
+    # config already provides credential.helper = manager.
+    $stub = @(
+        '[include]'
+        "`tpath = $($Source -replace '\\', '/')"
+        '[core]'
+        # Read the ignore list from the checkout instead of copying it to ~.
+        "`texcludesfile = $($ignorePath -replace '\\', '/')"
+        "`tlongpaths = true"
+        "`tfsmonitor = true"
+        "`tuntrackedcache = true"
+    ) -join "`n"
+
+    $stubItem = Get-Item -LiteralPath $stubPath -Force -ErrorAction SilentlyContinue
+    if ($stubItem -and -not $stubItem.LinkType -and
+        ((Get-Content -LiteralPath $stubPath -Raw).Trim() -replace "`r`n", "`n") -eq $stub) {
+        Write-Host 'Git config stub is already configured.'
+        return
+    }
+    if ($PSCmdlet.ShouldProcess($stubPath, "Include $Source")) {
+        if ($stubItem -and $stubItem.LinkType) {
+            $stubItem.Delete()
+        }
+        elseif ($stubItem) {
+            Copy-Item -LiteralPath $stubPath -Destination "$stubPath.bak" -Force
+        }
+        [IO.File]::WriteAllText($stubPath, "$stub`n", (New-Object Text.UTF8Encoding $false))
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -170,6 +207,9 @@ Set-ClaudeFolderTrust -Folder $claudeTrustedFolder
 
 # 4. Load the dotfiles PowerShell profile from pwsh's profile directory.
 Set-PowerShellProfileStub -Source $powerShellProfile
+
+# 5. Load the dotfiles git config from ~/.gitconfig.
+Set-GitConfigStub -Source $gitConfig
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'

@@ -17,6 +17,7 @@ _darcs
 
 \.git
 \.gitignore
+\.gitattributes
 \.gitmodules
 
 .+~

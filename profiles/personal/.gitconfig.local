@@ -1,0 +1,3 @@
+; Personal machines authenticate to GitHub over ssh by default.
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/

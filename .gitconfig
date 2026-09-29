@@ -49,9 +49,9 @@
 [push]
 	default = current
 [core]
-  autoclrf = input
+  autocrlf = input
 	symlinks = true
-	excludesfile = /Users/savvy/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [merge]
 	conflictstyle = zdiff3
 [fetch]
@@ -112,15 +112,10 @@
 	fsckObjects=true
 
 
-[credential "https://github.com"]
-	helper =
-	helper = !'C:\\Program Files\\GitHub CLI\\gh.exe' auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !'C:\\Program Files\\GitHub CLI\\gh.exe' auth git-credential
 [credential "https://app-explor-wus-dev.scm.azurewebsites.net"]
         provider = generic
-; for work, turn the following off:
-; at home it makes ssh auth work by default
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
+
+; Machine-specific settings, e.g. the personal-only ssh rewrite from
+; profiles/personal. Git skips this if the file doesn't exist.
+[include]
+	path = ~/.gitconfig.local
