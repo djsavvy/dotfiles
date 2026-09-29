@@ -155,7 +155,7 @@ Get-Content -LiteralPath $explorEnvPath | ForEach-Object {
 }
 
 
-$ENV:STARSHIP_CONFIG = "$HOME\.starship"
+$ENV:STARSHIP_CONFIG = Join-Path $dotfilesRoot '.starship'
 $ripgrepConfig = Join-Path $dotfilesRoot '.config\.ripgreprc'
 if ([System.IO.File]::Exists($ripgrepConfig)) {
   $ENV:RIPGREP_CONFIG_PATH = $ripgrepConfig
