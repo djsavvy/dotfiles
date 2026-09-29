@@ -31,6 +31,7 @@ $powerShellProfile = Join-Path $PSScriptRoot 'Microsoft.PowerShell_profile.ps1'
 $gitConfig = Join-Path $PSScriptRoot '.gitconfig'
 $nvimConfig = Join-Path $PSScriptRoot '.config\nvim'
 $terminalSettings = Join-Path $PSScriptRoot 'settings.json'
+$atuinConfig = Join-Path $PSScriptRoot '.config\atuin\config.toml'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -245,6 +246,32 @@ function Set-TerminalSettingsLink {
     }
 }
 
+function Set-AtuinConfigLink {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Source)
+
+    # Atuin reads config.toml but never writes to it (sync/session data go in the
+    # data directory), so a symlink is safe. Use a symlink rather than a stub: TOML
+    # has no include mechanism.
+    $linkPath = Join-Path $env:USERPROFILE '.config\atuin\config.toml'
+    $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue
+    if ($item -and $item.LinkType -eq 'SymbolicLink' -and "$($item.Target)" -eq $Source) {
+        Write-Host 'Atuin config link is already configured.'
+        return
+    }
+    if ($item -and $item.LinkType) {
+        throw "$linkPath is a $($item.LinkType) to $($item.Target), expected a symlink to $Source. Move it aside and rerun setup."
+    }
+    if ($PSCmdlet.ShouldProcess($linkPath, "Link to $Source")) {
+        New-Item -ItemType Directory -Path (Split-Path -Parent $linkPath) -Force | Out-Null
+        if ($item) {
+            Copy-Item -LiteralPath $linkPath -Destination "$linkPath.bak" -Force
+            Remove-Item -LiteralPath $linkPath -Force
+        }
+        New-Item -ItemType SymbolicLink -Path $linkPath -Target $Source | Out-Null
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -275,6 +302,9 @@ Set-NvimConfigJunction -Source $nvimConfig
 
 # 7. Point Windows Terminal Preview's settings at the checkout.
 Set-TerminalSettingsLink -Source $terminalSettings
+
+# 8. Point atuin's config at the checkout.
+Set-AtuinConfigLink -Source $atuinConfig
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
