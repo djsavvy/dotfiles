@@ -127,12 +127,17 @@ $envCandidates = @(
   'C:\src\EXPLOR\app\.env'
 ) | Select-Object -Unique
 $envFilesFound = @($envCandidates | Where-Object { [System.IO.File]::Exists($_) })
-if ($envFilesFound.Count -gt 1) {
+# Tools like Neovim run pwsh -NonInteractive and read its output, so keep these
+# warnings out of it. pwsh accepts any prefix of the flag down to -noni.
+$isInteractiveSession = -not ([Environment]::GetCommandLineArgs() -match '^-noni')
+if ($isInteractiveSession -and $envFilesFound.Count -gt 1) {
   Write-Warning "EXPLOR .env found in multiple locations; using $($envFilesFound[0])."
 }
 $explorEnvPath = $envFilesFound | Select-Object -First 1
 if (-not $explorEnvPath) {
-  Write-Warning "EXPLOR .env not found in any of: $($envCandidates -join ', '). Skipping env var population."
+  if ($isInteractiveSession) {
+    Write-Warning "EXPLOR .env not found in any of: $($envCandidates -join ', '). Skipping env var population."
+  }
 }
 else {
 Get-Content -LiteralPath $explorEnvPath | ForEach-Object {
