@@ -272,38 +272,58 @@ function Set-AtuinConfigLink {
     }
 }
 
+function Add-UserPath {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Directory)
+
+    $current = [Environment]::GetEnvironmentVariable('Path', 'User') ?? ''
+    # Split and filter empties so a trailing semicolon doesn't create a blank entry.
+    $parts = @($current -split ';' | Where-Object { $_ -ne '' })
+    if ($parts -contains $Directory) {
+        Write-Host "User PATH already contains $Directory."
+        return
+    }
+    $newPath = ($parts + $Directory) -join ';'
+    if ($PSCmdlet.ShouldProcess('User PATH', "Add $Directory")) {
+        [Environment]::SetEnvironmentVariable('Path', $newPath, 'User')
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
 
 # Add future setup steps below. Guard writes with ShouldProcess for -WhatIf.
 
-# 1. Add Custom Keys.ahk to shell:startup for the current user.
+# 1. Add ~/bin to the user PATH (lfs-dal, SysinternalsSuite, etc.).
+Add-UserPath -Directory (Join-Path $env:USERPROFILE 'bin')
+
+# 3. Add Custom Keys.ahk to shell:startup for the current user.
 Set-AutoHotkeyStartupShortcut -Script $hotkeyScript -StartupDirectory ([Environment]::GetFolderPath('Startup'))
 
-# 2. Battery preferences for the current power plan. AC settings stay unchanged.
+# 4. Battery preferences for the current power plan. AC settings stay unchanged.
 if ($PSCmdlet.ShouldProcess('Current Windows power plan', "Set battery hibernation to $hibernateTimeoutMinutes minutes and standby connectivity to $standbyConnectivityOnBattery")) {
     Invoke-PowerCfg -Arguments @('/change', 'hibernate-timeout-dc', "$hibernateTimeoutMinutes")
     Invoke-PowerCfg -Arguments @('/setdcvalueindex', 'SCHEME_CURRENT', 'SUB_NONE', 'CONNECTIVITYINSTANDBY', "$standbyConnectivityOnBattery")
     Invoke-PowerCfg -Arguments @('/setactive', 'SCHEME_CURRENT')
 }
 
-# 3. Skip Claude Code's folder trust prompt under the trusted folder.
+# 5. Skip Claude Code's folder trust prompt under the trusted folder.
 Set-ClaudeFolderTrust -Folder $claudeTrustedFolder
 
-# 4. Load the dotfiles PowerShell profile from pwsh's profile directory.
+# 6. Load the dotfiles PowerShell profile from pwsh's profile directory.
 Set-PowerShellProfileStub -Source $powerShellProfile
 
-# 5. Load the dotfiles git config from ~/.gitconfig.
+# 7. Load the dotfiles git config from ~/.gitconfig.
 Set-GitConfigStub -Source $gitConfig
 
-# 6. Point Neovim's config directory at the checkout.
+# 8. Point Neovim's config directory at the checkout.
 Set-NvimConfigJunction -Source $nvimConfig
 
-# 7. Point Windows Terminal Preview's settings at the checkout.
+# 9. Point Windows Terminal Preview's settings at the checkout.
 Set-TerminalSettingsLink -Source $terminalSettings
 
-# 8. Point atuin's config at the checkout.
+# 10. Point atuin's config at the checkout.
 Set-AtuinConfigLink -Source $atuinConfig
 
 if (-not $WhatIfPreference) {
