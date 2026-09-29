@@ -27,6 +27,9 @@ if (-not $WhatIfPreference -and -not $isAdmin) {
 $hibernateTimeoutMinutes = 20
 $standbyConnectivityOnBattery = 0
 $hotkeyScript = Join-Path $PSScriptRoot 'Custom Keys.ahk'
+# Claude Code treats subfolders of a trusted folder as trusted, so this skips the
+# "Do you trust the files in this folder?" prompt everywhere under it.
+$claudeTrustedFolder = $env:USERPROFILE
 
 function Invoke-PowerCfg {
     param([string[]]$Arguments)
@@ -73,6 +76,39 @@ function Set-AutoHotkeyStartupShortcut {
     }
 }
 
+function Set-ClaudeFolderTrust {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Folder)
+
+    $configPath = Join-Path $env:USERPROFILE '.claude.json'
+    if (-not (Test-Path -LiteralPath $configPath -PathType Leaf)) {
+        Write-Host "Skipping Claude Code folder trust: $configPath not found. Run claude once, then rerun setup."
+        return
+    }
+    # Claude Code keys projects by forward-slash paths.
+    $key = $Folder.TrimEnd('\') -replace '\\', '/'
+
+    $config = Get-Content -LiteralPath $configPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    if (-not $config.PSObject.Properties['projects']) {
+        $config | Add-Member -NotePropertyName projects -NotePropertyValue ([pscustomobject]@{})
+    }
+    $project = $config.projects.PSObject.Properties[$key]
+    if ($project -and $project.Value.hasTrustDialogAccepted -eq $true) {
+        Write-Host "Claude Code already trusts $key."
+        return
+    }
+    if ($PSCmdlet.ShouldProcess($configPath, "Trust $key and its subfolders in Claude Code")) {
+        if (-not $project) {
+            $config.projects | Add-Member -NotePropertyName $key -NotePropertyValue ([pscustomobject]@{})
+            $project = $config.projects.PSObject.Properties[$key]
+        }
+        $project.Value | Add-Member -NotePropertyName hasTrustDialogAccepted -NotePropertyValue $true -Force
+        Copy-Item -LiteralPath $configPath -Destination "$configPath.bak" -Force
+        # Running Claude Code sessions may overwrite this on exit; close them first.
+        [IO.File]::WriteAllText($configPath, ($config | ConvertTo-Json -Depth 100), (New-Object Text.UTF8Encoding $false))
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -88,6 +124,9 @@ if ($PSCmdlet.ShouldProcess('Current Windows power plan', "Set battery hibernati
     Invoke-PowerCfg -Arguments @('/setdcvalueindex', 'SCHEME_CURRENT', 'SUB_NONE', 'CONNECTIVITYINSTANDBY', "$standbyConnectivityOnBattery")
     Invoke-PowerCfg -Arguments @('/setactive', 'SCHEME_CURRENT')
 }
+
+# 3. Skip Claude Code's folder trust prompt under the trusted folder.
+Set-ClaudeFolderTrust -Folder $claudeTrustedFolder
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
