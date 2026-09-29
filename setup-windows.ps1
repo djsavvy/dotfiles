@@ -29,6 +29,7 @@ $standbyConnectivityOnBattery = 0
 $hotkeyScript = Join-Path $PSScriptRoot 'Custom Keys.ahk'
 $powerShellProfile = Join-Path $PSScriptRoot 'Microsoft.PowerShell_profile.ps1'
 $gitConfig = Join-Path $PSScriptRoot '.gitconfig'
+$nvimConfig = Join-Path $PSScriptRoot '.config\nvim'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -186,6 +187,31 @@ function Set-GitConfigStub {
     }
 }
 
+function Set-NvimConfigJunction {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Source)
+
+    # A junction rather than a stub init.lua, so spell files added with zg land in
+    # the checkout too. Junctions don't need Developer Mode.
+    $linkPath = Join-Path $env:LOCALAPPDATA 'nvim'
+    $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue
+    if (-not $item) {
+        if ($PSCmdlet.ShouldProcess($linkPath, "Create junction to $Source")) {
+            New-Item -ItemType Junction -Path $linkPath -Target $Source | Out-Null
+        }
+        return
+    }
+    if ($item.LinkType -eq 'Junction' -and "$($item.Target)".TrimEnd('\') -eq $Source.TrimEnd('\')) {
+        Write-Host 'Neovim config junction is already configured.'
+        return
+    }
+    # Don't replace an existing config; the user decides what to keep.
+    $found = if ($item.LinkType) { "a $($item.LinkType) to $($item.Target)" }
+        elseif ($item.PSIsContainer) { 'an existing folder' }
+        else { 'a file' }
+    throw "$linkPath is $found, expected a junction to $Source. Move it aside and rerun setup."
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -210,6 +236,9 @@ Set-PowerShellProfileStub -Source $powerShellProfile
 
 # 5. Load the dotfiles git config from ~/.gitconfig.
 Set-GitConfigStub -Source $gitConfig
+
+# 6. Point Neovim's config directory at the checkout.
+Set-NvimConfigJunction -Source $nvimConfig
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
