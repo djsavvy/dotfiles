@@ -365,8 +365,9 @@ if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
 
 # Add future setup steps below. Guard writes with ShouldProcess for -WhatIf.
 
-# 1. Add ~/bin to the user PATH (lfs-dal, SysinternalsSuite, etc.).
+# 1. Add ~/bin and the stable npm global bin to the user PATH.
 Add-UserPath -Directory (Join-Path $env:USERPROFILE 'bin')
+Add-UserPath -Directory (Join-Path $env:APPDATA 'npm')
 
 # 3. Add Custom Keys.ahk to shell:startup for the current user.
 Set-AutoHotkeyStartupShortcut -Script $hotkeyScript -StartupDirectory ([Environment]::GetFolderPath('Startup'))
