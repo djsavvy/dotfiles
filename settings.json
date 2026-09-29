@@ -30,10 +30,6 @@
             "id": "User.splitPaneRightDuplicate"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
             "command":
             {
                 "action": "moveFocus",
@@ -42,13 +38,8 @@
             "id": "User.moveFocus.87C324ED"
         },
         {
-            "command":
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878"
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": "find",
@@ -61,6 +52,15 @@
                 "direction": "down"
             },
             "id": "User.moveFocus.F747588A"
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
         },
         {
             "command":
@@ -87,15 +87,11 @@
     [
         {
             "id": null,
-            "keys": "alt+shift+plus"
-        },
-        {
-            "id": null,
             "keys": "ctrl+shift+4"
         },
         {
             "id": null,
-            "keys": "alt+shift+minus"
+            "keys": "alt+shift+plus"
         },
         {
             "id": null,
@@ -103,15 +99,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+2"
+            "keys": "alt+shift+minus"
+        },
+        {
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "alt+h"
         },
         {
             "id": "User.splitPaneRightDuplicate",
             "keys": "ctrl+shift+5"
         },
         {
-            "id": "User.moveFocus.2A0DA8E0",
-            "keys": "alt+h"
+            "id": null,
+            "keys": "ctrl+shift+2"
         },
         {
             "id": "User.splitPane.A6751878",
@@ -308,6 +308,18 @@
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{f278fee2-4b8a-5e62-8830-1575464ac093}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 18",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{637f6ed6-b1c6-5a3c-af4e-5bad8985c276}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 18",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
