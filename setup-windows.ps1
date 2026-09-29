@@ -32,6 +32,7 @@ $gitConfig = Join-Path $PSScriptRoot '.gitconfig'
 $nvimConfig = Join-Path $PSScriptRoot '.config\nvim'
 $terminalSettings = Join-Path $PSScriptRoot 'settings.json'
 $atuinConfig = Join-Path $PSScriptRoot '.config\atuin\config.toml'
+$zedConfigDir = Join-Path $PSScriptRoot '.config\zed'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -289,6 +290,35 @@ function Add-UserPath {
     }
 }
 
+function Set-ZedConfigLinks {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$SourceDir)
+
+    $zedDir = Join-Path $env:APPDATA 'Zed'
+    $allConfigured = $true
+    foreach ($name in 'settings.json', 'keymap.json') {
+        $src = Join-Path $SourceDir $name
+        $linkPath = Join-Path $zedDir $name
+        $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue
+        if ($item -and $item.LinkType -eq 'SymbolicLink' -and "$($item.Target)" -eq $src) {
+            Write-Host "Zed $name link is already configured."
+            continue
+        }
+        if ($item -and $item.LinkType) {
+            throw "$linkPath is a $($item.LinkType) to $($item.Target), expected a symlink to $src. Move it aside and rerun setup."
+        }
+        $allConfigured = $false
+        if ($PSCmdlet.ShouldProcess($linkPath, "Link to $src")) {
+            New-Item -ItemType Directory -Path $zedDir -Force | Out-Null
+            if ($item) {
+                Copy-Item -LiteralPath $linkPath -Destination "$linkPath.bak" -Force
+                Remove-Item -LiteralPath $linkPath -Force
+            }
+            New-Item -ItemType SymbolicLink -Path $linkPath -Target $src | Out-Null
+        }
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -325,6 +355,9 @@ Set-TerminalSettingsLink -Source $terminalSettings
 
 # 10. Point atuin's config at the checkout.
 Set-AtuinConfigLink -Source $atuinConfig
+
+# 11. Point Zed's settings and keymap at the checkout.
+Set-ZedConfigLinks -SourceDir $zedConfigDir
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
