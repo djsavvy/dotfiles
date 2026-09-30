@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "0.99.1",
   "theme": "light",
   "defaultProvider": "google-vertex",
   "defaultModel": "gemini-3.7-flash",
@@ -10,5 +10,8 @@
   ],
   "packages": [
     "npm:pi-exa"
+  ],
+  "defaultTools": [
+    "+powershell"
   ]
 }
