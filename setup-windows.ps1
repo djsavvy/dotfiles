@@ -365,9 +365,21 @@ if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
 
 # Add future setup steps below. Guard writes with ShouldProcess for -WhatIf.
 
-# 1. Add ~/bin and the stable npm global bin to the user PATH.
+# 1. Add ~/bin and the stable npm global bin to the user PATH, and pin the
+#    npm global prefix to that stable location so it survives nvm version switches.
 Add-UserPath -Directory (Join-Path $env:USERPROFILE 'bin')
-Add-UserPath -Directory (Join-Path $env:APPDATA 'npm')
+$npmGlobalBin = Join-Path $env:APPDATA 'npm'
+Add-UserPath -Directory $npmGlobalBin
+$npmrcPath = Join-Path $env:USERPROFILE '.npmrc'
+$npmrcLine = "prefix=$npmGlobalBin"
+$npmrcContent = if (Test-Path -LiteralPath $npmrcPath) { Get-Content $npmrcPath -Raw } else { '' }
+if ($npmrcContent -notmatch [regex]::Escape($npmrcLine)) {
+    if ($PSCmdlet.ShouldProcess($npmrcPath, "Set npm prefix to $npmGlobalBin")) {
+        Add-Content -LiteralPath $npmrcPath -Value $npmrcLine -Encoding UTF8 -NoNewline:$false
+    }
+} else {
+    Write-Host 'npm prefix is already configured.'
+}
 
 # 3. Add Custom Keys.ahk to shell:startup for the current user.
 Set-AutoHotkeyStartupShortcut -Script $hotkeyScript -StartupDirectory ([Environment]::GetFolderPath('Startup'))
