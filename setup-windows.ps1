@@ -38,6 +38,8 @@ $piWorkProfile = Join-Path $PSScriptRoot 'profiles\work\.pi'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
+# Defender real-time scanning makes yarn installs and builds under here very slow.
+$defenderExcludedFolder = Join-Path $env:USERPROFILE 'src'
 
 function Invoke-PowerCfg {
     param([string[]]$Arguments)
@@ -114,6 +116,24 @@ function Set-ClaudeFolderTrust {
         Copy-Item -LiteralPath $configPath -Destination "$configPath.bak" -Force
         # Running Claude Code sessions may overwrite this on exit; close them first.
         [IO.File]::WriteAllText($configPath, ($config | ConvertTo-Json -Depth 100), (New-Object Text.UTF8Encoding $false))
+    }
+}
+
+function Add-DefenderExclusion {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Folder)
+
+    $existing = @((Get-MpPreference).ExclusionPath)
+    if ($existing -contains $Folder) {
+        Write-Host "Defender already excludes $Folder."
+        return
+    }
+    if ($PSCmdlet.ShouldProcess($Folder, 'Add Microsoft Defender exclusion')) {
+        Add-MpPreference -ExclusionPath $Folder
+        # Org policy (Intune/GPO) can override local exclusions without erroring.
+        if (@((Get-MpPreference).ExclusionPath) -notcontains $Folder) {
+            Write-Warning "Defender did not keep the exclusion for $Folder; it may be overridden by policy."
+        }
     }
 }
 
@@ -444,6 +464,9 @@ Set-ZedConfigLinks -SourceDir $zedConfigDir
 
 # 12. Apply the pi work profile from profiles/work/.pi.
 Set-PiWorkProfile -SourceDir $piWorkProfile
+
+# 13. Exclude the source folder from Defender real-time scanning.
+Add-DefenderExclusion -Folder $defenderExcludedFolder
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
