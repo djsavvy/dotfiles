@@ -382,6 +382,23 @@ function .... { cd ../../.. }
 function ll { eza $args }
 
 
+# NVM for Windows v2 (shim mode) routes npm through trust-checked proxies, so a
+# global install or npm self-update is blocked (NVM4306) or has no shim until
+# `nvm reshim`. v1 and v2 link mode use a plain symlink and need none of this.
+$nvmShimLink = Join-Path $env:LOCALAPPDATA 'Author Software\nvm\.nodejs'
+if ((Get-Item -LiteralPath $nvmShimLink -Force -ErrorAction SilentlyContinue).Target -like '*\.shim') {
+  function npm {
+    & npm.exe @args
+    $npmExitCode = $LASTEXITCODE
+    if ($npmExitCode -eq 0 -and ($args -match '^(-g|--global|--location=global)$')) {
+      nvm reshim | Out-Null
+    }
+    $global:LASTEXITCODE = $npmExitCode
+  }
+}
+Remove-Variable nvmShimLink
+
+
 function p3 { python3 $args }
 function py3 { python3 $args }
 

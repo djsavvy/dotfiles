@@ -29,6 +29,7 @@ $standbyConnectivityOnBattery = 0
 $hotkeyScript = Join-Path $PSScriptRoot 'Custom Keys.ahk'
 $powerShellProfile = Join-Path $PSScriptRoot 'Microsoft.PowerShell_profile.ps1'
 $gitConfig = Join-Path $PSScriptRoot '.gitconfig'
+$gitBashProfile = Join-Path $PSScriptRoot 'gitbash.bashrc'
 $nvimConfig = Join-Path $PSScriptRoot '.config\nvim'
 $terminalSettings = Join-Path $PSScriptRoot 'settings.json'
 $atuinConfig = Join-Path $PSScriptRoot '.config\atuin\config.toml'
@@ -181,6 +182,32 @@ function Set-GitConfigStub {
         return
     }
     if ($PSCmdlet.ShouldProcess($stubPath, "Include $Source")) {
+        if ($stubItem -and $stubItem.LinkType) {
+            $stubItem.Delete()
+        }
+        elseif ($stubItem) {
+            Copy-Item -LiteralPath $stubPath -Destination "$stubPath.bak" -Force
+        }
+        [IO.File]::WriteAllText($stubPath, "$stub`n", (New-Object Text.UTF8Encoding $false))
+    }
+}
+
+function Set-BashrcStub {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Source)
+
+    # Source instead of symlinking, like the PowerShell and git config stubs. Git
+    # Bash creates a ~/.bash_profile that loads ~/.bashrc on its first launch.
+    $stubPath = Join-Path $env:USERPROFILE '.bashrc'
+    $stub = ". '$($Source -replace '\\', '/')'"
+
+    $stubItem = Get-Item -LiteralPath $stubPath -Force -ErrorAction SilentlyContinue
+    if ($stubItem -and -not $stubItem.LinkType -and
+        ((Get-Content -LiteralPath $stubPath -Raw).Trim() -replace "`r`n", "`n") -eq $stub) {
+        Write-Host 'Git Bash profile stub is already configured.'
+        return
+    }
+    if ($PSCmdlet.ShouldProcess($stubPath, "Source $Source")) {
         if ($stubItem -and $stubItem.LinkType) {
             $stubItem.Delete()
         }
@@ -399,6 +426,9 @@ Set-PowerShellProfileStub -Source $powerShellProfile
 
 # 7. Load the dotfiles git config from ~/.gitconfig.
 Set-GitConfigStub -Source $gitConfig
+
+# 7b. Load the dotfiles Git Bash profile from ~/.bashrc.
+Set-BashrcStub -Source $gitBashProfile
 
 # 8. Point Neovim's config directory at the checkout.
 Set-NvimConfigJunction -Source $nvimConfig
