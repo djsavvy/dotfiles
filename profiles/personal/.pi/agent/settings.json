@@ -1,6 +1,6 @@
 {
   "defaultProvider": "openrouter",
-  "defaultModel": "google/gemini-3.7-flash",
+  "defaultModel": "anthropic/claude-opus-5.5",
   "defaultThinkingLevel": "minimal",
   "theme": "light",
   "packages": [
