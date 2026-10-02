@@ -263,6 +263,39 @@ function Set-NvimConfigJunction {
     throw "$linkPath is $found, expected a junction to $Source. Move it aside and rerun setup."
 }
 
+function Set-ScreenRecordingsJunction {
+    [CmdletBinding(SupportsShouldProcess)]
+    param()
+
+    # Snipping Tool saves recordings to Videos\Screen Recordings and screenshots to
+    # Pictures\Screenshots. Junction the former to the latter so recordings land
+    # wherever screenshots go (OneDrive, when Pictures is redirected there).
+    $screenshotsOverride = (Get-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' -ErrorAction SilentlyContinue).'{B7BEDE81-DF94-4682-A7D8-57A52620B86F}'
+    $target = if ($screenshotsOverride) { [Environment]::ExpandEnvironmentVariables($screenshotsOverride) }
+        else { Join-Path ([Environment]::GetFolderPath('MyPictures')) 'Screenshots' }
+    $linkPath = Join-Path ([Environment]::GetFolderPath('MyVideos')) 'Screen Recordings'
+
+    $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue
+    if ($item -and $item.LinkType -eq 'Junction' -and "$($item.Target)".TrimEnd('\') -eq $target.TrimEnd('\')) {
+        Write-Host 'Screen Recordings junction is already configured.'
+        return
+    }
+    # Snipping Tool creates an empty folder on first use; anything else is the user's.
+    $isEmptyFolder = $item -and -not $item.LinkType -and $item.PSIsContainer -and
+        -not (Get-ChildItem -LiteralPath $linkPath -Force | Select-Object -First 1)
+    if ($item -and -not $isEmptyFolder) {
+        $found = if ($item.LinkType) { "a $($item.LinkType) to $($item.Target)" }
+            elseif ($item.PSIsContainer) { 'a non-empty folder' }
+            else { 'a file' }
+        throw "$linkPath is $found, expected a junction to $target. Move its contents aside and rerun setup."
+    }
+    if ($PSCmdlet.ShouldProcess($linkPath, "Create junction to $target")) {
+        New-Item -ItemType Directory -Path $target -Force | Out-Null
+        if ($item) { $item.Delete() }
+        New-Item -ItemType Junction -Path $linkPath -Target $target | Out-Null
+    }
+}
+
 function Set-TerminalSettingsLink {
     [CmdletBinding(SupportsShouldProcess)]
     param([string]$Source)
@@ -467,6 +500,9 @@ Set-PiWorkProfile -SourceDir $piWorkProfile
 
 # 13. Exclude the source folder from Defender real-time scanning.
 Add-DefenderExclusion -Folder $defenderExcludedFolder
+
+# 14. Save screen recordings alongside screenshots.
+Set-ScreenRecordingsJunction
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
