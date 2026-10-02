@@ -84,6 +84,12 @@
 	required = true
 	clean = git-lfs clean -- %f
 
+; Keep pi's self-updating lastChangelogVersion out of commits (see
+; .gitattributes in the dotfiles repo). Needs jq; git skips the filter without it.
+[filter "pi-settings"]
+	clean = "jq 'del(.lastChangelogVersion)'"
+	smudge = cat
+
 ; difftastic
 # [diff]
 #         tool = difftastic

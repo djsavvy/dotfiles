@@ -1,2 +1,6 @@
 # cmd can misparse labels and goto in LF batch files.
 *.bat text eol=crlf
+
+# pi rewrites lastChangelogVersion on every update; the pi-settings filter
+# (defined in .gitconfig) strips it so it never shows up in diffs or commits.
+profiles/*/.pi/agent/settings.json filter=pi-settings

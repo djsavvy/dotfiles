@@ -1,8 +1,8 @@
 {
-  "theme": "dark",
-  "defaultProvider": "anthropic",
-  "defaultModel": "claude-sonnet-4-20250514",
-  "defaultThinkingLevel": "medium",
+  "defaultProvider": "openrouter",
+  "defaultModel": "google/gemini-3.7-flash",
+  "defaultThinkingLevel": "minimal",
+  "theme": "light",
   "packages": [
     "npm:pi-exa"
   ]

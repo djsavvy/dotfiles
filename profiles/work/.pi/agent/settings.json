@@ -1,5 +1,4 @@
 {
-  "lastChangelogVersion": "0.99.1",
   "theme": "light",
   "defaultProvider": "google-vertex",
   "defaultModel": "gemini-3.7-flash",
