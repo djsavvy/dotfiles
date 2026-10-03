@@ -28,5 +28,9 @@
   "remoteControlAtStartup": true,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "feedbackDrafts": "off"
+  "feedbackDrafts": "off",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
 }
