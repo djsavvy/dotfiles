@@ -26,6 +26,9 @@ if (-not $WhatIfPreference -and -not $isAdmin) {
 # Preferences: edit these values, then rerun setup.
 $hibernateTimeoutMinutes = 20
 $standbyConnectivityOnBattery = 0
+# Precision touchpads have no scroll speed setting of their own; they follow the
+# mouse wheel's lines/chars per notch. Windows' default of 3 is too fast.
+$scrollLinesPerNotch = 1
 $hotkeyScript = Join-Path $PSScriptRoot 'Custom Keys.ahk'
 $powerShellProfile = Join-Path $PSScriptRoot 'Microsoft.PowerShell_profile.ps1'
 $gitConfig = Join-Path $PSScriptRoot '.gitconfig'
@@ -439,6 +442,33 @@ function Set-PiWorkProfile {
     if ($allConfigured) { Write-Host 'pi work profile is already configured.' }
 }
 
+function Set-WheelScrollAmount {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([int]$Lines)
+
+    $desktop = Get-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop'
+    if ($desktop.WheelScrollLines -eq "$Lines" -and $desktop.WheelScrollChars -eq "$Lines") {
+        Write-Host "Scroll amount is already $Lines line(s) per notch."
+        return
+    }
+    if ($PSCmdlet.ShouldProcess('Mouse and touchpad scrolling', "Scroll $Lines line(s) and char(s) per notch")) {
+        # Use SystemParametersInfo rather than writing the registry directly, so the
+        # change applies without signing out.
+        Add-Type -Namespace DotfilesSetup -Name User32 -MemberDefinition @'
+[DllImport("user32.dll", SetLastError = true)]
+public static extern bool SystemParametersInfo(uint action, uint param, IntPtr vparam, uint winIni);
+'@
+        $SPI_SETWHEELSCROLLLINES = 0x0069
+        $SPI_SETWHEELSCROLLCHARS = 0x006D
+        $SPIF_UPDATEINIFILE_SENDCHANGE = 0x3
+        foreach ($action in $SPI_SETWHEELSCROLLLINES, $SPI_SETWHEELSCROLLCHARS) {
+            if (-not [DotfilesSetup.User32]::SystemParametersInfo($action, $Lines, [IntPtr]::Zero, $SPIF_UPDATEINIFILE_SENDCHANGE)) {
+                throw "SystemParametersInfo($action) failed (error $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
+            }
+        }
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -503,6 +533,9 @@ Add-DefenderExclusion -Folder $defenderExcludedFolder
 
 # 14. Save screen recordings alongside screenshots.
 Set-ScreenRecordingsJunction
+
+# 15. Slow down touchpad (and mouse wheel) scrolling.
+Set-WheelScrollAmount -Lines $scrollLinesPerNotch
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
