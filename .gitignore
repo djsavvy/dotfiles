@@ -24,3 +24,7 @@ profiles/**/*-cache
 
 # Claude Code per-machine permission approvals
 .claude/settings.local.json
+
+# Local-only scripts
+/ensure-claude-model.ps1
+/install-ensure-claude-model-task.ps1
