@@ -1,8 +1,8 @@
 {
   "theme": "light",
   "defaultProvider": "google-vertex",
-  "defaultModel": "gemini-3.7-flash",
-  "defaultThinkingLevel": "medium",
+  "defaultModel": "gemini-4-argon",
+  "defaultThinkingLevel": "low",
   "enabledModels": [
     "google-vertex/*",
     "azure-openai-responses/*"
