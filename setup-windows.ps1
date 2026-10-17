@@ -43,6 +43,7 @@ $piWorkProfile = Join-Path $PSScriptRoot 'profiles\work\.pi'
 $claudeTrustedFolder = $env:USERPROFILE
 # Defender real-time scanning makes yarn installs and builds under here very slow.
 $defenderExcludedFolder = Join-Path $env:USERPROFILE 'src'
+$powerModeScript = Join-Path $PSScriptRoot 'bin\power-mode-by-adapter.ps1'
 
 function Invoke-PowerCfg {
     param([string[]]$Arguments)
@@ -469,6 +470,34 @@ public static extern bool SystemParametersInfo(uint action, uint param, IntPtr v
     }
 }
 
+function Register-PowerModeByAdapterTask {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Script)
+
+    $taskName = 'PowerModeByAdapter'
+    $arguments = "--headless powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$Script`""
+    $existing = Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
+    if ($existing -and $existing.Actions[0].Arguments -eq $arguments) {
+        Write-Host "Scheduled task $taskName is already configured."
+        return
+    }
+    if ($PSCmdlet.ShouldProcess("Scheduled task $taskName", "Run $Script on USB-C adapter attach and at sign-in")) {
+        # The Lenovo power service logs event 105 with the adapter wattage on attach.
+        $eventTriggerClass = Get-CimClass -ClassName MSFT_TaskEventTrigger -Namespace Root/Microsoft/Windows/TaskScheduler
+        $adapterTrigger = New-CimInstance -CimClass $eventTriggerClass -ClientOnly
+        $adapterTrigger.Enabled = $true
+        $adapterTrigger.Subscription = '<QueryList><Query Id="0" Path="Lenovo-Power-BaseModule/Operational"><Select Path="Lenovo-Power-BaseModule/Operational">*[System[EventID=105]]</Select></Query></QueryList>'
+        $logonTrigger = New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME
+        # conhost --headless keeps a console window from flashing on each run.
+        $action = New-ScheduledTaskAction -Execute 'conhost.exe' -Argument $arguments
+        # Setup runs elevated; register for the normal interactive user anyway.
+        $principal = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Limited
+        $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Minutes 2) -MultipleInstances IgnoreNew
+        Register-ScheduledTask -TaskName $taskName -Description 'Best performance on strong USB-C adapters, Balanced on power banks and weak chargers.' `
+            -Action $action -Trigger @($adapterTrigger, $logonTrigger) -Principal $principal -Settings $settings -Force | Out-Null
+    }
+}
+
 if (-not (Test-Path -LiteralPath $hotkeyScript -PathType Leaf)) {
     throw "Missing hotkey script: $hotkeyScript. Run setup from a complete dotfiles checkout."
 }
@@ -536,6 +565,9 @@ Set-ScreenRecordingsJunction
 
 # 15. Slow down touchpad (and mouse wheel) scrolling.
 Set-WheelScrollAmount -Lines $scrollLinesPerNotch
+
+# 16. Best performance on strong chargers, Balanced on power banks (by adapter wattage).
+Register-PowerModeByAdapterTask -Script $powerModeScript
 
 if (-not $WhatIfPreference) {
     Write-Host 'Windows setup complete. The hotkey script will run at your next sign-in.'
