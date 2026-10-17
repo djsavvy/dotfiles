@@ -43,5 +43,9 @@ _darcs
 # Run firefox/install.sh to (re)link it. See firefox/README.md.
 ^/firefox$
 
+# macOS system-level config (LaunchDaemons etc.) installed into /Library, not
+# $HOME. Run macos/install.sh. See macos/README.md.
+^/macos$
+
 # Profiles directory (use stow -d profiles -t ~ <profile>)
 ^/profiles$

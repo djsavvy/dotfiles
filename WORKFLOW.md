@@ -45,6 +45,11 @@ stow -d profiles -t ~ personal
   firefox/install.sh
   ```
 
+- **macOS GPU memory limit** (for large local LLMs, see `macos/README.md`):
+  ```bash
+  macos/install.sh
+  ```
+
 - **Windows Setup**:
   Run `.\setup-windows.ps1` as administrator to set battery preferences, add
   the AHK Startup shortcut, and point pwsh's profile, `~/.gitconfig`, Neovim's

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Raise the Apple Silicon GPU wired-memory limit at boot so large local LLMs
+  fit in unified memory. 118784 MB = 116 GB, sized for a 128 GB Mac.
+  See README.md before changing the value.
+-->
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>local.iogpu-wired-limit</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/sbin/sysctl</string>
+		<string>iogpu.wired_limit_mb=118784</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>
