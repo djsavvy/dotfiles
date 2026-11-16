@@ -38,6 +38,7 @@ $terminalSettings = Join-Path $PSScriptRoot 'settings.json'
 $atuinConfig = Join-Path $PSScriptRoot '.config\atuin\config.toml'
 $zedConfigDir = Join-Path $PSScriptRoot '.config\zed'
 $piWorkProfile = Join-Path $PSScriptRoot 'profiles\work\.pi'
+$agentInstructions = Join-Path $PSScriptRoot 'agents\global-instructions.md'
 # Claude Code treats subfolders of a trusted folder as trusted, so this skips the
 # "Do you trust the files in this folder?" prompt everywhere under it.
 $claudeTrustedFolder = $env:USERPROFILE
@@ -443,6 +444,39 @@ function Set-PiWorkProfile {
     if ($allConfigured) { Write-Host 'pi work profile is already configured.' }
 }
 
+function Set-AgentInstructionsLinks {
+    [CmdletBinding(SupportsShouldProcess)]
+    param([string]$Source)
+
+    # One shared instructions file for every coding agent. Each tool reads its global
+    # instructions from a fixed path and has no include mechanism, so symlink each one.
+    $linkPaths = @(
+        (Join-Path $env:USERPROFILE '.claude\CLAUDE.md'),
+        (Join-Path $env:USERPROFILE '.codex\AGENTS.md'),
+        (Join-Path $env:USERPROFILE '.pi\agent\AGENTS.md')
+    )
+    $allConfigured = $true
+    foreach ($linkPath in $linkPaths) {
+        $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue
+        if ($item -and $item.LinkType -eq 'SymbolicLink' -and "$($item.Target)" -eq $Source) {
+            continue
+        }
+        if ($item -and $item.LinkType) {
+            throw "$linkPath is a $($item.LinkType) to $($item.Target), expected a symlink to $Source. Move it aside and rerun setup."
+        }
+        $allConfigured = $false
+        if ($PSCmdlet.ShouldProcess($linkPath, "Link to $Source")) {
+            New-Item -ItemType Directory -Path (Split-Path -Parent $linkPath) -Force | Out-Null
+            if ($item) {
+                Copy-Item -LiteralPath $linkPath -Destination "$linkPath.bak" -Force
+                Remove-Item -LiteralPath $linkPath -Force
+            }
+            New-Item -ItemType SymbolicLink -Path $linkPath -Target $Source | Out-Null
+        }
+    }
+    if ($allConfigured) { Write-Host 'Agent instruction links are already configured.' }
+}
+
 function Set-WheelScrollAmount {
     [CmdletBinding(SupportsShouldProcess)]
     param([int]$Lines)
@@ -556,6 +590,9 @@ Set-ZedConfigLinks -SourceDir $zedConfigDir
 
 # 12. Apply the pi work profile from profiles/work/.pi.
 Set-PiWorkProfile -SourceDir $piWorkProfile
+
+# 12b. Link the shared agent instructions into Claude Code, Codex, and pi.
+Set-AgentInstructionsLinks -Source $agentInstructions
 
 # 13. Exclude the source folder from Defender real-time scanning.
 Add-DefenderExclusion -Folder $defenderExcludedFolder
