@@ -103,6 +103,9 @@ if status is-interactive
     function gpuo
         git push -u origin (git branch --show-current)
     end
+    function grho
+        git reset --hard origin/(git branch --show-current)
+    end
 
     function gp
         set stashed 0

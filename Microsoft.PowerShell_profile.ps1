@@ -236,6 +236,7 @@ function gpull { git pull $args }
 function gpush { git push $args }
 function gpf { git push --force $args }
 function gpuo { git push -u origin "$(git branch --show-current)" }
+function grho { git reset --hard "origin/$(git branch --show-current)" }
 
 if (Test-Path Alias:gp) {
   Remove-Alias -Name gp -Force
